@@ -56,9 +56,10 @@ $route['officers/lists/(:any)'] = 'officers_c/lists/$1'; // from officer_c
 $route['form15/list15/(:any)'] = 'form15_c/list15/$1';   // from officer_c to form15_c 
 $route['form15/show15/(:any)'] = 'form15_c/show15/$1';
 $route['pages/status/(:any)'] = 'pages_c/status/$1';
-$route['form15/update']='form15_c/update_stat15';
+$route['form15/update11']='form16_c/update_stat11';
+$route['form16/submitForm16/'] = 'form16_c/submitForm16/';
 
-$route['pages/forms/form16']='form16_c/';
+// $route['pages/forms/form16']='form16_c/';
 
 $route['pages/trans1']='trans_c/trans1';
 $route['pages/trans2']='trans_c/trans2';

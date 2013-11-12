@@ -77,6 +77,7 @@ class Form15_C extends CI_Controller{
 				'fprovince' => $this->input->post('fprovince'),
 				'fzipcode'=> $this->input->post('fzipcode'),
 				'ftel' => $this->input->post('ftel'),
+				'fphone' => $this->input->post('fphone'),
 				'ffax' => $this->input->post('ffax'),
 				'fmail' => $this->input->post('fmail'),
 
@@ -170,28 +171,32 @@ class Form15_C extends CI_Controller{
 	}
 
 
-	public function update_stat15(){
+	// public function update_stat15(){
 
-		if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
-		{
-			$array = array('status' => $this->input->post('stat'),
-							'comment' => $this->input->post('comment'));
-			$id =array('form15_Id' => $this->input->post('form15_Id'));
-			$this->form15_model->update_stat_form15($id,$array);
+	// 	// if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
+	// 	if ($this->ion_auth->is_officer() )
+	// 	{
+	// 		$array = array('status' => $this->input->post('stat'),
+	// 						'comment' => $this->input->post('comment'));
+	// 		$id =array('form15_Id' => $this->input->post('form15_Id'));
+	// 		$this->form15_model->update_stat_form15($id,$array);
 			
-			$user = $this->ion_auth->user()->row();
+	// 		$user = $this->ion_auth->user()->row();
 
-				//save username to be data
-			$data['username'] = $user->username;
-			$data['form15'] = $this->form15_model->get_listform15('11');
+	// 			//save username to be data
+	// 		$data['username'] = $user->username;
+	// 		$data['form15'] = $this->form15_model->get_listform15('11');
 
-			//open quqery form15
-			$this->load->view('officers/form15/list15',$data);
-		}
-		else{
-			redirect('auth', 'refresh');
-		}
+	// 		//open quqery form15
+	// 		// $this->load->view('officers/form15/list15',$data);
+	// 		// $segments = array('form16', 'submitForm16', $data['form15'] );
+	// 		$segments = anchor('form16/submitForm16', 'form15',$data['form15'] );
+	// 		redirect($segments);
+	// 	}
+	// 	else{
+	// 		redirect('auth', 'refresh');
+	// 	}
 
-	}
+	// }
 
 }

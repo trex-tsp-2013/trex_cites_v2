@@ -77,7 +77,7 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><h2>Form & Request</h2></li>
-              <li class="active"><a href="<? echo site_url("officers/lists/11") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li class="active"><a href="<? echo site_url("pages/trans1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
               <li><a href="<? echo site_url("pages/trans2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
@@ -364,7 +364,7 @@
             <br>
             <br>
             <?if($form15['status']!='Verified'){?>
-            <?php echo form_open("form15/update");?>
+            <?php echo form_open("form15/update11");?>
             <textarea rows="5" name="comment"><?php echo $form15['comment']; ?></textarea>
             <br>
             <br>
