@@ -102,266 +102,274 @@
 
             <?
               // check post if it is null value
-              if(isset($form15['fname'])) 
-                $fname = $form15['fname'];
+              if(isset($form16['fname'])) 
+                $fname = $form16['fname'];
               else 
                 $fname = '';
-              if(isset($form15['fbd'])) 
-                $fbd = $form15['fbd'];
+              if(isset($form16['fbd'])) 
+                $fbd = $form16['fbd'];
               else 
                 $fbd = '';
-              if(isset($form15['fnation'])) 
-                $fnation = $form15['fnation'];
+              if(isset($form16['fnation'])) 
+                $fnation = $form16['fnation'];
               else 
                 $fnation = '';
-              if(isset($form15['fpassport'])) 
-                $fpassport = $form15['fpassport'];
+              if(isset($form16['fpassport'])) 
+                $fpassport = $form16['fpassport'];
               else 
                 $fpassport = '';
-              if(isset($form15['fissue'])) 
-                $fissue = $form15['fissue'];
+              if(isset($form16['fissue'])) 
+                $fissue = $form16['fissue'];
               else 
                 $fissue = '';
-              if(isset($form15['faddress'])) 
-                $faddress = $form15['faddress'];
+              if(isset($form16['faddress'])) 
+                $faddress = $form16['faddress'];
               else 
                 $faddress = '';
-              if(isset($form15['fstreet'])) 
-                $fstreet = $form15['fstreet'];
+              if(isset($form16['fstreet'])) 
+                $fstreet = $form16['fstreet'];
               else 
                 $fstreet = '';
-              if(isset($form15['fprovince'])) 
-                $fprovince = $form15['fprovince'];
+              if(isset($form16['fprovince'])) 
+                $fprovince = $form16['fprovince'];
               else 
                 $fprovince = '';
-              if(isset($form15['fzipcode'])) 
-                $fzipcode = $form15['fzipcode'];
+              if(isset($form16['fzipcode'])) 
+                $fzipcode = $form16['fzipcode'];
               else 
                 $fzipcode = '';
-              if(isset($form15['ftel'])) 
-                $ftel = $form15['ftel'];
+              if(isset($form16['ftel'])) 
+                $ftel = $form16['ftel'];
               else 
                 $ftel = '';
-              if(isset($form15['fphone'])) 
-                $fphone = $form15['fphone'];
+              if(isset($form16['fphone'])) 
+                $fphone = $form16['fphone'];
               else 
                 $fphone = '';
-              if(isset($form15['ffax'])) 
-                $ffax = $form15['ffax'];
+              if(isset($form16['ffax'])) 
+                $ffax = $form16['ffax'];
               else 
                 $ffax = '';
-              if(isset($form15['fmail'])) 
-                $fmail = $form15['fmail'];
+              if(isset($form16['fmail'])) 
+                $fmail = $form16['fmail'];
               else 
                 $fmail = '';
-              if(isset($form15['fname2'])) 
-                $fname2 = $form15['fname2'];
+              if(isset($form16['fname2'])) 
+                $fname2 = $form16['fname2'];
               else 
                 $fname2 = '';
-              if(isset($form15['fowner'])) 
-                $fowner = $form15['fowner'];
+              if(isset($form16['fowner'])) 
+                $fowner = $form16['fowner'];
               else 
                 $fowner = '';
-              if(isset($form15['faddress2'])) 
-                $faddress2 = $form15['faddress2'];
+              if(isset($form16['faddress2'])) 
+                $faddress2 = $form16['faddress2'];
               else 
                 $faddress2 = '';
-              if(isset($form15['fstreet2'])) 
-                $fstreet2 = $form15['fstreet2'];
+              if(isset($form16['fstreet2'])) 
+                $fstreet2 = $form16['fstreet2'];
               else 
                 $fstreet2 = '';
-              if(isset($form15['fprovince2'])) 
-                $fprovince2 = $form15['fprovince2'];
+              if(isset($form16['fprovince2'])) 
+                $fprovince2 = $form16['fprovince2'];
               else 
                 $fprovince2 = '';
-              if(isset($form15['fzipcode2'])) 
-                $fzipcode2 = $form15['fzipcode2'];
+              if(isset($form16['fzipcode2'])) 
+                $fzipcode2 = $form16['fzipcode2'];
               else 
                 $fzipcode2 = '';
-              if(isset($form15['ftel2'])) 
-                $ftel2 = $form15['ftel2'];
+              if(isset($form16['ftel2'])) 
+                $ftel2 = $form16['ftel2'];
               else 
                 $ftel2 = '';
-              if(isset($form15['fphone2'])) 
-                $fphone2 = $form15['fphone2'];
+              if(isset($form16['fphone2'])) 
+                $fphone2 = $form16['fphone2'];
               else 
                 $fphone2 = '';
-              if(isset($form15['ffax2'])) 
-                $ffax2 = $form15['ffax2'];
+              if(isset($form16['ffax2'])) 
+                $ffax2 = $form16['ffax2'];
               else 
                 $ffax2 = '';
-              if(isset($form15['flocation'])) 
-                $flocation = $form15['flocation'];
+              if(isset($form16['flocation'])) 
+                $flocation = $form16['flocation'];
               else 
                 $flocation = '';
-              if(isset($form15['faddress3'])) 
-                $faddress3 = $form15['faddress3'];
+              if(isset($form16['faddress3'])) 
+                $faddress3 = $form16['faddress3'];
               else 
                 $faddress3 = '';
-              if(isset($form15['fstreet3'])) 
-                $fstreet3 = $form15['fstreet3'];
+              if(isset($form16['fstreet3'])) 
+                $fstreet3 = $form16['fstreet3'];
               else 
                 $fstreet3 = '';
-              if(isset($form15['fprovince3'])) 
-                $fprovince3 = $form15['fprovince3'];
+              if(isset($form16['fprovince3'])) 
+                $fprovince3 = $form16['fprovince3'];
               else 
                 $fprovince3 = '';
-              if(isset($form15['fzipcode3'])) 
-                $fzipcode3 = $form15['fzipcode3'];
+              if(isset($form16['fzipcode3'])) 
+                $fzipcode3 = $form16['fzipcode3'];
               else 
                 $fzipcode3 = '';
-              if(isset($form15['ftel3'])) 
-                $ftel3 = $form15['ftel3'];
+              if(isset($form16['ftel3'])) 
+                $ftel3 = $form16['ftel3'];
               else 
                 $ftel3 = '';
-              if(isset($form15['fphone3'])) 
-                $fphone3 = $form15['fphone3'];
+              if(isset($form16['fphone3'])) 
+                $fphone3 = $form16['fphone3'];
               else 
                 $fphone3 = '';
-              if(isset($form15['ffax3'])) 
-                $ffax3 = $form15['ffax3'];
+              if(isset($form16['ffax3'])) 
+                $ffax3 = $form16['ffax3'];
               else 
                 $ffax3 = '';
-              if(isset($form15['plantname'])) 
-                $plantname = $form15['plantname'];
+              if(isset($form16['plantname'])) 
+                $plantname = $form16['plantname'];
               else 
                 $plantname = '';
-              if(isset($form15['sname'])) 
-                $sname = $form15['sname'];
+              if(isset($form16['sname'])) 
+                $sname = $form16['sname'];
               else 
                 $sname = '';
-              if(isset($form15['numberbreed'])) 
-                $numberbreed = $form15['numberbreed'];
+              if(isset($form16['numberbreed'])) 
+                $numberbreed = $form16['numberbreed'];
               else 
                 $numberbreed = '';
-              if(isset($form15['numbercom'])) 
-                $numbercom = $form15['numbercom'];
+              if(isset($form16['numbercom'])) 
+                $numbercom = $form16['numbercom'];
               else 
                 $numbercom = '';
-              if(isset($form15['source'])) 
-                $source = $form15['source'];
+              if(isset($form16['source'])) 
+                $source = $form16['source'];
               else 
                 $source = '';
-              if(isset($form15['ab'])) 
-                $ab = $form15['ab'];
+              if(isset($form16['ab'])) 
+                $ab = $form16['ab'];
               else 
                 $ab = '';
-              // if(isset($form15['comment'])) 
-              //   $comment = $form15['comment'];
+              if(isset($form16['fdates'])) 
+                $ab = $form16['fdates'];
+              else 
+                $ab = '';
+              if(isset($form16['fdatee'])) 
+                $ab = $form16['fdatee'];
+              else 
+                $ab = '';
+              // if(isset($form16['comment'])) 
+              //   $comment = $form16['comment'];
               // else 
               //   $comment = '';
               ?>
-            <h3><b>เลขที่คำขอ: </b><span style="color:blue"><?echo $form15["form15_Id"];?></span></h3><br>
-            <b>ข้าพเจ้า: </b><span style="color:blue"><?echo $form15["fname"];?></span><br>
-            <b>วันเดือนปีเกิด: </b><span style="color:blue"><?echo $form15["fbd"];?></span><br>
-            <b>สัญชาติ: </b><span style="color:blue"><?echo $form15["fnation"];?></span><br>
+            <h3><b>เลขที่คำขอ: </b><span style="color:blue"><?echo $form16["form16_Id"];?></span></h3><br>
+            <b>ข้าพเจ้า: </b><span style="color:blue"><?echo $form16["fname"];?></span><br>
+            <b>วันเดือนปีเกิด: </b><span style="color:blue"><?echo $form16["fbd"];?></span><br>
+            <b>สัญชาติ: </b><span style="color:blue"><?echo $form16["fnation"];?></span><br>
             <b>บัตรประจำตัวประชาชน / ใบสำคัญประจำตัวคนต่างด้าว เลขที่: </b>
-            <span style="color:blue"><?echo $form15["fpassport"];?></span><br>
-            <b>ออกให้ ณ: </b><span style="color:blue"><?echo $form15["fissue"];?></span><br>
+            <span style="color:blue"><?echo $form16["fpassport"];?></span><br>
+            <b>ออกให้ ณ: </b><span style="color:blue"><?echo $form16["fissue"];?></span><br>
 
-            <b>ที่อยู่: </b><span style="color:blue"><?echo $form15["faddress"];?></span><br>
+            <b>ที่อยู่: </b><span style="color:blue"><?echo $form16["faddress"];?></span><br>
 
-            <b>ถนน: </b><span style="color:blue"><?echo $form15["fstreet"];?></span><br>
+            <b>ถนน: </b><span style="color:blue"><?echo $form16["fstreet"];?></span><br>
 
-            <b>จังหวัด: </b><span style="color:blue"><?echo $form15["fprovince"];?></span><br>
+            <b>จังหวัด: </b><span style="color:blue"><?echo $form16["fprovince"];?></span><br>
 
-            <b>รหัสไปรษณีย์: </b><span style="color:blue"><?echo $form15["fzipcode"];?></span><br>
+            <b>รหัสไปรษณีย์: </b><span style="color:blue"><?echo $form16["fzipcode"];?></span><br>
 
-            <b>โทรศัพท์: </b><span style="color:blue"><?echo $form15["ftel"];?></span><br>
+            <b>โทรศัพท์: </b><span style="color:blue"><?echo $form16["ftel"];?></span><br>
             
-            <b>โทรศัพท์เคลื่อนที่: </b><span style="color:blue"><?echo $form15["fphone"];?></span><br>
+            <b>โทรศัพท์เคลื่อนที่: </b><span style="color:blue"><?echo $form16["fphone"];?></span><br>
 
-            <b>โทรสาร: </b><span style="color:blue"><?echo $form15["ffax"];?></span><br>
+            <b>โทรสาร: </b><span style="color:blue"><?echo $form16["ffax"];?></span><br>
 
-            <b>อีเลคทรอนิคเมล์ Email: </b><span style="color:blue"><?echo $form15["fmail"];?></span><br>
+            <b>อีเลคทรอนิคเมล์ Email: </b><span style="color:blue"><?echo $form16["fmail"];?></span><br>
 
             <br>
             <b>มีความประสงค์จะขอขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์</b>
             <br>
             <br>
-            <? $fname2 = $form15['fname2']; ?>
-            <b>ในนามของ(กรณีเป็นนิติบุคคล): </b><span style="color:blue"><?echo $form15["fname2"];?></span><br>
+            <? $fname2 = $form16['fname2']; ?>
+            <b>ในนามของ(กรณีเป็นนิติบุคคล): </b><span style="color:blue"><?echo $form16["fname2"];?></span><br>
 
-            <? $fowner = $form15['fowner']; ?>
-            <b>โดยมี: </b><span style="color:blue"><?echo $form15["fowner"];?></span><br>
+            <? $fowner = $form16['fowner']; ?>
+            <b>โดยมี: </b><span style="color:blue"><?echo $form16["fowner"];?></span><br>
 
-            <? $faddress2 = $form15['faddress2']; ?>
-            <b>ที่อยู่: </b><span style="color:blue"><?echo $form15["faddress2"];?></span><br>
+            <? $faddress2 = $form16['faddress2']; ?>
+            <b>ที่อยู่: </b><span style="color:blue"><?echo $form16["faddress2"];?></span><br>
 
-            <? $fstreet2 = $form15['fstreet2']; ?>
-            <b>ถนน: </b><span style="color:blue"><?echo $form15["fstreet2"];?></span><br>
+            <? $fstreet2 = $form16['fstreet2']; ?>
+            <b>ถนน: </b><span style="color:blue"><?echo $form16["fstreet2"];?></span><br>
 
-            <? $fprovince2 = $form15['fprovince2']; ?>
-            <b>จังหวัด: </b><span style="color:blue"><?echo $form15["fprovince2"];?></span><br>
+            <? $fprovince2 = $form16['fprovince2']; ?>
+            <b>จังหวัด: </b><span style="color:blue"><?echo $form16["fprovince2"];?></span><br>
 
-            <? $fzipcode2 = $form15['fzipcode2']; ?>
-            <b>รหัสไปรษณีย์: </b><span style="color:blue"><?echo $form15["fzipcode2"];?></span><br>
+            <? $fzipcode2 = $form16['fzipcode2']; ?>
+            <b>รหัสไปรษณีย์: </b><span style="color:blue"><?echo $form16["fzipcode2"];?></span><br>
 
-            <? $ftel2 = $form15['ftel2']; ?>
-            <b>โทรศัพท์: </b><span style="color:blue"><?echo $form15["ftel2"];?></span><br>
+            <? $ftel2 = $form16['ftel2']; ?>
+            <b>โทรศัพท์: </b><span style="color:blue"><?echo $form16["ftel2"];?></span><br>
 
-            <? $fphone2 = $form15['fphone2']; ?>
-            <b>โทรศัพท์เคลื่อนที่: </b><span style="color:blue"><?echo $form15["fphone2"];?></span><br>
+            <? $fphone2 = $form16['fphone2']; ?>
+            <b>โทรศัพท์เคลื่อนที่: </b><span style="color:blue"><?echo $form16["fphone2"];?></span><br>
 
-            <? $ffax2 = $form15['ffax2']; ?>
-            <b>โทรสาร: </b><span style="color:blue"><?echo $form15["ffax2"];?></span><br>
+            <? $ffax2 = $form16['ffax2']; ?>
+            <b>โทรสาร: </b><span style="color:blue"><?echo $form16["ffax2"];?></span><br>
 
             <br>
             
-            <? $flocation = $form15['flocation']; ?>
-            <b>สถานที่เพาะเลี้ยงอนุรักษ์ ชื่อ: </b><span style="color:blue"><?echo $form15["flocation"];?></span><br>
+            <? $flocation = $form16['flocation']; ?>
+            <b>สถานที่เพาะเลี้ยงอนุรักษ์ ชื่อ: </b><span style="color:blue"><?echo $form16["flocation"];?></span><br>
 
             <br>
 
-            <? $faddress3 = $form15['faddress3']; ?>
-            <b>ที่อยู่: </b><span style="color:blue"><?echo $form15["faddress3"];?></span><br>
+            <? $faddress3 = $form16['faddress3']; ?>
+            <b>ที่อยู่: </b><span style="color:blue"><?echo $form16["faddress3"];?></span><br>
 
-            <? $fstreet3 = $form15['fstreet3']; ?>
-            <b>ถนน: </b><span style="color:blue"><?echo $form15["fstreet3"];?></span><br>
+            <? $fstreet3 = $form16['fstreet3']; ?>
+            <b>ถนน: </b><span style="color:blue"><?echo $form16["fstreet3"];?></span><br>
 
-            <? $fprovince3 = $form15['fprovince3']; ?>
-            <b>จังหวัด: </b><span style="color:blue"><?echo $form15["fprovince3"];?></span><br>
+            <? $fprovince3 = $form16['fprovince3']; ?>
+            <b>จังหวัด: </b><span style="color:blue"><?echo $form16["fprovince3"];?></span><br>
 
-            <? $fzipcode3 = $form15['fzipcode3']; ?>
-            <b>รหัสไปรษณีย์: </b><span style="color:blue"><?echo $form15["fzipcode3"];?></span><br>
+            <? $fzipcode3 = $form16['fzipcode3']; ?>
+            <b>รหัสไปรษณีย์: </b><span style="color:blue"><?echo $form16["fzipcode3"];?></span><br>
 
             
-            <? $ftel3 = $form15['ftel3']; ?>
-            <b>โทรศัพท์: </b><span style="color:blue"><?echo $form15["ftel3"];?></span><br>
+            <? $ftel3 = $form16['ftel3']; ?>
+            <b>โทรศัพท์: </b><span style="color:blue"><?echo $form16["ftel3"];?></span><br>
 
-            <? $fphone3 = $form15['fphone3']; ?>
-            <b>โทรศัพท์เคลื่อนที่: </b><span style="color:blue"><?echo $form15["fphone3"];?></span><br>
+            <? $fphone3 = $form16['fphone3']; ?>
+            <b>โทรศัพท์เคลื่อนที่: </b><span style="color:blue"><?echo $form16["fphone3"];?></span><br>
 
-            <? $ffax3 = $form15['ffax3']; ?>
-            <b>โทรสาร: </b><span style="color:blue"><?echo $form15["ffax3"];?></span><br>
-
-            <br>
-            <br>
-
-            <? $plantname = $form15['plantname']; ?>
-            <b>ชื่อพืช: </b><span style="color:blue"><?echo $form15["plantname"];?></span><br>
-
-            <? $sname = $form15['sname']; ?>
-            <b>ชื่อวิทยาศาสตร์: </b><span style="color:blue"><?echo $form15["sname"];?></span><br>
-
-            <? $numberbreed = $form15['numberbreed']; ?>
-            <b>จำนวน พ่อ-แม่ พันธุ์: </b><span style="color:blue"><?echo $form15["numberbreed"];?></span><br>
-
-            <? $numbercom = $form15['numbercom']; ?>
-            <b>จำนวนเพื่อการค้า: </b><span style="color:blue"><?echo $form15["numbercom"];?></span><br>
-
-            <? $source = $form15['source']; ?>
-            <b>แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): </b><span style="color:blue"><?echo $form15["source"];?></span><br>
-
-            <? $ab = $form15['ab']; ?>
-            <b>วิธีการขยายพันธุ์เทียม: </b><span style="color:blue"><?echo $form15["ab"];?></span><br>
+            <? $ffax3 = $form16['ffax3']; ?>
+            <b>โทรสาร: </b><span style="color:blue"><?echo $form16["ffax3"];?></span><br>
 
             <br>
             <br>
-            <? $fstreet2 = $form15['fstreet2']; ?>
-            <b>ใบสำคัญฉบับนี้ออกให้เมื่อวันที่: </b><span style="color:blue"><?echo $form15["fstreet2"];?></span><br>
-            <? $ffax3 = $form15['ffax3']; ?>
-            <b>โดยให้ใช้ถึงวันที่: </b><span style="color:blue"><?echo $form15["ffax3"];?></span><br>
+
+            <? $plantname = $form16['plantname']; ?>
+            <b>ชื่อพืช: </b><span style="color:blue"><?echo $form16["plantname"];?></span><br>
+
+            <? $sname = $form16['sname']; ?>
+            <b>ชื่อวิทยาศาสตร์: </b><span style="color:blue"><?echo $form16["sname"];?></span><br>
+
+            <? $numberbreed = $form16['numberbreed']; ?>
+            <b>จำนวน พ่อ-แม่ พันธุ์: </b><span style="color:blue"><?echo $form16["numberbreed"];?></span><br>
+
+            <? $numbercom = $form16['numbercom']; ?>
+            <b>จำนวนเพื่อการค้า: </b><span style="color:blue"><?echo $form16["numbercom"];?></span><br>
+
+            <? $source = $form16['source']; ?>
+            <b>แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): </b><span style="color:blue"><?echo $form16["source"];?></span><br>
+
+            <? $ab = $form16['ab']; ?>
+            <b>วิธีการขยายพันธุ์เทียม: </b><span style="color:blue"><?echo $form16["ab"];?></span><br>
+
+            <br>
+            <br>
+            <? $fstreet2 = $form16['fdates']; ?>
+            <b>ใบสำคัญฉบับนี้ออกให้เมื่อวันที่: </b><span style="color:blue"><?echo $form16["fdates"];?></span><br>
+            <? $ffax3 = $form16['fdatee']; ?>
+            <b>โดยให้ใช้ถึงวันที่: </b><span style="color:blue"><?echo $form16["fdatee"];?></span><br>
             <b>และให้ใช้ได้เฉพาะสถานที่ซึ่งระบุไว้ในใบสำคัญนี้เท่านั้น</b>
 
 
@@ -377,7 +385,7 @@
             <br>
             <br>
             <?php echo form_open("officers/view/update");?>
-            <textarea rows="5" name="comment"><?php echo $form15['comment']; ?></textarea>
+            <textarea rows="5" name="comment"><?php echo $form16['comment']; ?></textarea>
             <br>
             <br> -->
             <button type="cancel" class="btn btn-large">Go Back</button>
