@@ -50,16 +50,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="<? echo base_url()?>">TREX Corp.</a>
+          <a class="brand" href="<? echo base_url() ?>">TREX Corp.</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link"><?echo $username;?></a>
-              <!-- <button onclick="location.href='http://localhost/trex_cites/index.php/auth/logout'" class="btn btn-small btn-danger">Sign Out</button> -->
               <button onclick="location.href='<? echo site_url("auth/logout")?>'" class="btn btn-small btn-danger">Sign Out</button>
             </p>
 
             <ul class="nav">
-              <li><a href="<? echo base_url()?>">Home</a></li>
+              <li><a href="<? echo base_url() ?>">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -74,9 +73,9 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><h2>Form & Request</h2></li>
-              <li class="active"><a href="#">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <li class="active"><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
               <li><a href="<? echo site_url("pages/trans3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
@@ -87,61 +86,21 @@
               <br>
               <li><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
-          </div><!--/.well -->
+          
         </div><!--/span-->
         <div class="span9">
           <div class="well">
-            <h2>ตรวจสอบคำขอขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์(พ.พ.15)</h2><br><br>
-            <table class="table table-striped table-bordered">
-              <tr class = "warning">
-                <th>
-                  เลขที่คำขอ
-                </th>
-                <th>
-                  ผู้ยื่นคำร้อง
-                </th>
-                <th>
-                  สถานะ
-                </th>
-                <th>
-                <!-- สถานที่เพาะเลี้ยงพืชอนุรักษ์ -->
-                </th>
-              </tr>
-              <?php
-              foreach ($form15 as $form15_item) :
-              ?>
-              <tr class="info">
-                <td>
-                  <?php echo $form15_item['form15_Id'] ?>
-                </td>
-                <td>
-                  <?php echo $form15_item['fname'] ?>
-                </td>
-                <td>
-                    <?if($form15_item['status'] == 'Verified'){
-                      echo '<span style="color:green">'.$form15_item['status'].'</span>';
-                    }
-                    elseif ($form15_item['status'] == 'Denied') {
-                      echo '<span style="color:red">'.$form15_item['status'].'</span>';
-                    }
-                    else{
-                      echo '<span style="color:orange">'.$form15_item['status'].'</span>';
-                    }
-                    ?>
-                </td>
-                <td>
-                  <? $segment = array('form15', 'show15', $form15_item['form15_Id']); ?>
-                  <a class="btn" href="<? echo site_url($segment) ?>"> ดูแบบฟอร์ม
-                  </a>
-                </td>
-              </tr>
-            <?php endforeach ?>
-            </table>
-          </div>
-          
-      </div><!--/row-->
-    </div>
-      <hr>
+            <h2>การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</h2><br><br>
+            <div style ="font-size:16px">
+            <ol>
+              <li><a href="#">การยื่นคําขอแก้ไขรายการใบสําคัญการขึ้นทะเบียน เพิ่ม ลด สถานที่เพาะเลี้ยงพืชอนุรักษ์</a></li>
+              <li><a href="#">การขอต่ออายุใบสําคัญการข้ึนทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์</a></li>
+              <li><a href="#">การขอใบแทนใบสําคัญการขึ้นทะเบียนสถานท่ีเพาะเลี้ยงพืชอนุรักษ์</a></li>
+              <li><a href="#">การยื่นบัญชีแสดงจํานวนพืชอนุรักษท่ีเปลี่ยนแปลงในรอบปปฏิทิน</a></li>
+              <li><a href="#">การยื่นบัญชีเพิ่มหรือลดชนิดพืชอนุรักษ์ หรือจํานวนพ่อแม่พันธุ์</a></li>
+            </ol>
+            </div>
+          <hr>
 
       <footer>
         <p>© TREX Corp. 2013</p>

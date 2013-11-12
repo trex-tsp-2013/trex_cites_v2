@@ -105,32 +105,33 @@
           <div class="row-fluid">
             <div class="well span4">
               <h4>การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</h4><br>
-              <p><a class="btn btn-success" href="<? echo site_url("officers/lists/11") ?>">Verification »</a></p>
+              <!-- <p><a class="btn btn-success" href="<? echo site_url("officers/lists/11") ?>">Verification »</a></p> -->
+              <p><a class="btn btn-success" href="<? echo site_url("pages/trans1") ?>">Verification »</a></p>
             </div><!--/span-->
             <div class="well span4">
               <h4>การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</h4><br>
-              <p><a class="btn btn-success" href="#">Verification »</a></p>
+              <p><a class="btn btn-success" href="<? echo site_url("pages/trans2") ?>">Verification »</a></p>
             </div><!--/span-->
             <div class="well span4">
               <h4>การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</h4><br>
-              <p><a class="btn btn-success" href="#">Verification »</a></p>
+              <p><a class="btn btn-success" href="<? echo site_url("pages/trans3") ?>">Verification »</a></p>
             </div><!--/span-->
           </div><!--/row-->
           <div class="row-fluid">
             <div class="well span4">
               <h4>การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</h4><br>
-              <p><a class="btn btn-success" href="#">Verification »</a></p>
+              <p><a class="btn btn-success" href="<? echo site_url("pages/trans4") ?>">Verification »</a></p>
             </div><!--/span-->
             <div class="well span4">
               <h4>การขออนุญาตนำผ่านพืชอนุรักษ์</h4>
               <br><br>
-              <p><a class="btn btn-success" href="#">Verification »</a></p>
+              <p><a class="btn btn-success" href="<? echo site_url("pages/trans5") ?>">Verification »</a></p>
             </div><!--/span-->
             <div class="well span4">
               <h4>การออกหนังสือรับรองการส่งออกพืชลูกผสม</h4>
               <br><br>
-              <p><a class="btn btn-success" href="#">Verification »</a></p>
+              <p><a class="btn btn-success" href="<? echo site_url("pages/trans6") ?>">Verification »</a></p>
             </div><!--/span-->
           </div><!--/row-->
         </div><!--/span-->

@@ -20,6 +20,15 @@ class Trans_C extends CI_Controller{
 			// $data['request'] = $request; 
 			//open form15
 			$this->load->view('pages/trans/trans1',$data);
+		} else if($this->ion_auth->is_officer()) {
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//save request to be data
+			// $data['request'] = $request; 
+			//open form15
+			$this->load->view('pages/transofficer/trans1',$data);
+
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
@@ -37,6 +46,15 @@ class Trans_C extends CI_Controller{
 			// $data['request'] = $request; 
 			//open form15
 			$this->load->view('pages/trans/trans2',$data);
+		} else if($this->ion_auth->is_officer()) {
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//save request to be data
+			// $data['request'] = $request; 
+			//open form15
+			$this->load->view('pages/transofficer/trans2',$data);
+
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
@@ -54,6 +72,15 @@ class Trans_C extends CI_Controller{
 			// $data['request'] = $request; 
 			//open form15
 			$this->load->view('pages/trans/trans3',$data);
+		} else if($this->ion_auth->is_officer()) {
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//save request to be data
+			// $data['request'] = $request; 
+			//open form15
+			$this->load->view('pages/transofficer/trans3',$data);
+
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
@@ -71,6 +98,15 @@ class Trans_C extends CI_Controller{
 			// $data['request'] = $request; 
 			//open form15
 			$this->load->view('pages/trans/trans4',$data);
+		} else if($this->ion_auth->is_officer()) {
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//save request to be data
+			// $data['request'] = $request; 
+			//open form15
+			$this->load->view('pages/transofficer/trans4',$data);
+
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
@@ -88,6 +124,15 @@ class Trans_C extends CI_Controller{
 			// $data['request'] = $request; 
 			//open form15
 			$this->load->view('pages/trans/trans5',$data);
+		} else if($this->ion_auth->is_officer()) {
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//save request to be data
+			// $data['request'] = $request; 
+			//open form15
+			$this->load->view('pages/transofficer/trans5',$data);
+
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
@@ -105,6 +150,15 @@ class Trans_C extends CI_Controller{
 			// $data['request'] = $request; 
 			//open form15
 			$this->load->view('pages/trans/trans6',$data);
+		} else if($this->ion_auth->is_officer()) {
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//save request to be data
+			// $data['request'] = $request; 
+			//open form15
+			$this->load->view('pages/transofficer/trans6',$data);
+
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
