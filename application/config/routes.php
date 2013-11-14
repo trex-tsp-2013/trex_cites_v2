@@ -68,6 +68,14 @@ $route['pages/trans4']='trans_c/trans4';
 $route['pages/trans5']='trans_c/trans5';
 $route['pages/trans6']='trans_c/trans6';
 
+$route['pages/stats_home']='stats_c/home';
+$route['pages/stats1']='stats_c/stats1';
+$route['pages/stats2']='stats_c/stats2';
+$route['pages/stats3']='stats_c/stats3';
+$route['pages/stats4']='stats_c/stats4';
+$route['pages/stats5']='stats_c/stats5';
+$route['pages/stats6']='stats_c/stats6';
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

@@ -41,6 +41,7 @@
   </head>
 
   <body>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -49,16 +50,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="<? echo base_url()?>">TREX Corp.</a>
+          <a class="brand" href="<? echo base_url() ?>">TREX Corp.</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link"><?echo $username;?></a>
-              <!-- <button onclick="location.href='http://localhost/trex_cites/index.php/auth/logout'" class="btn btn-small btn-danger">Sign Out</button> -->
               <button onclick="location.href='<? echo site_url("auth/logout")?>'" class="btn btn-small btn-danger">Sign Out</button>
             </p>
 
             <ul class="nav">
-              <li><a href="<? echo base_url()?>">Home</a></li>
+              <li><a href="<? echo base_url() ?>">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -72,76 +72,44 @@
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><h2>Form & Request</h2></li>
+              <li class="nav-header"><font color="green"><h2>Form Status</h2></font></li>
               <li class="active"><a href="#">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/stats2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              <li><a href="<? echo site_url("pages/stats3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
               <br>
-              <li><a href="#">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/stats4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/stats5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li><a href="<? echo site_url("pages/stats6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
           </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header"><a href="<? echo base_url() ?>">
+              <h2>Form & Request</h2></a></li>
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header"><a href="<? echo site_url("pages/report") ?>">
+              <font color="orange"><h2>Approved REQ.</h2></a></font></li>
+            </ul>
+          </div><!--/.well -->
+          
         </div><!--/span-->
         <div class="span9">
           <div class="well">
-            <h2>ตรวจสอบคำขอขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์(พ.พ.15)</h2><br><br>
-            <table class="table table-striped table-bordered">
-              <tr class = "warning">
-                <th>
-                  เลขที่คำขอ
-                </th>
-                <th>
-                  ผู้ยื่นคำร้อง
-                </th>
-                <th>
-                  สถานะ
-                </th>
-                <th>
-                <!-- สถานที่เพาะเลี้ยงพืชอนุรักษ์ -->
-                </th>
-              </tr>
-              <?php
-              foreach ($form15 as $form15_item) :
-              ?>
-              <tr class="info">
-                <td>
-                  <?php echo $form15_item['form15_Id'] ?>
-                </td>
-                <td>
-                  <?php echo $form15_item['fname'] ?>
-                </td>
-                <td>
-                    <?if($form15_item['status'] == 'Verified'){
-                      echo '<span style="color:green">'.$form15_item['status'].'</span>';
-                    }
-                    elseif ($form15_item['status'] == 'Denied') {
-                      echo '<span style="color:red">'.$form15_item['status'].'</span>';
-                    }
-                    else{
-                      echo '<span style="color:orange">'.$form15_item['status'].'</span>';
-                    }
-                    ?>
-                </td>
-                <td>
-
-                  <? $segment = array('form15', 'show15', $form15_item['form15_Id'], $request); ?>
-                  <a class="btn" href="<? echo site_url($segment) ?>"> ดูแบบฟอร์ม
-                  </a>
-                </td>
-              </tr>
-            <?php endforeach ?>
-            </table>
-          </div>
-          
-      </div><!--/row-->
-    </div>
-      <hr>
+            <h2>การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</h2><br><br>
+            <div style ="font-size:16px">
+            <ol>
+              <li><a href="<? echo site_url("pages/status/form15") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+            </ol>
+            </div>
+          <hr>
 
       <footer>
         <p>© TREX Corp. 2013</p>
@@ -153,7 +121,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-statsition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
     <script src="assets/js/bootstrap-dropdown.js"></script>
