@@ -95,7 +95,7 @@
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><a href="<? echo site_url("pages/report") ?>">
+              <li class="nav-header"><a href="<? echo site_url("pages/report_home") ?>">
               <font color="orange"><h2>Approved REQ.</h2></a></font></li>
             </ul>
           </div><!--/.well -->

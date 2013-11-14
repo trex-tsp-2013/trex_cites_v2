@@ -72,31 +72,31 @@
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><h2>Form & Request</h2></li>
-              <li><a href="<? echo site_url("pages/trans1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li class="nav-header"><font color="orange"><h2>Approved REQ.</h2></font></li>
+              <li><a href="<? echo site_url("pages/report1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
               <li class="active"><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              <li><a href="<? echo site_url("pages/report3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/report4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/report5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li><a href="<? echo site_url("pages/report6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header"><a href="<? echo base_url() ?>">
+              <h2>Form & Request</h2></a></li>
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><a href="<? echo site_url("pages/stats_home") ?>">
-              <h2><font color="green">Form Status</h2></a></font></li>
-            </ul>
-          </div><!--/.well -->
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header"><a href="<? echo site_url("pages/report_home") ?>">
-              <font color="orange"><h2>Approved REQ.</h2></a></font></li>
+              <font color="green"><h2>Form Status</h2></a></font></li>
             </ul>
           </div><!--/.well -->
           
@@ -125,7 +125,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-reportition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
     <script src="assets/js/bootstrap-dropdown.js"></script>

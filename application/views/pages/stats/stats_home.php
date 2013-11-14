@@ -94,7 +94,7 @@
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><a href="<? echo site_url("pages/report") ?>">
+              <li class="nav-header"><a href="<? echo site_url("pages/report_home") ?>">
               <font color="orange"><h2>Approved REQ.</h2></a></font></li>
             </ul>
           </div><!--/.well -->
@@ -103,9 +103,8 @@
 
         <div class="span9">
           <div class="hero-unit">
-            <h2>กรุณาเลือกเอกสารที่จะทำการตรวจสอบ</h2>
-            <p>Check your CITES online Approved request</p>
-            <p>ตรวจสอบสถานะของเอกสารที่ทำการร้องขอ</p>
+            <h2>หลักฐานเอกสารที่ได้รับการตรวจสอบและยืนยัน</h2>
+            <p>Approved Documents for your CITES online Approved request</p>
           </div>
         </div><!--/span-->
       </div><!--/row-->

@@ -72,45 +72,44 @@
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><h2>Form & Request</h2></li>
-              <li><a href="<? echo site_url("pages/trans1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li class="nav-header"><font color="orange"><h2>Approved REQ.</h2></font></li>
+              <li><a href="<? echo site_url("pages/report1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
-              <li class="active"><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/report2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              <li class="active"><a href="#">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/report4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/report5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li><a href="<? echo site_url("pages/report6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header"><a href="<? echo base_url() ?>">
+              <h2>Form & Request</h2></a></li>
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><a href="<? echo site_url("pages/stats_home") ?>">
-              <h2><font color="green">Form Status</h2></a></font></li>
-            </ul>
-          </div><!--/.well -->
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header"><a href="<? echo site_url("pages/report_home") ?>">
-              <font color="orange"><h2>Approved REQ.</h2></a></font></li>
+              <font color="green"><h2>Form Status</h2></a></font></li>
             </ul>
           </div><!--/.well -->
           
         </div><!--/span-->
         <div class="span9">
           <div class="well">
-            <h2>การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</h2><br><br>
+            <h2>การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              ตามวงศ์และชนิดที่ระบุในบัญชี</h2><br><br>
             <div style ="font-size:16px">
             <ol>
-              <li><a href="#">การยื่นคําขอแก้ไขรายการใบสําคัญการขึ้นทะเบียน เพิ่ม ลด สถานที่เพาะเลี้ยงพืชอนุรักษ์</a></li>
-              <li><a href="#">การขอต่ออายุใบสําคัญการข้ึนทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์</a></li>
-              <li><a href="#">การขอใบแทนใบสําคัญการขึ้นทะเบียนสถานท่ีเพาะเลี้ยงพืชอนุรักษ์</a></li>
-              <li><a href="#">การยื่นบัญชีแสดงจํานวนพืชอนุรักษท่ีเปลี่ยนแปลงในรอบปปฏิทิน</a></li>
-              <li><a href="#">การยื่นบัญชีเพิ่มหรือลดชนิดพืชอนุรักษ์ หรือจํานวนพ่อแม่พันธุ์</a></li>
+              <li><a href="#">การขออนุญาตนําเข้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์ตามวงศ์และชนิดที่ระบุในบัญชี 1 และ 2</a></li>
+              <li><a href="#">การขออนุญาตนําเข้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์ตามวงศ์และชนิดที่ระบุในบัญชี 3</a></li>
+              <li><a href="#">การขออนุญาตนําเข้าล่วงหน้าซึ่งพnช อนุรักษ์และซากของพืชอนุรักษ์ตามวงศ์และชนิดที่ระบุใน บัญชี 1 และ 2</a></li>
             </ol>
             </div>
           <hr>
@@ -125,7 +124,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-reportition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
     <script src="assets/js/bootstrap-dropdown.js"></script>

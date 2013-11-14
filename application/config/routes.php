@@ -76,6 +76,14 @@ $route['pages/stats4']='stats_c/stats4';
 $route['pages/stats5']='stats_c/stats5';
 $route['pages/stats6']='stats_c/stats6';
 
+$route['pages/report_home']='report_c/home';
+$route['pages/report1']='report_c/report1';
+$route['pages/report2']='report_c/report2';
+$route['pages/report3']='report_c/report3';
+$route['pages/report4']='report_c/report4';
+$route['pages/report5']='report_c/report5';
+$route['pages/report6']='report_c/report6';
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
