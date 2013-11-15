@@ -93,12 +93,7 @@
               <h2>Form & Request</h2></a></li>
             </ul>
           </div><!--/.well -->
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header"><a href="<? echo site_url("pages/report_home") ?>">
-              <font color="orange"><h2>Approved REQ.</h2></a></font></li>
-            </ul>
-          </div><!--/.well -->
+          
           
         </div><!--/span-->
         <div class="span9">
@@ -106,7 +101,7 @@
             <h2>การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</h2><br><br>
             <div style ="font-size:16px">
             <ol>
-              <li><a href="<? echo site_url("pages/status/form15") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/status/11") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
             </ol>
             </div>
           <hr>

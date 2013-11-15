@@ -14,5 +14,10 @@ class Form16_model extends CI_Model
 		return 'true';
 	}
 
+	public function get_form16($req_Id, $req)
+	{
+		$query = $this->db->get_where('form16', array('request' => $req, 'req_Id' => $req_Id ));
+		return $query->row_array();
+	}
 
 }

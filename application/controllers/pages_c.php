@@ -22,9 +22,15 @@ class Pages_C extends CI_Controller{
 		}
 	}
 
-	public function status($form){
-		$formdb = $form."_c";
-		redirect($formdb."/status");
+	// public function status($form){
+	// 	$formdb = $form."_c";
+	// 	redirect($formdb."/status");
+	// }
+
+	public function status($req){
+		if($req == 11){
+			redirect("form15_c/status");
+		}
 	}
 
 

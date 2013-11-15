@@ -51,7 +51,7 @@ class Form15_C extends CI_Controller{
 
 		$data['checks'] = $this->form15_model->get_stat15($id['id']);
 			
-		$this->load->view('pages/status',$data);
+		$this->load->view('pages/status/status11',$data);
 	}
 
 

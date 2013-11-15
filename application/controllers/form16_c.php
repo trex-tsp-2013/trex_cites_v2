@@ -21,7 +21,7 @@ class Form16_C extends CI_Controller{
 				//save username to be data
 			$data['username'] = $user->username;
 			$data['form15'] = $this->form15_model->get_listidform15('11', $id);
-
+			$data['form15']['req_Id'] = $data['form15']['form15_Id'];
 			unset($data['form15']['form15_Id'],
 				$data['form15']['status'],
 				$data['form15']['comment']);
@@ -43,6 +43,20 @@ class Form16_C extends CI_Controller{
 		else{
 			redirect('auth', 'refresh');
 		}
+
+	}
+
+	public function view16($req_Id, $req){
+		if(!$this->ion_auth->logged_in()){
+			redirect('auth', 'refresh');
+		}
+
+		$data['form16'] = $this->form16_model->get_form16($req_Id, $req);
+
+		$user = $this->ion_auth->user()->row();
+			//save username to be data
+		$data['username'] = $user->username;
+		$this->load->view('pages/previews/preview16', $data);
 
 	}
 

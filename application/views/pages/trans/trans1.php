@@ -93,12 +93,7 @@
               <h2><font color="green">Form Status</h2></a></font></li>
             </ul>
           </div><!--/.well -->
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header"><a href="<? echo site_url("pages/report_home") ?>">
-              <font color="orange"><h2>Approved REQ.</h2></a></font></li>
-            </ul>
-          </div><!--/.well -->
+       
           
         </div><!--/span-->
         <div class="span9">
