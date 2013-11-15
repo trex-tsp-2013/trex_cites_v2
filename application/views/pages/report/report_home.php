@@ -103,9 +103,8 @@
 
         <div class="span9">
           <div class="hero-unit">
-            <h2>กรุณาเลือกเอกสารที่จะทำการตรวจสอบ</h2>
-            <p>Check your CITES online Approved request</p>
-            <p>ตรวจสอบสถานะของเอกสารที่ทำการร้องขอ</p>
+            <h2>หลักฐานเอกสารที่ได้รับการตรวจสอบและยืนยัน</h2>
+            <p>Approved Documents for your CITES online Approved request</p>
           </div>
         </div><!--/span-->
       </div><!--/row-->
