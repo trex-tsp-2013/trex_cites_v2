@@ -25,7 +25,7 @@
         }
       }
     </style>
-     <link href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -50,11 +50,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-           <a class="brand" href="<? echo base_url() ?>">TREX Corp.</a>
+          <a class="brand" href="<? echo base_url() ?>">TREX Corp.</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link"><?echo $username;?></a>
-              <!-- <button onclick="location.href='http://localhost/trex_cites/index.php/auth/logout'" class="btn btn-small btn-danger">Sign Out</button> -->
               <button onclick="location.href='<? echo site_url("auth/logout")?>'" class="btn btn-small btn-danger">Sign Out</button>
             </p>
 
@@ -74,20 +73,20 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><h2>Form & Request</h2></li>
-              <li><a href="<? echo site_url("pages/trans1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li class="active"><a href="#">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
-              <li class="active"><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <li><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              <li><a href="#">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <li><a href="#">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <li><a href="#">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li><a href="#">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
-           </div><!--/.well -->
+          </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><h2>Form Status</h2></li>
@@ -97,8 +96,10 @@
         </div><!--/span-->
         <div class="span9">
           <div class="well">
-            <h2>คำขอแก้ไขรายการใบสำคัญการขึ้นทะเบียน เพิ่ม/ลด สถานที่เพาะเลี้ยงพืชอนุรักษ์</h2><br><br>
-            <?php echo form_open("pages/preview21");?>
+            <h2>ใบคำขอต่ออายุใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลียงพืชอนุรักษ์</h2><br><br>
+
+            <?php echo form_open("pages/preview19");?>
+
             <?
               // check post if it is null value
               if(isset($_POST['fname'])) 
@@ -132,7 +133,7 @@
               if(isset($_POST['fprovince'])) 
                 $fprovince = $_POST['fprovince'];
               else 
-                $fprovince = '';
+                $ffprovince = '';
               if(isset($_POST['fzipcode'])) 
                 $fzipcode = $_POST['fzipcode'];
               else 
@@ -149,11 +150,22 @@
                 $ffax = $_POST['ffax'];
               else 
                 $ffax = '';
-              //
+              if(isset($_POST['fmail'])) 
+                $fmail = $_POST['fmail'];
+              else 
+                $fmail = '';
+              if(isset($_POST['fnumber'])) 
+                $fnumber = $_POST['fnumber'];
+              else 
+                $fnumber = '';
               if(isset($_POST['fname2'])) 
                 $fname2 = $_POST['fname2'];
               else 
                 $fname2 = '';
+              if(isset($_POST['frname'])) 
+                $frname = $_POST['frname'];
+              else 
+                $frname = '';
               if(isset($_POST['faddress2'])) 
                 $faddress2 = $_POST['faddress2'];
               else 
@@ -165,7 +177,7 @@
               if(isset($_POST['fprovince2'])) 
                 $fprovince2 = $_POST['fprovince2'];
               else 
-                $fprovince2 = '';
+                $ffprovince2 = '';
               if(isset($_POST['fzipcode2'])) 
                 $fzipcode2 = $_POST['fzipcode2'];
               else 
@@ -182,12 +194,6 @@
                 $ffax2 = $_POST['ffax2'];
               else 
                 $ffax2 = '';
-              //
-              if(isset($_POST['fregisNum'])) 
-                $fregisNum = $_POST['fregisNum'];
-              else 
-                $fregisNum = '';
-              //
               if(isset($_POST['fname3'])) 
                 $fname3 = $_POST['fname3'];
               else 
@@ -203,7 +209,7 @@
               if(isset($_POST['fprovince3'])) 
                 $fprovince3 = $_POST['fprovince3'];
               else 
-                $fprovince3 = '';
+                $ffprovince3 = '';
               if(isset($_POST['fzipcode3'])) 
                 $fzipcode3 = $_POST['fzipcode3'];
               else 
@@ -220,47 +226,9 @@
                 $ffax3 = $_POST['ffax3'];
               else 
                 $ffax3 = '';
-              //
-              if(isset($_POST['plantname'])) 
-                $plantname = $_POST['plantname'];
-              else 
-                $plantname = '';
-              if(isset($_POST['sname'])) 
-                $sname = $_POST['sname'];
-              else 
-                $sname = '';
-              if(isset($_POST['numberbreed'])) 
-                $numberbreed = $_POST['numberbreed'];
-              else 
-                $numberbreed = '';
-              if(isset($_POST['numbercom'])) 
-                $numbercom = $_POST['numbercom'];
-              else 
-                $numbercom = '';
-              if(isset($_POST['source'])) 
-                $source = $_POST['source'];
-              else 
-                $source = '';
-              if(isset($_POST['ab'])) 
-                $ab = $_POST['ab'];
-              else 
-                $ab = '';
-              //
-              if(isset($_POST['fimnum'])) 
-                $fimnum = $_POST['fimnum'];
-              else 
-                $fimnum = '';
-              if(isset($_POST['fformdate'])) 
-                $fformdate = $_POST['fformdate'];
-              else 
-                $fformdate = '';
-              if(isset($_POST['fformenddate'])) 
-                $fformenddate = $_POST['fformenddate'];
-              else 
-                $fformenddate = '';
-
             ?>
 
+            
             <b>ข้าพเจ้า: </b><input class="input-xlarge" type="text" name="fname" value="<?echo $fname;?>"><br>
             <b>อายุ: </b><input type="text" name="fage" value="<?echo $fage;?>"><br>
             <b>สัญชาติ: </b><input type="text" name="fnation" value="<?echo $fnation;?>"><br>
@@ -273,8 +241,12 @@
             <b>โทรศัพท์: </b><input type="text" name="ftel" value="<?echo $ftel;?>"><br>
             <b>โทรศัพท์เคลื่อนที่: </b><input type="text" name="fphone" value="<?echo $fphone;?>"><br>
             <b>โทรสาร: </b><input type="text" name="ffax" value="<?echo $ffax;?>"><br>
+            <b>อีเลคทรอนิคเมล์ Email: </b><input class="input-xlarge" type="text" name="fmail" value="<?echo $fmail;?>">
             <br><br>
+            <br>
+            <b>ขอต่ออายุใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ ทะเบียนเลขที่: </b><input type="text" name="fnumber" value="<?echo $fnumber;?>"><br>
             <b>ในนามของ: </b><input type="text" name="fname2" value="<?echo $fname2;?>"><br>
+            <b>โดยมี: </b><input type="text" name="frname" value="<?echo $frname;?>"> เป็นผู้ดำเนินกิจการ<br>
             <b>ที่อยู่: </b><input class="input-xxlarge" type="text" name="faddress2" value="<?echo $faddress2;?>"><br>
             <b>ถนน: </b><input type="text" name="fstreet2" value="<?echo $fstreet2;?>"><br>
             <b>จังหวัด: </b><input type="text" name="fprovince2" value="<?echo $fprovince2;?>"><br>
@@ -282,38 +254,22 @@
             <b>โทรศัพท์: </b><input type="text" name="ftel2" value="<?echo $ftel2;?>"><br>
             <b>โทรศัพท์เคลื่อนที่: </b><input type="text" name="fphone2" value="<?echo $fphone2;?>">
             <b>โทรสาร: </b><input type="text" name="ffax2" value="<?echo $ffax2;?>"><br>
-            <b>ใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่</b><input type="text" name="fregisNum"><br>
-            <br>
-            <br>
-            <input type="checkbox" name="ffix" value="fix">ขอแก้ไขรายการใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ดังกล่าวดังนี้<br>
-            <input type="text" name="ffixtext"><br>
-            <br><br>
-            <input type="checkbox" name="fincordec" value="incordec">เพิ่ม/ลด สถานที่เพาะเลี้ยงพืชอนุรักษ์ ดังนี้<br>
-            <br>
             <br>
             <b>สถานที่เพาะเลี้ยงอนุรักษ์ ชื่อ: </b><input class="input-xlarge" type="text" name="fname3" value="<?echo $fname3;?>"><br>
             <b>ที่อยู่: </b><input class="input-xxlarge" type="text" Name="faddress3" value="<?echo $faddress3;?>"><br>
             <b>ถนน: </b><input type="text" name="fstreet3" value="<?echo $fstreet3;?>"><br>
             <b>จังหวัด: </b><input type="text" name="fprovince3" value="<?echo $fprovince3;?>"><br>
             <b>รหัสไปรษณีย์: </b><input type="text" name="fzipcode3" value="<?echo $fzipcode3;?>"><br>
+            <br>
             <b>โทรศัพท์: </b><input type="text" name="ftel3" value="<?echo $ftel3;?>"><br>
             <b>โทรศัพท์เคลื่อนที่: </b><input type="text" name="fphone3" value="<?echo $fphone3;?>"><br>
             <b>โทรสาร: </b><input type="text" name="ffax3" value="<?echo $ffax3;?>"><br>
             <br>
             <br>
-            <b>ชื่อพืช: </b><input class="input-xlarge" type="text" name="plantname" value="<?echo $plantname;?>"><br>
-            <b>ชื่อวิทยาศาสตร์: </b><input class="input-xlarge" type="text" name="sname" value="<?echo $sname;?>"><br>
-            <b>จำนวน พ่อ-แม่ พันธุ์: </b><input type="text" name="numberbreed" value="<?echo $numberbreed;?>"><br>
-            <b>จำนวนเพื่อการค้า: </b><input type="text" name="numbercom" value="<?echo $numbercom;?>"><br>
-            <b>แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): </b><input type="text" name="source" value="<?echo $source;?>"><br>
-            <b>วิธีการขยายพันธุ์เทียม: </b><input type="text" name="ab" value="<?echo $ab;?>">
             <br>
             <br>
-            <br>
-            <b>ใบสำคัญเลขที่</b><input type="text" name="fimnum" value="<?echo $fimnum;?>"><br>
-            <br>
-            <b>ออกให้เมื่อวันที่</b><input type="date" name="fformdate" value="<?echo $fformdate;?>"><br>
-            <b>สิ้นอายุเมื่อวันที่</b><input type="date" name="fformenddate" value="<?echo $fformenddate;?>"><br>
+            <b>หมายเหตุ : ผู้ยื่นคำขอต่ออายุใบสำคัญฯ จะต้องแนบบัญชีพืชอนุรักษ์เป็นหลักฐานประกอบด้วย<br>
+            <b></b>ยกเว้นว่าท่านได้ยื่นแบบ พ.พ.17ครั้งสุดท้าย ไปก่อนหน้านี้ไม่้กิน3เดือน<br>
             <br>
             <br>
             <table>
@@ -329,7 +285,6 @@
               </td>
             </tr>
             <table>
-          </div>
           
       </div><!--/row-->
     </div>

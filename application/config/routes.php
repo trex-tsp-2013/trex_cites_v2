@@ -55,11 +55,14 @@ $route['officers'] = 'officers_c';
 $route['officers/lists/(:any)'] = 'officers_c/lists/$1'; // from officer_c
 $route['form15/list15/(:any)'] = 'form15_c/list15/$1';   // from officer_c to form15_c 
 $route['form15/show15/(:any)'] = 'form15_c/show15/$1';
-$route['pages/status/(:any)'] = 'pages_c/status/$1'; 
+$route['pages/status/(:any)'] = 'pages_c/status/$1';
 $route['form15/update11']='form16_c/update_stat11';
 $route['form16/submitForm16/'] = 'form16_c/submitForm16/';
 
 // $route['pages/forms/form16']='form16_c/';
+$route['pages/form21/(:any)'] ='form21_c/form21/$1';
+$route['pages/preview21'] ='form21_c/preview21';
+
 
 $route['pages/trans1']='trans_c/trans1';
 $route['pages/trans2']='trans_c/trans2';
@@ -75,14 +78,6 @@ $route['pages/stats3']='stats_c/stats3';
 $route['pages/stats4']='stats_c/stats4';
 $route['pages/stats5']='stats_c/stats5';
 $route['pages/stats6']='stats_c/stats6';
-
-$route['pages/report_home']='report_c/home';
-$route['pages/report1']='report_c/report1';
-$route['pages/report2']='report_c/report2';
-$route['pages/report3']='report_c/report3';
-$route['pages/report4']='report_c/report4';
-$route['pages/report5']='report_c/report5';
-$route['pages/report6']='report_c/report6';
 
 //user view the return form form officer
 $route['form16/view/(:any)'] = 'form16_c/view16/$1/$2';

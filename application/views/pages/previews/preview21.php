@@ -25,7 +25,7 @@
         }
       }
     </style>
-    <link href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
+     <link href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -50,10 +50,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="<? echo base_url() ?>">TREX Corp.</a>
+           <a class="brand" href="<? echo base_url() ?>">TREX Corp.</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link"><?echo $username;?></a>
+              <!-- <button onclick="location.href='http://localhost/trex_cites/index.php/auth/logout'" class="btn btn-small btn-danger">Sign Out</button> -->
               <button onclick="location.href='<? echo site_url("auth/logout")?>'" class="btn btn-small btn-danger">Sign Out</button>
             </p>
 
@@ -73,9 +74,9 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><h2>Form & Request</h2></li>
-              <li class="active"><a href="#">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <li class="active"><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
               <li><a href="<? echo site_url("pages/trans3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
@@ -86,26 +87,25 @@
               <br>
               <li><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
-          </div><!--/.well -->
+           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><a href="<? echo site_url("pages/status/form15") ?>">
-              <h2><font color="green">Form Status</h2></a></font></li>
+              <li class="nav-header"><h2>Form Status</h2></li>
+              <li><a href="<? echo site_url("pages/status") ?>">คำขอล่าสุด</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <div class="well">
-            <h2>คำขอขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์</h2><br>
-            
-            <?php echo form_open("pages/save15");?>
-
+            <h2>คำขอแก้ไขรายการใบสำคัญการขึ้นทะเบียน เพิ่ม/ลด สถานที่เพาะเลี้ยงพืชอนุรักษ์</h2><br><br>
+            <?php echo form_open("pages/save21");?>
             <div style="color:red"><h1>โปรดตรวจสอบความถูกต้องอีกครั้ง</h1></div>
+
             <? $fname = $_POST['fname']; ?>
             <b>ข้าพเจ้า: </b><span style="color:red"><?echo $_POST["fname"];?></span><br>
 
-            <? $fbd = $_POST['fbd']; ?>
-            <b>วันเดือนปีเกิด: </b><span style="color:red"><?echo $_POST["fbd"];?></span><br>
+            <? $fage= $_POST['fage']; ?>
+            <b>อายุ: </b><span style="color:red"><?echo $_POST["fage"];?></span><br>
 
             <? $fnation = $_POST['fnation']; ?>
             <b>สัญชาติ: </b><span style="color:red"><?echo $_POST["fnation"];?></span><br>
@@ -137,20 +137,11 @@
 
             <? $ffax = $_POST['ffax']; ?>
             <b>โทรสาร: </b><span style="color:red"><?echo $_POST["ffax"];?></span><br>
-
-            <? $fmail = $_POST['fmail']; ?>
-            <b>อีเลคทรอนิคเมล์ Email: </b><span style="color:red"><?echo $_POST["fmail"];?></span><br>
-
-            <br><br>
-            <b>มีความประสงค์จะขอขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์</b>
             <br>
-            <br>
+
             <? $fname2 = $_POST['fname2']; ?>
-            <b>ในนามของ(กรณีเป็นนิติบุคคล): </b><span style="color:red"><?echo $_POST["fname2"];?></span><br>
-
-            <? $fowner = $_POST['fowner']; ?>
-            <b>โดยมี: </b><span style="color:red"><?echo $_POST["fowner"];?></span><br>
-
+            <b>ในนามของ: </b><span style="color:red"><?echo $_POST["fname2"];?></span><br>
+            
             <? $faddress2 = $_POST['faddress2']; ?>
             <b>ที่อยู่: </b><span style="color:red"><?echo $_POST["faddress2"];?></span><br>
 
@@ -172,12 +163,18 @@
             <? $ffax2 = $_POST['ffax2']; ?>
             <b>โทรสาร: </b><span style="color:red"><?echo $_POST["ffax2"];?></span><br>
 
+            <? $fregisNum = $_POST['fregisNum']; ?>
+            <b>ใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที: </b><span style="color:red"><?echo $_POST["fregisNum"];?></span><br>
             <br>
-            
-            <? $flocation = $_POST['flocation']; ?>
-            <b>สถานที่เพาะเลี้ยงอนุรักษ์ ชื่อ: </b><span style="color:red"><?echo $_POST["flocation"];?></span><br>
-
             <br>
+            <input type="checkbox" name="ffix" value="fix">ขอแก้ไขรายการใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ดังกล่าวดังนี้<br>
+            <input type="text" name="ffixtext"><br>
+            <br><br>
+            <input type="checkbox" name="fincordec" value="incordec">เพิ่ม/ลด สถานที่เพาะเลี้ยงพืชอนุรักษ์ ดังนี้<br>
+            <br>
+            <br>
+            <? $fname3 = $_POST['fname3']; ?>
+            <b>สถานที่เพาะเลี้ยงอนุรักษ์ ชื่อ: </b><span style="color:red"><?echo $_POST["fname3"];?></span><br>
 
             <? $faddress3 = $_POST['faddress3']; ?>
             <b>ที่อยู่: </b><span style="color:red"><?echo $_POST["faddress3"];?></span><br>
@@ -221,21 +218,21 @@
 
             <? $ab = $_POST['ab']; ?>
             <b>วิธีการขยายพันธุ์เทียม: </b><span style="color:red"><?echo $_POST["ab"];?></span><br>
+            <br>
+            <br>
+            <? $fimnum = $_POST['fimnum']; ?>
+            <b>ใบสำคัญเลขที่: </b><span style="color:red"><?echo $_POST["fimnum"];?></span><br>
 
-          
+            <? $fformdate= $_POST['fformdate']; ?>
+            <b>ออกให้เมื่อวันที่: </b><span style="color:red"><?echo $_POST["fformdate"];?></span><br>
 
+            <? $fformenddate = $_POST['fformenddate']; ?>
+            <b>สิ้นอายุในวันที่: </b><span style="color:red"><?echo $_POST["fformenddate"];?></span><br>
             <br>
             <br>
-            <br>
-            <b>รูปภาพสถานประกอบการ: </b> <input type="file" name="file" id="file"><br>
-            <b>รูปภาพพันธุ์พืชอนุรักษ์: </b> <input type="file" name="file2" id="file">
-            <br>
-            <br>
-            <br>
-
 
             <input type="hidden" name="fname" value="<?echo $fname;?>">
-            <input type="hidden" name="fbd" value="<?echo $fbd;?>">
+            <input type="hidden" name="fage" value="<?echo $fage;?>">
             <input type="hidden" name="fnation" value="<?echo $fnation;?>">
             <input type="hidden" name="fpassport" value="<?echo $fpassport;?>">
             <input type="hidden" name="fissue" value="<?echo $fissue;?>">
@@ -246,10 +243,8 @@
             <input type="hidden" name="ftel" value="<?echo $ftel;?>">
             <input type="hidden" name="fphone" value="<?echo $fphone;?>">
             <input type="hidden" name="ffax" value="<?echo $ffax;?>">
-            <input type="hidden" name="fmail" value="<?echo $fmail;?>">
 
             <input type="hidden" name="fname2" value="<?echo $fname2;?>">
-            <input type="hidden" name="fowner" value="<?echo $fowner;?>">
             <input type="hidden" name="faddress2" value="<?echo $faddress2;?>">
             <input type="hidden" name="fstreet2" value="<?echo $fstreet2;?>">
             <input type="hidden" name="fprovince2" value="<?echo $fprovince2;?>">
@@ -257,10 +252,11 @@
             <input type="hidden" name="ftel2" value="<?echo $ftel2;?>">
             <input type="hidden" name="fphone2" value="<?echo $fphone2;?>">
             <input type="hidden" name="ffax2" value="<?echo $ffax2;?>">
+            <input type="hidden" name="fregisNum" value="<?echo $fregisNum;?>">
 
 
 
-            <input type="hidden" name="flocation" value="<?echo $flocation;?>">
+            <input type="hidden" name="fname3" value="<?echo $fname3;?>">
             <input type="hidden" name="faddress3" value="<?echo $faddress3;?>">
             <input type="hidden" name="fstreet3" value="<?echo $fstreet3;?>">
             <input type="hidden" name="fprovince3" value="<?echo $fprovince3;?>">
@@ -275,6 +271,10 @@
             <input type="hidden" name="numbercom" value="<?echo $numbercom;?>">
             <input type="hidden" name="source" value="<?echo $source;?>">
             <input type="hidden" name="ab" value="<?echo $ab;?>">
+
+            <input type="hidden" name="fimnum" value="<?echo $fimnum;?>">
+            <input type="hidden" name="fformdate" value="<?echo $fformdate;?>">
+            <input type="hidden" name="fformenddate" value="<?echo $fformenddate;?>">
             
             <table>
             <tr>
@@ -284,9 +284,9 @@
             </td>
 
             <td>
-            <?php echo form_open('pages/form15/11'); ?>
+            <?php echo form_open('pages/form21/21'); ?>
             <input type="hidden" name="fname" value="<?echo $fname;?>">
-            <input type="hidden" name="fbd" value="<?echo $fbd;?>">
+            <input type="hidden" name="fage" value="<?echo $fage;?>">
             <input type="hidden" name="fnation" value="<?echo $fnation;?>">
             <input type="hidden" name="fpassport" value="<?echo $fpassport;?>">
             <input type="hidden" name="fissue" value="<?echo $fissue;?>">
@@ -297,10 +297,8 @@
             <input type="hidden" name="ftel" value="<?echo $ftel;?>">
             <input type="hidden" name="fphone" value="<?echo $fphone;?>">
             <input type="hidden" name="ffax" value="<?echo $ffax;?>">
-            <input type="hidden" name="fmail" value="<?echo $fmail;?>">
 
             <input type="hidden" name="fname2" value="<?echo $fname2;?>">
-            <input type="hidden" name="fowner" value="<?echo $fowner;?>">
             <input type="hidden" name="faddress2" value="<?echo $faddress2;?>">
             <input type="hidden" name="fstreet2" value="<?echo $fstreet2;?>">
             <input type="hidden" name="fprovince2" value="<?echo $fprovince2;?>">
@@ -308,10 +306,11 @@
             <input type="hidden" name="ftel2" value="<?echo $ftel2;?>">
             <input type="hidden" name="fphone2" value="<?echo $fphone2;?>">
             <input type="hidden" name="ffax2" value="<?echo $ffax2;?>">
+            <input type="hidden" name="fregisNum" value="<?echo $fregisNum;?>">
 
 
 
-            <input type="hidden" name="flocation" value="<?echo $flocation;?>">
+            <input type="hidden" name="fname3" value="<?echo $fname3;?>">
             <input type="hidden" name="faddress3" value="<?echo $faddress3;?>">
             <input type="hidden" name="fstreet3" value="<?echo $fstreet3;?>">
             <input type="hidden" name="fprovince3" value="<?echo $fprovince3;?>">
@@ -326,6 +325,10 @@
             <input type="hidden" name="numbercom" value="<?echo $numbercom;?>">
             <input type="hidden" name="source" value="<?echo $source;?>">
             <input type="hidden" name="ab" value="<?echo $ab;?>">
+
+            <input type="hidden" name="fimnum" value="<?echo $fimnum;?>">
+            <input type="hidden" name="fformdate" value="<?echo $fformdate;?>">
+            <input type="hidden" name="fformenddate" value="<?echo $fformenddate;?>">
 
             <br><button type="submit" class="btn btn-large">Go Back</button>
             <?php echo form_close(); ?>
@@ -364,3 +367,7 @@
   
 
 </body></html>
+
+
+
+
