@@ -30,6 +30,8 @@ class Pages_C extends CI_Controller{
 	public function status($req){
 		if($req == 11){
 			redirect("form15_c/status");
+		} else if($req == 21){
+			redirect("form21_c/status");
 		}
 	}
 

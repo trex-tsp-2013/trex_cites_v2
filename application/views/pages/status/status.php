@@ -72,18 +72,18 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><font color="green"><h2>Form Status</h2></font></li>
-              <li class="active"><a href="<? echo site_url("pages/stats1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li class='<?=($activer == 1) ? "active" : "nonactive" ;?>'><a href="<? echo site_url("pages/stats1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/stats2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <li class='<?=($activer == 2) ? "active" : "nonactive" ;?>'><a href="<? echo site_url("pages/stats2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/stats3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              <li class='<?=($activer == 3) ? "active" : "nonactive" ;?>'><a href="<? echo site_url("pages/stats3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/stats4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <li class='<?=($activer == 4) ? "active" : "nonactive" ;?>'><a href="<? echo site_url("pages/stats4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/stats5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <li class='<?=($activer == 5) ? "active" : "nonactive" ;?>'><a href="<? echo site_url("pages/stats5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/stats6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li class='<?=($activer == 6) ? "active" : "nonactive" ;?>'><a href="<? echo site_url("pages/stats6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
@@ -113,7 +113,9 @@
             ?>
                   <tr class="warning">
                   <td width="10%">
-                  <?echo $check['form15_Id'];?>
+                  <?
+                    echo $check[$formNameId];
+                  ?>
                   </td>
                   <td>
                   <?echo $check['fname'];?>
@@ -136,10 +138,14 @@
                       </span>
                     </td>
                     <td>
-                      <? if($check['status'] == 'Verified'){ ?>
-                      <? $segments = array('form16', 'view', $check['form15_Id'], '11' ); ?>
-                      <a class="btn" style="width:70px" href="<? echo site_url($segments) ?>">พ.พ. 16</a>
-                      <? } ?>
+                      <? 
+                        if($check['request'] == 11){
+                          if($check['status'] == 'Verified'){ 
+                            $segments = array('form16', 'view', $check['form15_Id'], '11' );
+                            echo '<a class="btn" style="width:70px" href="<? echo site_url($segments) ?>">พ.พ. 16</a>';
+                          } 
+                        }
+                      ?>
                     </td>
 
                     </tr>

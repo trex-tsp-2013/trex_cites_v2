@@ -104,8 +104,8 @@
             <? $fname = $_POST['fname']; ?>
             <b>ข้าพเจ้า: </b><span style="color:red"><?echo $_POST["fname"];?></span><br>
 
-            <? $fage= $_POST['fage']; ?>
-            <b>อายุ: </b><span style="color:red"><?echo $_POST["fage"];?></span><br>
+            <? $fbd= $_POST['fbd']; ?>
+            <b>อายุ: </b><span style="color:red"><?echo $_POST["fbd"];?></span><br>
 
             <? $fnation = $_POST['fnation']; ?>
             <b>สัญชาติ: </b><span style="color:red"><?echo $_POST["fnation"];?></span><br>
@@ -232,7 +232,7 @@
             <br>
 
             <input type="hidden" name="fname" value="<?echo $fname;?>">
-            <input type="hidden" name="fage" value="<?echo $fage;?>">
+            <input type="hidden" name="fbd" value="<?echo $fbd;?>">
             <input type="hidden" name="fnation" value="<?echo $fnation;?>">
             <input type="hidden" name="fpassport" value="<?echo $fpassport;?>">
             <input type="hidden" name="fissue" value="<?echo $fissue;?>">
@@ -286,7 +286,7 @@
             <td>
             <?php echo form_open('pages/form21/21'); ?>
             <input type="hidden" name="fname" value="<?echo $fname;?>">
-            <input type="hidden" name="fage" value="<?echo $fage;?>">
+            <input type="hidden" name="fbd" value="<?echo $fbd;?>">
             <input type="hidden" name="fnation" value="<?echo $fnation;?>">
             <input type="hidden" name="fpassport" value="<?echo $fpassport;?>">
             <input type="hidden" name="fissue" value="<?echo $fissue;?>">

@@ -50,6 +50,7 @@ $route['auth/logout'] = 'auth/logout';
 $route['pages/form15/(:any)'] ='form15_c/form15/$1';
 $route['pages/preview15'] ='form15_c/preview15';
 $route['pages/save15'] = 'form15_c/save15';
+$route['pages/save21'] = 'form21_c/save21';
 $route['pages/about'] = 'pages_c/about';
 $route['officers'] = 'officers_c';
 $route['officers/lists/(:any)'] = 'officers_c/lists/$1'; // from officer_c

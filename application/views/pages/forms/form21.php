@@ -105,10 +105,10 @@
                 $fname = $_POST['fname'];
               else 
                 $fname = '';
-              if(isset($_POST['fage'])) 
-                $fage = $_POST['fage'];
+              if(isset($_POST['fbd'])) 
+                $fbd = $_POST['fbd'];
               else 
-                $fage = '';
+                $fbd = '';
               if(isset($_POST['fnation'])) 
                 $fnation = $_POST['fnation'];
               else 
@@ -262,7 +262,7 @@
             ?>
 
             <b>ข้าพเจ้า: </b><input class="input-xlarge" type="text" name="fname" value="<?echo $fname;?>"><br>
-            <b>อายุ: </b><input type="text" name="fage" value="<?echo $fage;?>"><br>
+            <b>วันเดือนปีเกิด: </b><input type="text" name="fbd" placeholder="dd/mm/yyyy" value="<?echo $fbd;?>"><br>
             <b>สัญชาติ: </b><input type="text" name="fnation" value="<?echo $fnation;?>"><br>
             <b>บัตรประจำตัวประชาชน / ใบสำคัญประจำตัวคนต่างด้าว เลขที่: </b><input class="input-xlarge" type="text" name="fpassport" value="<?echo $fpassport;?>"><br>
             <b>ออกให้ ณ: </b><input type="text" name="fissue" value="<?echo $fissue;?>"><br>
@@ -314,6 +314,7 @@
             <br>
             <b>ออกให้เมื่อวันที่</b><input type="date" name="fformdate" value="<?echo $fformdate;?>"><br>
             <b>สิ้นอายุเมื่อวันที่</b><input type="date" name="fformenddate" value="<?echo $fformenddate;?>"><br>
+            <input type="hidden" name="request" value="$request">
             <br>
             <br>
             <table>

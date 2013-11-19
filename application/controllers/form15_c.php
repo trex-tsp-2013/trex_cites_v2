@@ -50,8 +50,10 @@ class Form15_C extends CI_Controller{
 		$id['id'] = $user->id;
 
 		$data['checks'] = $this->form15_model->get_stat15($id['id']);
+		$data['formNameId'] = 'form15_Id';
+		$data['activer'] = 1;
 			
-		$this->load->view('pages/status/status11',$data);
+		$this->load->view('pages/status/status',$data);
 	}
 
 
