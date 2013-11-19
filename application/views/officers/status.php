@@ -56,10 +56,9 @@
               Logged in as <a href="#" class="navbar-link"><?echo $username;?></a>
               <button onclick="location.href='<? echo site_url("auth/logout")?>'" class="btn btn-small btn-danger">Sign Out</button>
             </p>
-
             <ul class="nav">
               <li><a href="<? echo base_url() ?>">Home</a></li>
-              <li><a href="#about">About</a></li>
+              <li><a href="pages/about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -72,42 +71,86 @@
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><font color="green"><h2>Form Status</h2></font></li>
-              <li class="active"><a href="#">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li class="nav-header"><font ><h2>FORM & REQUEST</h2></font></li>
+              <li class='<?=($activer == 1) ? "active" : "nonactive" ;?>'><a href="<? echo site_url("pages/trans1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/stats2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <li class='<?=($activer == 2) ? "active" : "nonactive" ;?>'><a href="<? echo site_url("pages/trans2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/stats3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              <li class='<?=($activer == 3) ? "active" : "nonactive" ;?>'><a href="<? echo site_url("pages/trans3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/stats4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <li class='<?=($activer == 4) ? "active" : "nonactive" ;?>'><a href="<? echo site_url("pages/trans4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/stats5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <li class='<?=($activer == 5) ? "active" : "nonactive" ;?>'><a href="<? echo site_url("pages/trans5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/stats6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li class='<?=($activer == 6) ? "active" : "nonactive" ;?>'><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
           </div><!--/.well -->
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header"><a href="<? echo base_url() ?>">
-              <h2>Form & Request</h2></a></li>
-            </ul>
-          </div><!--/.well -->
-          
+       
+         
           
         </div><!--/span-->
         <div class="span9">
           <div class="well">
-            <h2>การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</h2><br><br>
-            <div style ="font-size:16px">
-            <ol>
-              <li><a href="<? echo site_url("pages/status/11") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
-            </ol>
-            </div>
+            <h2>คำขอล่าสุด</h2>
+            <br>
+            <table class="table table-striped table-bordered">
+              <tr class = "warning">
+                <th>
+                  เลขที่คำขอ
+                </th>
+                <th>
+                  ผู้ยื่นคำร้อง
+                </th>
+                <th>
+                  สถานะ
+                </th>
+                <th>
+                <!-- สถานที่เพาะเลี้ยงพืชอนุรักษ์ -->
+                </th>
+              </tr>
+              <?php
+              foreach ($checks as $check) :
+              ?>
+              <tr class="info">
+                <td>
+                  <?php echo $check[$formNameId] ?>
+                </td>
+                <td>
+                  <?php echo $check['fname'] ?>
+                </td>
+                <td>
+                    <?if($check['status'] == 'Verified'){
+                      echo '<span style="color:green">'.$check['status'].'</span>';
+                    }
+                    elseif ($check['status'] == 'Denied') {
+                      echo '<span style="color:red">'.$check['status'].'</span>';
+                    }
+                    else{
+                      echo '<span style="color:orange">'.$check['status'].'</span>';
+                    }
+                    ?>
+                </td>
+                <td>
+                  <?
+                    if($check['request'] == 11){
+                      $segment = array('form15', 'show15', $check['form15_Id']);
+                      echo '<a class="btn" href="'.site_url($segment).'"> ดูแบบฟอร์ม </a>';
+                    } elseif ($check['request'] == 21) {
+                      $segment = array('form21', 'show21', $check['form21_Id']);
+                      echo '<a class="btn" href="'.site_url($segment).'"> ดูแบบฟอร์ม </a>';
+                    }
+                  ?>
+                </td>
+              </tr>
+            <?php endforeach ?>
+            </table>
+
           </div>
-          </div>
-        </div>
-          <hr>
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
 
       <footer>
         <p>© TREX Corp. 2013</p>

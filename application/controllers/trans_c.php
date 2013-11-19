@@ -27,7 +27,7 @@ class Trans_C extends CI_Controller{
 			//save request to be data
 			// $data['request'] = $request; 
 			//open form15
-			$this->load->view('pages/transofficer/trans1',$data);
+			$this->load->view('officers/trans/trans1',$data);
 
 		} else{
 			//redirect them to the login page
@@ -53,7 +53,7 @@ class Trans_C extends CI_Controller{
 			//save request to be data
 			// $data['request'] = $request; 
 			//open form15
-			$this->load->view('pages/transofficer/trans2',$data);
+			$this->load->view('officers/trans/trans2',$data);
 
 		} else{
 			//redirect them to the login page
@@ -79,7 +79,7 @@ class Trans_C extends CI_Controller{
 			//save request to be data
 			// $data['request'] = $request; 
 			//open form15
-			$this->load->view('pages/transofficer/trans3',$data);
+			$this->load->view('officers/trans/trans3',$data);
 
 		} else{
 			//redirect them to the login page
@@ -105,7 +105,7 @@ class Trans_C extends CI_Controller{
 			//save request to be data
 			// $data['request'] = $request; 
 			//open form15
-			$this->load->view('pages/transofficer/trans4',$data);
+			$this->load->view('officers/trans/trans4',$data);
 
 		} else{
 			//redirect them to the login page
@@ -131,7 +131,7 @@ class Trans_C extends CI_Controller{
 			//save request to be data
 			// $data['request'] = $request; 
 			//open form15
-			$this->load->view('pages/transofficer/trans5',$data);
+			$this->load->view('officers/trans/trans5',$data);
 
 		} else{
 			//redirect them to the login page
@@ -157,7 +157,7 @@ class Trans_C extends CI_Controller{
 			//save request to be data
 			// $data['request'] = $request; 
 			//open form15
-			$this->load->view('pages/transofficer/trans6',$data);
+			$this->load->view('officers/trans/trans6',$data);
 
 		} else{
 			//redirect them to the login page

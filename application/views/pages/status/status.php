@@ -113,9 +113,7 @@
             ?>
                   <tr class="warning">
                   <td width="10%">
-                  <?
-                    echo $check[$formNameId];
-                  ?>
+                  <? echo $check[$formNameId]; ?>
                   </td>
                   <td>
                   <?echo $check['fname'];?>
@@ -141,11 +139,17 @@
                       <? 
                         if($check['request'] == 11){
                           if($check['status'] == 'Verified'){ 
-                            $segments = array('form16', 'view', $check['form15_Id'], '11' );
-                            echo '<a class="btn" style="width:70px" href="<? echo site_url($segments) ?>">พ.พ. 16</a>';
+                            $segments = array('form16', 'view', $check['form15_Id'], '11' ); 
+                            echo '<a class="btn" style="width:70px" href="'.site_url($segments).'">พ.พ. 16</a>';
                           } 
+                        } else if($check['request'] == 21){
+                          if($check['status'] == 'Verified'){
+                            $segments = array('form16', 'view', $check['form21_Id'], '21' ); 
+                            echo '<a class="btn" style="width:70px" href="'.site_url($segments).'">พ.พ. 16</a>';
+                          }
                         }
                       ?>
+                      
                     </td>
 
                     </tr>

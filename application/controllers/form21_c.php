@@ -56,6 +56,19 @@ class Form21_C extends CI_Controller{
 		$this->load->view('pages/status/status',$data);
 	}
 
+	public function statusoff(){
+		$user = $this->ion_auth->user()->row();
+		//save username to be data
+		$data['username'] = $user->username;
+		$id['id'] = $user->id;
+
+		$data['checks'] = $this->form21_model->get_allform21();
+		$data['formNameId'] = 'form21_Id';
+		$data['activer'] = 2;
+			
+		$this->load->view('officers/status',$data);
+	}
+
 
 	public function save21()
 	{
@@ -137,25 +150,25 @@ class Form21_C extends CI_Controller{
 	 */
 
 
-	public function list21($request)
-	{
-		if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
-		{
-			$user = $this->ion_auth->user()->row();
-			//save username to be data
-			$data['username'] = $user->username;
-			//save request to be data
-			$data['request'] = $request;
-			//load db table form21
-			$data['form21'] = $this->form21_model->get_listform21($request);
-			//open quqery form21
-			$this->load->view('officers/form21/list21',$data);
-		} else{
-			//redirect them to the login page
-		 	redirect('auth', 'refresh');
-		}
+	// public function list21($request)
+	// {
+	// 	if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
+	// 	{
+	// 		$user = $this->ion_auth->user()->row();
+	// 		//save username to be data
+	// 		$data['username'] = $user->username;
+	// 		//save request to be data
+	// 		$data['request'] = $request;
+	// 		//load db table form21
+	// 		$data['form21'] = $this->form21_model->get_listform21($request);
+	// 		//open quqery form21
+	// 		$this->load->view('officers/form21/list21',$data);
+	// 	} else{
+	// 		//redirect them to the login page
+	// 	 	redirect('auth', 'refresh');
+	// 	}
 		
-	}
+	// }
 	public function show21($formId)
 	{
 		if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
@@ -168,7 +181,7 @@ class Form21_C extends CI_Controller{
 			if (empty($data['form21'])){
 				show_404();
 			}
-			$this->load->view('officers/form21/show21', $data);
+			$this->load->view('officers/forms/form21', $data);
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');

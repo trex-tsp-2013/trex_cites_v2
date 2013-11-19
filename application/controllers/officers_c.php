@@ -30,17 +30,26 @@ class Officers_C extends CI_Controller{
 		$this->load->view('pages/about');
 	}
 
-	
-	
-	public function lists($request)
-	{
-		if($request == "11"){
-			// $segments = array('officers', 'form15', 'list15', $request);
-			redirect("form15/list15/".$request);
-		}else{
-			echo "test";
+	public function status($req){
+		if($req == 11){
+			// redirect("form15_c/statusoff");
+			redirect("officers/form15/status");
+		} else if($req == 21){
+			// redirect("form21_c/statusoff");
+			redirect("officers/form21/status");
 		}
 	}
+
+	
+	// public function lists($request)
+	// {
+	// 	if($request == "11"){
+	// 		// $segments = array('officers', 'form15', 'list15', $request);
+	// 		redirect("form15/list15/".$request);
+	// 	}else{
+	// 		echo "test";
+	// 	}
+	// }
 	
 
 	

@@ -82,20 +82,23 @@
               <br>
               <li><a href="<? echo site_url("pages/trans4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
               <br>
-              <li class="active"><a href="#">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li class="active"><a href="#">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
-          </div><!--/.well -->
+         </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <div class="well">
-            <h2>การขออนุญาตนำผ่านพืชอนุรักษ์</h2><br><br>
+            <h2>การออกหนังสือรับรองการส่งออกพืชลูกผสม</h2><br><br>
             <div style ="font-size:16px">
             <ol>
-              <li><a href="#">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <li><a href="#">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ol>
             </div>
+          </div>
+        </div>
+      </div>
           <hr>
 
       <footer>

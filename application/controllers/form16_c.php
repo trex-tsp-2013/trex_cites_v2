@@ -30,12 +30,11 @@ class Form16_C extends CI_Controller{
 			// $this->load->view('officers/form15/list15',$data);
 			if($this->form16_model->save_form16($data['form15']))
 			{
-
 				$array = array('status' => $this->input->post('stat'),
 							'comment' => $this->input->post('comment'));
 				$this->form15_model->update_stat_form15($ida,$array);
 				// $this->load->view('officers/form15/list15', $data);
-				redirect('form15/list15/11');
+				redirect('officers/status/11');
 			}else{
 				show_404();
 			}

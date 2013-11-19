@@ -25,10 +25,15 @@ class Form21_model extends CI_Model
 		return $query->result_array();
 	}
 
-	public function get_listform21($slug){
-		$query = $this->db->get_where('form21', array('request' => $slug));
+	public function get_allform21()
+	{
+		$query = $this->db->get_where('form21');
 		return $query->result_array();
 	}
+	// public function get_listform21($slug){
+	// 	$query = $this->db->get_where('form21', array('request' => $slug));
+	// 	return $query->result_array();
+	// }
 
 	public function get_listidform21($slug, $id){
 		$query = $this->db->get_where('form21', array('request' => $slug, 'form21_Id' => $id));

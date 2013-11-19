@@ -25,10 +25,16 @@ class Form15_model extends CI_Model
 		return $query->result_array();
 	}
 
-	public function get_listform15($slug){
-		$query = $this->db->get_where('form15', array('request' => $slug));
+	public function get_allform15()
+	{
+		$query = $this->db->get_where('form15');
 		return $query->result_array();
 	}
+
+	// public function get_listform15($slug){
+	// 	$query = $this->db->get_where('form15', array('request' => $slug));
+	// 	return $query->result_array();
+	// }
 
 	public function get_listidform15($slug, $id){
 		$query = $this->db->get_where('form15', array('request' => $slug, 'form15_Id' => $id));

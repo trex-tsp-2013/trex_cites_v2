@@ -380,7 +380,7 @@
           </td>
           <?}?>
             <td width="30%">
-              <a href="<? echo site_url("officers/lists/11"); ?>" class="btn btn-large " >Go Back</a>
+              <a href="<? echo site_url("officers/status/11"); ?>" class="btn btn-large " >Go Back</a>
           </td>
           </tr>
           </table>

@@ -93,7 +93,8 @@
               <h2><font color="green">Form Status</h2></a></font></li>
             </ul>
           </div><!--/.well -->
-       
+
+          
           
         </div><!--/span-->
         <div class="span9">
@@ -104,9 +105,12 @@
               <li><a href="<? echo site_url("pages/form15/11") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
             </ol>
             </div>
-          <hr>
-
-      <footer>
+          </div>
+        </div>
+      </div>
+          
+      <hr>
+       <footer>
         <p>© TREX Corp. 2013</p>
       </footer>
 

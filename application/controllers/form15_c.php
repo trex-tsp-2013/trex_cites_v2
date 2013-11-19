@@ -44,6 +44,10 @@ class Form15_C extends CI_Controller{
 
 
 	public function status(){
+		if(!$this->ion_auth->logged_in() && !$this->ion_auth->is_officer()){
+			redirect('auth', 'refresh');
+		}
+
 		$user = $this->ion_auth->user()->row();
 		//save username to be data
 		$data['username'] = $user->username;
@@ -54,6 +58,23 @@ class Form15_C extends CI_Controller{
 		$data['activer'] = 1;
 			
 		$this->load->view('pages/status/status',$data);
+	}
+
+	public function statusoff(){
+		if(!$this->ion_auth->logged_in() && !$this->ion_auth->is_officer()){
+			redirect('auth', 'refresh');
+		}
+
+		$user = $this->ion_auth->user()->row();
+		//save username to be data
+		$data['username'] = $user->username;
+		$id['id'] = $user->id;
+
+		$data['checks'] = $this->form15_model->get_allform15();
+		$data['formNameId'] = 'form15_Id';
+		$data['activer'] = 1;
+			
+		$this->load->view('officers/status',$data);
 	}
 
 
@@ -134,25 +155,25 @@ class Form15_C extends CI_Controller{
 	 */
 
 
-	public function list15($request)
-	{
-		if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
-		{
-			$user = $this->ion_auth->user()->row();
-			//save username to be data
-			$data['username'] = $user->username;
-			//save request to be data
-			$data['request'] = $request;
-			//load db table form15
-			$data['form15'] = $this->form15_model->get_listform15($request);
-			//open quqery form15
-			$this->load->view('officers/form15/list15',$data);
-		} else{
-			//redirect them to the login page
-		 	redirect('auth', 'refresh');
-		}
+	// public function list15($request)   --> change to statusoff
+	// {
+	// 	if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
+	// 	{
+	// 		$user = $this->ion_auth->user()->row();
+	// 		//save username to be data
+	// 		$data['username'] = $user->username;
+	// 		//save request to be data
+	// 		$data['request'] = $request;
+	// 		//load db table form15
+	// 		$data['form15'] = $this->form15_model->get_listform15($request);
+	// 		//open quqery form15
+	// 		$this->load->view('officers/form15/list15',$data);
+	// 	} else{
+	// 		//redirect them to the login page
+	// 	 	redirect('auth', 'refresh');
+	// 	}
 		
-	}
+	// }
 	public function show15($formId)
 	{
 		if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
@@ -165,7 +186,7 @@ class Form15_C extends CI_Controller{
 			if (empty($data['form15'])){
 				show_404();
 			}
-			$this->load->view('officers/form15/show15', $data);
+			$this->load->view('officers/forms/form15', $data);
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
