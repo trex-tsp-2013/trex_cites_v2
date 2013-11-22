@@ -102,10 +102,10 @@
             <?php echo form_open("pages/preview17");?>
 
             <?
-              if(isset($_POST['nunname'])) 
-                $nunname = $_POST['nunname'];
+              if(isset($_POST['fname'])) 
+                $fname = $_POST['fname'];
               else 
-                $nunname = '';
+                $fname = '';
               if(isset($_POST['fdate'])) 
                 $fdate = $_POST['fdate'];
               else 
@@ -142,7 +142,10 @@
                 $ab = $_POST['ab'];
               else 
                 $ab = '';
-              
+              if(isset($_POST['sname2'])) 
+                $sname2 = $_POST['sname2'];
+              else 
+                $sname2 = '';
               if(isset($_POST['plantname2'])) 
                 $plantname2 = $_POST['plantname2'];
               else 
@@ -163,7 +166,10 @@
                 $ab2 = $_POST['ab2'];
               else 
                 $ab2 = '';
-
+              if(isset($_POST['sname3'])) 
+                $sname3 = $_POST['sname3'];
+              else 
+                $sname3 = '';
               if(isset($_POST['plantname3'])) 
                 $plantname3 = $_POST['plantname3'];
               else 
@@ -185,8 +191,8 @@
               else 
                 $ab3 = '';
             ?>
-            <form action="" method="post">
-            <b>ใบสำคัญการขึ้นทะเบียนสถานทีเพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่: </b><input class="input-xlarge" type="text" name="numname" value="<?echo $numname;?>"><br>
+            
+            <b>ใบสำคัญการขึ้นทะเบียนสถานทีเพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่: </b><input class="input-xlarge" type="text" name="fname" value="<?echo $fname;?>"><br>
             <b>ลงวันที่: </b><input class="input-xlarge" type="text" name="fdate" value="<?echo $fdate;?>"><br>
 
             <b>ตั้งแต่: </b><input class="input-xlarge" type="text" name="fdate2" value="<?echo $fdate2;?>">

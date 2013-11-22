@@ -119,7 +119,7 @@ class Form21_C extends CI_Controller{
 				'numberbreed' => $this->input->post('numberbreed'),
 				'numbercom' => $this->input->post('numbercom'),
 				'source' => $this->input->post('source'),
-				'ad' => $this->input->post('ad'),
+				'ab' => $this->input->post('ab'),
 				'fimnum' => $this->input->post('fimnum'),
 				'fformdate' => $this->input->post('fformdate'),
 				'fformdateend' => $this->input->post('fformenddate'),
@@ -188,33 +188,6 @@ class Form21_C extends CI_Controller{
 		}
 	}
 
-
-	// public function update_stat21(){
-
-	// 	// if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
-	// 	if ($this->ion_auth->is_officer() )
-	// 	{
-	// 		$array = array('status' => $this->input->post('stat'),
-	// 						'comment' => $this->input->post('comment'));
-	// 		$id =array('form21_Id' => $this->input->post('form21_Id'));
-	// 		$this->form21_model->update_stat_form21($id,$array);
-			
-	// 		$user = $this->ion_auth->user()->row();
-
-	// 			//save username to be data
-	// 		$data['username'] = $user->username;
-	// 		$data['form21'] = $this->form21_model->get_listform21('11');
-
-	// 		//open quqery form21
-	// 		// $this->load->view('officers/form21/list21',$data);
-	// 		// $segments = array('form16', 'submitForm16', $data['form21'] );
-	// 		$segments = anchor('form16/submitForm16', 'form21',$data['form21'] );
-	// 		redirect($segments);
-	// 	}
-	// 	else{
-	// 		redirect('auth', 'refresh');
-	// 	}
-
-	// }
+	
 
 }

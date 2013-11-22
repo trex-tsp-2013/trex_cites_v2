@@ -71,18 +71,22 @@ $route['officers'] = 'officers_c';
 $route['officers/lists/(:any)'] = 'officers_c/lists/$1'; // from officer_c
  // $route['form15/list15/(:any)'] = 'form15_c/list15/$1';   // from officer_c to form15_c 
 $route['officers/status/(:any)'] = 'officers_c/status/$1';
-$route['officers/form15/status'] = 'form15_c/statusoff';
 $route['form15/show15/(:any)'] = 'form15_c/show15/$1';
 $route['pages/status/(:any)'] = 'pages_c/status/$1';
 $route['form15/update11']='form16_c/update_stat11';
 
 // $route['pages/forms/form16']='form16_c/';
+$route['officers/form15/status'] = 'form15_c/statusoff';
 $route['officers/form21/status'] = 'form21_c/statusoff';
+$route['officers/form19/status'] = 'form19_c/statusoff';
+$route['officers/form20/status'] = 'form20_c/statusoff';
+$route['officers/form17/status'] = 'form17_c/statusoff';
 
 $route['form21/show21/(:any)'] = 'form21_c/show21/$1';
 $route['pages/form21/(:any)'] ='form21_c/form21/$1';
 $route['pages/preview21'] ='form21_c/preview21';
 $route['pages/save21'] = 'form21_c/save21';
+$route['form21/update21']='form16_c/update_stat21';  ////////////////////////brb/////
 
 
 //user view the return form form officer
@@ -101,6 +105,10 @@ $route['pages/save20'] = 'form20_c/save20';
 $route['pages/form13/(:any)'] ='form13_c/form13/$1';
 $route['pages/preview13'] ='form13_c/preview13';
 $route['pages/save13'] = 'form13_c/save13';
+
+$route['pages/form17/(:any)'] ='form17_c/form17/$1';
+$route['pages/preview17'] ='form17_c/preview17';
+$route['pages/save17'] = 'form17_c/save17';
 
 
 /* End of file routes.php */

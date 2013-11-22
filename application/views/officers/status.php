@@ -139,7 +139,17 @@
                     } elseif ($check['request'] == 21) {
                       $segment = array('form21', 'show21', $check['form21_Id']);
                       echo '<a class="btn" href="'.site_url($segment).'"> ดูแบบฟอร์ม </a>';
+                    } elseif ($check['request'] == 22)  {
+                      $segment = array('form19', 'show19', $check['form19_Id']);
+                      echo '<a class="btn" href="'.site_url($segment).'"> ดูแบบฟอร์ม </a>';
+                    } elseif ($check['request'] == 23)  {
+                      $segment = array('form20', 'show20', $check['form20_Id']);
+                      echo '<a class="btn" href="'.site_url($segment).'"> ดูแบบฟอร์ม </a>';
+                    } elseif ($check['request'] == 24)  {
+                      $segment = array('form17', 'show17', $check['form17_Id']);
+                      echo '<a class="btn" href="'.site_url($segment).'"> ดูแบบฟอร์ม </a>';
                     }
+
                   ?>
                 </td>
               </tr>

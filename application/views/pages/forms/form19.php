@@ -230,7 +230,7 @@
 
             
             <b>ข้าพเจ้า: </b><input class="input-xlarge" type="text" name="fname" value="<?echo $fname;?>"><br>
-            <b>วันเดือนปีเกิด: </b><input type="text" name="fbd" value="<?echo $fbd;?>"><br>
+            <b>วันเดือนปีเกิด: </b><input type="text" placeholder="dd/mm/yyyy" name="fbd" value="<?echo $fbd;?>"><br>
             <b>สัญชาติ: </b><input type="text" name="fnation" value="<?echo $fnation;?>"><br>
             <b>บัตรประจำตัวประชาชน / ใบสำคัญประจำตัวคนต่างด้าว เลขที่: </b><input class="input-xlarge" type="text" name="fpassport" value="<?echo $fpassport;?>"><br>
             <b>ออกให้ ณ: </b><input type="text" name="fissue" value="<?echo $fissue;?>"><br>
@@ -269,7 +269,7 @@
             <br>
             <br>
             <b>หมายเหตุ : ผู้ยื่นคำขอต่ออายุใบสำคัญฯ จะต้องแนบบัญชีพืชอนุรักษ์เป็นหลักฐานประกอบด้วย<br>
-            <b></b>ยกเว้นว่าท่านได้ยื่นแบบ พ.พ.17ครั้งสุดท้าย ไปก่อนหน้านี้ไม่้กิน3เดือน<br>
+            <b></b>ยกเว้นว่าท่านได้ยื่นแบบ พ.พ.17ครั้งสุดท้าย ไปก่อนหน้านี้ไม่เกิน3เดือน<br>
             <br>
             <br>
             <table>

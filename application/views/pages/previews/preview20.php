@@ -139,7 +139,7 @@
             <b>ขอรับใบแทนใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ </b><br>
 
             <? $tname = $_POST['tname']; ?>
-            <b>ชื่อ: </b><span style="color:red"><?echo $_POST["fname"];?></span><br>
+            <b>ชื่อ: </b><span style="color:red"><?echo $_POST["tname"];?></span><br>
 
             <? $fid = $_POST['fid']; ?>
             <b>ตามใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์เลขทะเบียนที่: </b><span style="color:red"><?echo $_POST["fid"];?></span><br>
@@ -173,7 +173,7 @@
 
             <? $fcause = $_POST['fcause']; ?>
             <b>เหตุผลที่ขอรับใบแทน: </b><span style="color:red"><?echo $_POST["fcause"];?></span><br>
-            <?echo $_POST['fcause'];?>
+
 
 
             <input type="hidden" name="fname" value="<?echo $fname;?>">
