@@ -73,24 +73,24 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><h2>Form & Request</h2></li>
-              <li class="active"><a href="#">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
+              <li class ="active"><a href="<? echo site_url("pages/trans2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              <li><a href="<? echo site_url("pages/trans3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
               <br>
-              <li><a href="#">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
+              <li><a href="<? echo site_url("pages/trans5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
-              <li><a href="#">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><h2>Form Status</h2></li>
-              <li><a href="<? echo site_url("pages/status") ?>">คำขอล่าสุด</a></li>
+              <li class="nav-header"><a href="<? echo site_url("pages/stats_home") ?>">
+              <h2><font color="green">Form Status</h2></a></font></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
@@ -106,10 +106,10 @@
                 $fname = $_POST['fname'];
               else 
                 $fname = '';
-              if(isset($_POST['fage'])) 
-                $fage = $_POST['fage'];
+              if(isset($_POST['fbd'])) 
+                $fbd = $_POST['fbd'];
               else 
-                $fage = '';
+                $fbd = '';
               if(isset($_POST['fnation'])) 
                 $fnation = $_POST['fnation'];
               else 
@@ -133,7 +133,7 @@
               if(isset($_POST['fprovince'])) 
                 $fprovince = $_POST['fprovince'];
               else 
-                $ffprovince = '';
+                $fprovince = '';
               if(isset($_POST['fzipcode'])) 
                 $fzipcode = $_POST['fzipcode'];
               else 
@@ -177,7 +177,7 @@
               if(isset($_POST['fprovince2'])) 
                 $fprovince2 = $_POST['fprovince2'];
               else 
-                $ffprovince2 = '';
+                $fprovince2 = '';
               if(isset($_POST['fzipcode2'])) 
                 $fzipcode2 = $_POST['fzipcode2'];
               else 
@@ -209,7 +209,7 @@
               if(isset($_POST['fprovince3'])) 
                 $fprovince3 = $_POST['fprovince3'];
               else 
-                $ffprovince3 = '';
+                $fprovince3 = '';
               if(isset($_POST['fzipcode3'])) 
                 $fzipcode3 = $_POST['fzipcode3'];
               else 
@@ -230,7 +230,7 @@
 
             
             <b>ข้าพเจ้า: </b><input class="input-xlarge" type="text" name="fname" value="<?echo $fname;?>"><br>
-            <b>อายุ: </b><input type="text" name="fage" value="<?echo $fage;?>"><br>
+            <b>วันเดือนปีเกิด: </b><input type="text" name="fbd" value="<?echo $fbd;?>"><br>
             <b>สัญชาติ: </b><input type="text" name="fnation" value="<?echo $fnation;?>"><br>
             <b>บัตรประจำตัวประชาชน / ใบสำคัญประจำตัวคนต่างด้าว เลขที่: </b><input class="input-xlarge" type="text" name="fpassport" value="<?echo $fpassport;?>"><br>
             <b>ออกให้ ณ: </b><input type="text" name="fissue" value="<?echo $fissue;?>"><br>

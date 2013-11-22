@@ -1,15 +1,15 @@
 <?php
 
-class Form19_C extends CI_Controller{
+class Form20_C extends CI_Controller{
 
 	public function __construct()  // load the model
 	{
 		parent::__construct();
-		$this->load->model('form19_model');
+		$this->load->model('form20_model');
 
 	}
 
-	public function form19($request)
+	public function form20($request)
 	{
 		if ($this->ion_auth->logged_in() && !$this->ion_auth->is_officer())
 		{
@@ -18,15 +18,15 @@ class Form19_C extends CI_Controller{
 				$data['username'] = $user->username;
 				//save request to be data
 				$data['request'] = $request; 
-				//open form19
-				$this->load->view('pages/forms/form19',$data);
+				//open form20
+				$this->load->view('pages/forms/form20',$data);
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
 		}
 	}
 
-	public function preview19()
+	public function preview20()
 	{
 
 		if ($this->ion_auth->logged_in() && !$this->ion_auth->is_officer())
@@ -34,8 +34,8 @@ class Form19_C extends CI_Controller{
 			$user = $this->ion_auth->user()->row();
 			//save username to be data
 			$data['username'] = $user->username;
-			//open preview form19
-			$this->load->view('pages/previews/preview19',$data);
+			//open preview form20
+			$this->load->view('pages/previews/preview20',$data);
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
@@ -49,8 +49,8 @@ class Form19_C extends CI_Controller{
 		$data['username'] = $user->username;
 		$id['id'] = $user->id;
 
-		$data['checks'] = $this->form19_model->get_stat19($id['id']);
-		$data['formNameId'] = 'form19_Id';
+		$data['checks'] = $this->form20_model->get_stat20($id['id']);
+		$data['formNameId'] = 'form20_Id';
 		$data['activer'] = 2;
 			
 		$this->load->view('pages/status/status',$data);
@@ -62,15 +62,15 @@ class Form19_C extends CI_Controller{
 		$data['username'] = $user->username;
 		$id['id'] = $user->id;
 
-		$data['checks'] = $this->form19_model->get_allform19();
-		$data['formNameId'] = 'form19_Id';
+		$data['checks'] = $this->form20_model->get_allform20();
+		$data['formNameId'] = 'form20_Id';
 		$data['activer'] = 2;
 			
 		$this->load->view('officers/status',$data);
 	}
 
 
-	public function save19()
+	public function save20()
 	{
 
 		if ($this->ion_auth->logged_in() && !$this->ion_auth->is_officer())
@@ -79,7 +79,7 @@ class Form19_C extends CI_Controller{
 			$user = $this->ion_auth->user()->row();
 
 
-			$data19 = array(
+			$data20 = array(
 				//add userId form user
 				'userId' => $user->id,
 				'fname' => $this->input->post('fname'),
@@ -94,11 +94,9 @@ class Form19_C extends CI_Controller{
 				'ftel' => $this->input->post('ftel'),
 				'fphone' => $this->input->post('fphone'),
 				'ffax' => $this->input->post('ffax'),
-				'fmail' => $this->input->post('fmail'),
 
-				'fnumber' => $this->input->post('fnumber'),
 				'fname2' => $this->input->post('fname2'),
-				'frname' => $this->input->post('frname'),
+				'fname3' => $this->input->post('fname3'),
 				'faddress2' => $this->input->post('faddress2'),
 				'fstreet2' => $this->input->post('fstreet2'),
 				'fprovince2' => $this->input->post('fprovince2'),
@@ -106,19 +104,11 @@ class Form19_C extends CI_Controller{
 				'ftel2' => $this->input->post('ftel2'),
 				'fphone2' => $this->input->post('ffax2'),
 				'ffax2' => $this->input->post('ffax2'),
-
-				'fname3' => $this->input->post('fname3'),
-				'faddress3' => $this->input->post('faddress3'),
-				'fstreet3' => $this->input->post('fstreet3'),
-				'fprovince3' => $this->input->post('fprovince3'),
-				'fzipcode3' => $this->input->post('fzipcode3'),
-				'ftel3' => $this->input->post('ftel3'),
-				'fphone3' => $this->input->post('fphone3'),
-				'ffax3' => $this->input->post('ffax3'),
-				'request' => 22,
+				'fcause' => $this->input->post('fcause'),
+				'request' => 23,
 				);
 
-				if($this->form19_model->save_form19($data19))
+				if($this->form20_model->save_form20($data20))
 				{
 					redirect('auth', 'refresh');
 				}else{
@@ -126,8 +116,8 @@ class Form19_C extends CI_Controller{
 				}
 
 
-			// //open preview form19
-			// $this->load->view('pages/previews/preview19');
+			// //open preview form20
+			// $this->load->view('pages/previews/preview20');
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
@@ -142,7 +132,7 @@ class Form19_C extends CI_Controller{
 	 */
 
 
-	// public function list19($request)
+	// public function list20($request)
 	// {
 	// 	if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
 	// 	{
@@ -151,17 +141,17 @@ class Form19_C extends CI_Controller{
 	// 		$data['username'] = $user->username;
 	// 		//save request to be data
 	// 		$data['request'] = $request;
-	// 		//load db table form19
-	// 		$data['form19'] = $this->form19_model->get_listform19($request);
-	// 		//open quqery form19
-	// 		$this->load->view('officers/form19/list19',$data);
+	// 		//load db table form20
+	// 		$data['form20'] = $this->form20_model->get_listform20($request);
+	// 		//open quqery form20
+	// 		$this->load->view('officers/form20/list20',$data);
 	// 	} else{
 	// 		//redirect them to the login page
 	// 	 	redirect('auth', 'refresh');
 	// 	}
 		
 	// }
-	public function show19($formId)
+	public function show20($formId)
 	{
 		if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
 		{
@@ -169,11 +159,11 @@ class Form19_C extends CI_Controller{
 			//save username to be data
 			$data['username'] = $user->username;
 			//save from to data
-			$data['form19'] = $this->form19_model->get_showform19($formId);
-			if (empty($data['form19'])){
+			$data['form20'] = $this->form20_model->get_showform20($formId);
+			if (empty($data['form20'])){
 				show_404();
 			}
-			$this->load->view('officers/forms/form19', $data);
+			$this->load->view('officers/forms/form20', $data);
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
@@ -181,26 +171,26 @@ class Form19_C extends CI_Controller{
 	}
 
 
-	// public function update_stat19(){
+	// public function update_stat20(){
 
 	// 	// if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
 	// 	if ($this->ion_auth->is_officer() )
 	// 	{
 	// 		$array = array('status' => $this->input->post('stat'),
 	// 						'comment' => $this->input->post('comment'));
-	// 		$id =array('form19_Id' => $this->input->post('form19_Id'));
-	// 		$this->form19_model->update_stat_form19($id,$array);
+	// 		$id =array('form20_Id' => $this->input->post('form20_Id'));
+	// 		$this->form20_model->update_stat_form20($id,$array);
 			
 	// 		$user = $this->ion_auth->user()->row();
 
 	// 			//save username to be data
 	// 		$data['username'] = $user->username;
-	// 		$data['form19'] = $this->form19_model->get_listform19('11');
+	// 		$data['form20'] = $this->form20_model->get_listform20('11');
 
-	// 		//open quqery form19
-	// 		// $this->load->view('officers/form19/list19',$data);
-	// 		// $segments = array('form16', 'submitForm16', $data['form19'] );
-	// 		$segments = anchor('form16/submitForm16', 'form19',$data['form19'] );
+	// 		//open quqery form20
+	// 		// $this->load->view('officers/form20/list20',$data);
+	// 		// $segments = array('form16', 'submitForm16', $data['form20'] );
+	// 		$segments = anchor('form16/submitForm16', 'form20',$data['form20'] );
 	// 		redirect($segments);
 	// 	}
 	// 	else{
