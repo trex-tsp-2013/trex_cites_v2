@@ -110,6 +110,7 @@ $route['pages/form17/(:any)'] ='form17_c/form17/$1';
 $route['pages/preview17'] ='form17_c/preview17';
 $route['pages/save17'] = 'form17_c/save17';
 
+$route['officers/pdf/form16']='form16_c/pdf';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

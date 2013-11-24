@@ -111,6 +111,14 @@ class Form16_C extends CI_Controller{
 
 	}
 
+	public function pdf(){
+		if(!$this->ion_auth->logged_in()){
+			redirect('auth', 'refresh');
+		}
+		fopen("application/views/officers/pdf/form16.pdf","");
+
+	}
+
 
 
 

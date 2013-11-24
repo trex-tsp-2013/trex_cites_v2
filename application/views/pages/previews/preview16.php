@@ -1,107 +1,15 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <title>TREX Corp.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Le styles -->
-    <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-
-      @media (max-width: 980px) {
-        /* Enable use of floated navbar text */
-        .navbar-text.pull-right {
-          float: none;
-          padding-left: 5px;
-          padding-right: 5px;
-        }
-      }
-    </style>
-    <link href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
-
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
   </head>
 
   <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="<? echo base_url() ?>">TREX Corp.</a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link"><?echo $username;?></a>
-              <!-- <button onclick="location.href='http://localhost/trex_cites/index.php/auth/logout'" class="btn btn-small btn-danger">Sign Out</button> -->
-              <button onclick="location.href='<? echo site_url("auth/logout")?>'" class="btn btn-small btn-danger">Sign Out</button>
-            </p>
-
-            <ul class="nav">
-              <li><a href="<? echo base_url() ?>">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header"><h2><font color="green">FORM STATUS</font></h2></li>
-              <li class="active"><a href="<? echo site_url("pages/stats1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์ </a></li>
-              <br>
-              <li><a href="<? echo site_url("pages/stats2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
-              <br>
-              <li><a href="<? echo site_url("pages/stats3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
-              ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
-              <br>
-              <li><a href="<? echo site_url("pages/stats4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
-              <br>
-              <li><a href="<? echo site_url("pages/stats5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
-              <br>
-              <li><a href="<? echo site_url("pages/stats6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
-            </ul>
-          </div><!--/.well -->
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header"><a href="<? echo site_url("pages/status/form15") ?>">
-              <h2><font>Form & request</h2></a></font></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9">
-          <div class="well">
-            <h2>ใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ พพ.16</h2><br><br>
-
             <?
               // check post if it is null value
+            if(isset($form16['req_Id'])) 
+                $freq = $form16['req_Id'];
+              else 
+                $freq = '';
               if(isset($form16['fname'])) 
                 $fname = $form16['fname'];
               else 
@@ -247,216 +155,190 @@
               else 
                 $ab = '';
               if(isset($form16['fdates'])) 
-                $ab = $form16['fdates'];
+                $fdates = $form16['fdates'];
               else 
-                $ab = '';
+                $fdates = '';
               if(isset($form16['fdatee'])) 
-                $ab = $form16['fdatee'];
+                $fdatee = $form16['fdatee'];
               else 
-                $ab = '';
-              // if(isset($form16['comment'])) 
-              //   $comment = $form16['comment'];
-              // else 
-              //   $comment = '';
+                $fdatee = '';
               ?>
-            <h3><b>เลขที่คำขอ: </b><span style="color:blue"><?echo $form16["req_Id"];?></span></h3><br>
-            <b>ข้าพเจ้า: </b><span style="color:blue"><?echo $form16["fname"];?></span><br>
-            <b>วันเดือนปีเกิด: </b><span style="color:blue"><?echo $form16["fbd"];?></span><br>
-            <b>สัญชาติ: </b><span style="color:blue"><?echo $form16["fnation"];?></span><br>
-            <b>บัตรประจำตัวประชาชน / ใบสำคัญประจำตัวคนต่างด้าว เลขที่: </b>
-            <span style="color:blue"><?echo $form16["fpassport"];?></span><br>
-            <b>ออกให้ ณ: </b><span style="color:blue"><?echo $form16["fissue"];?></span><br>
 
-            <b>ที่อยู่: </b><span style="color:blue"><?echo $form16["faddress"];?></span><br>
+              <?php
+                  require('fpdf.php');
 
-            <b>ถนน: </b><span style="color:blue"><?echo $form16["fstreet"];?></span><br>
+                  define('FPDF_FONTPATH','font/');
 
-            <b>จังหวัด: </b><span style="color:blue"><?echo $form16["fprovince"];?></span><br>
-
-            <b>รหัสไปรษณีย์: </b><span style="color:blue"><?echo $form16["fzipcode"];?></span><br>
-
-            <b>โทรศัพท์: </b><span style="color:blue"><?echo $form16["ftel"];?></span><br>
-            
-            <b>โทรศัพท์เคลื่อนที่: </b><span style="color:blue"><?echo $form16["fphone"];?></span><br>
-
-            <b>โทรสาร: </b><span style="color:blue"><?echo $form16["ffax"];?></span><br>
-
-            <b>อีเลคทรอนิคเมล์ Email: </b><span style="color:blue"><?echo $form16["fmail"];?></span><br>
-
-            <br>
-            <b>มีความประสงค์จะขอขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์</b>
-            <br>
-            <br>
-            <? $fname2 = $form16['fname2']; ?>
-            <b>ในนามของ(กรณีเป็นนิติบุคคล): </b><span style="color:blue"><?echo $form16["fname2"];?></span><br>
-
-            <? $fowner = $form16['fowner']; ?>
-            <b>โดยมี: </b><span style="color:blue"><?echo $form16["fowner"];?></span><br>
-
-            <? $faddress2 = $form16['faddress2']; ?>
-            <b>ที่อยู่: </b><span style="color:blue"><?echo $form16["faddress2"];?></span><br>
-
-            <? $fstreet2 = $form16['fstreet2']; ?>
-            <b>ถนน: </b><span style="color:blue"><?echo $form16["fstreet2"];?></span><br>
-
-            <? $fprovince2 = $form16['fprovince2']; ?>
-            <b>จังหวัด: </b><span style="color:blue"><?echo $form16["fprovince2"];?></span><br>
-
-            <? $fzipcode2 = $form16['fzipcode2']; ?>
-            <b>รหัสไปรษณีย์: </b><span style="color:blue"><?echo $form16["fzipcode2"];?></span><br>
-
-            <? $ftel2 = $form16['ftel2']; ?>
-            <b>โทรศัพท์: </b><span style="color:blue"><?echo $form16["ftel2"];?></span><br>
-
-            <? $fphone2 = $form16['fphone2']; ?>
-            <b>โทรศัพท์เคลื่อนที่: </b><span style="color:blue"><?echo $form16["fphone2"];?></span><br>
-
-            <? $ffax2 = $form16['ffax2']; ?>
-            <b>โทรสาร: </b><span style="color:blue"><?echo $form16["ffax2"];?></span><br>
-
-            <br>
-            
-            <? $flocation = $form16['flocation']; ?>
-            <b>สถานที่เพาะเลี้ยงอนุรักษ์ ชื่อ: </b><span style="color:blue"><?echo $form16["flocation"];?></span><br>
-
-            <br>
-
-            <? $faddress3 = $form16['faddress3']; ?>
-            <b>ที่อยู่: </b><span style="color:blue"><?echo $form16["faddress3"];?></span><br>
-
-            <? $fstreet3 = $form16['fstreet3']; ?>
-            <b>ถนน: </b><span style="color:blue"><?echo $form16["fstreet3"];?></span><br>
-
-            <? $fprovince3 = $form16['fprovince3']; ?>
-            <b>จังหวัด: </b><span style="color:blue"><?echo $form16["fprovince3"];?></span><br>
-
-            <? $fzipcode3 = $form16['fzipcode3']; ?>
-            <b>รหัสไปรษณีย์: </b><span style="color:blue"><?echo $form16["fzipcode3"];?></span><br>
-
-            
-            <? $ftel3 = $form16['ftel3']; ?>
-            <b>โทรศัพท์: </b><span style="color:blue"><?echo $form16["ftel3"];?></span><br>
-
-            <? $fphone3 = $form16['fphone3']; ?>
-            <b>โทรศัพท์เคลื่อนที่: </b><span style="color:blue"><?echo $form16["fphone3"];?></span><br>
-
-            <? $ffax3 = $form16['ffax3']; ?>
-            <b>โทรสาร: </b><span style="color:blue"><?echo $form16["ffax3"];?></span><br>
-
-            <br>
-            <br>
-
-            <? $plantname = $form16['plantname']; ?>
-            <b>ชื่อพืช: </b><span style="color:blue"><?echo $form16["plantname"];?></span><br>
-
-            <? $sname = $form16['sname']; ?>
-            <b>ชื่อวิทยาศาสตร์: </b><span style="color:blue"><?echo $form16["sname"];?></span><br>
-
-            <? $numberbreed = $form16['numberbreed']; ?>
-            <b>จำนวน พ่อ-แม่ พันธุ์: </b><span style="color:blue"><?echo $form16["numberbreed"];?></span><br>
-
-            <? $numbercom = $form16['numbercom']; ?>
-            <b>จำนวนเพื่อการค้า: </b><span style="color:blue"><?echo $form16["numbercom"];?></span><br>
-
-            <? $source = $form16['source']; ?>
-            <b>แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): </b><span style="color:blue"><?echo $form16["source"];?></span><br>
-
-            <? $ab = $form16['ab']; ?>
-            <b>วิธีการขยายพันธุ์เทียม: </b><span style="color:blue"><?echo $form16["ab"];?></span><br>
-
-            <br>
-            <br>
-            <? $fstreet2 = $form16['fdates']; ?>
-            <b>ใบสำคัญฉบับนี้ออกให้เมื่อวันที่: </b><span style="color:blue"><?echo $form16["fdates"];?></span><br>
-            <? $ffax3 = $form16['fdatee']; ?>
-            <b>โดยให้ใช้ถึงวันที่: </b><span style="color:blue"><?echo $form16["fdatee"];?></span><br>
-            <b>และให้ใช้ได้เฉพาะสถานที่ซึ่งระบุไว้ในใบสำคัญนี้เท่านั้น</b>
-
-
-            <br>
-            <br>
-            <br>
-            <!-- <b>รูปภาพสถานประกอบการ: </b> <input type="file" name="file" id="file"><br>
-            <b>รูปภาพพันธุ์พืชอนุรักษ์: </b> <input type="file" name="file2" id="file">
-            <br>
-            <br>
-            <br> -->
-            <!-- <b>หมายเหตุ</b>
-            <br>
-            <br>
-            <?php echo form_open("officers/view/update");?>
-            <textarea rows="5" name="comment"><?php echo $form16['comment']; ?></textarea>
-            <br>
-            <br> -->
-            <?php echo form_open('pages/status/11'); ?>
-              <button type="cancel" class="btn btn-large">Go Back</button>
-            <? echo form_close(); ?>
-          </div>
-          
-      </div><!--/row-->
-    </div>
-      <hr>
-            <!-- <form action="" method="post">
-            <b>ใบสำคัญฉบับนี้ออกให้แก่: </b><input class="input-xlarge" type="text" name="fname"><br>
-            <b>ในนามของ/ซึ่งมี: </b><input type="text" name="fbd"><B>เป็นผู้ดำเนินการ</B><br>
-            
-            <b>ที่อยู่: </b><input class="input-xxlarge" type="text" name="faddress"><br>
-            <b>ถนน: </b><input type="text" name="fstreet"><br>
-            <b>หมู่ที่: </b><input type="text" name="fmoo"><br>
-            <b>ตำบล/แขวง: </b><input type="text" name="ftumbon"><br>
-            <b>อำเภอ/เขต: </b><input type="text" name="famphur"><br>
-            <b>จังหวัด: </b><input type="text" name="fprovince"><br>
-            <br>
-            <b>สถานที่เพาะเลี้ยงอนุรักษ์ ชื่อ: </b><input class="input-xlarge" type="text" name="fname2"><br>
-            <b>ที่อยู่: </b><input class="input-xxlarge" type="text" Name="faddress2"><br>
-            <b>ถนน: </b><input type="text" name="fstreet2"><br>
-            <b>หมู่ที่: </b><input type="text" name="fmoo2"><br>
-            <b>ตำบล/แขวง: </b><input type="text" name="ftumbon2"><br>
-            <b>อำเภอ: </b><input type="text" name="famphur2"><br>
-            <b>จังหวัด: </b><input type="text" name="fprovince2"><br>
-            <br>
-            <b>ออกเมื่อวันที่่: </b><input type="text" name="fstart"><br>
-            <b>พ.ศ.: </b><input type="text" name="fyear1"><br>
-            <b>ใช้ได้จนถึงวันที่: </b><input type="text" name="fend"><br>
-            <b>พ.ศ.: </b><input type="text" name="fyear2"><br>
-            <br>
-
-            <B>บัญชีพืชอนุรักษ์แนบท้ายใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์</B><br>
-            <b>ดาวน์โหลดเอกสาร: </b> <button type="cancel" class="btn btn-small">Download</button><br>
-            <b>ส่งใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์: </b> <input type="file" name="file" id="file"><br>
-            <br>
-            <button type="submit" class="btn btn-large btn-primary">Submit</button>
-            <button type="cancel" class="btn btn-large">Cancel</button>
-            </form> -->
-          </div>
-          
-      </div><!--/row-->
-    </div>
-      <hr>
-
-      <footer>
-        <p>© TREX Corp. 2013</p>
-      </footer>
-
-    </div><!--/.fluid-container-->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap-transition.js"></script>
-    <script src="assets/js/bootstrap-alert.js"></script>
-    <script src="assets/js/bootstrap-modal.js"></script>
-    <script src="assets/js/bootstrap-dropdown.js"></script>
-    <script src="assets/js/bootstrap-scrollspy.js"></script>
-    <script src="assets/js/bootstrap-tab.js"></script>
-    <script src="assets/js/bootstrap-tooltip.js"></script>
-    <script src="assets/js/bootstrap-popover.js"></script>
-    <script src="assets/js/bootstrap-button.js"></script>
-    <script src="assets/js/bootstrap-collapse.js"></script>
-    <script src="assets/js/bootstrap-carousel.js"></script>
-    <script src="assets/js/bootstrap-typeahead.js"></script>
-
+                  $pdf=new FPDF();
+                  $pdf->AddPage();
+                  $pdf->Image('assets/img/logo.gif',90,10,-160);
+                  $pdf->AddFont('angsa','','angsa.php');
+                  $pdf->AddFont('angsana','B','angsab.php');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(0,20,'',0,1,'');
+                  $pdf->Cell(0,5,iconv( 'UTF-8','TIS-620','ใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ พพ.16'),0,1,'C');
+                  $pdf->Cell(20,15,iconv( 'UTF-8','TIS-620','                เลขที่คำขอ: '.$freq),0,0,'');
+                  $pdf->Cell(0,15,iconv( 'UTF-8','TIS-620','กรมวิชาการเกษตร'),0,1,'R');
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                ข้าพเจ้า: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fname),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                วันเดือนปีเกิด: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$fbd),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                สัญชาติ: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fnation),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                บัตรประจำตัวประชาชน / ใบสำคัญประจำตัวคนต่างด้าว เลขที่: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$fpassport),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                ออกให้ ณ: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fissue),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                ที่อยู่: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$faddress),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                ถนน: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fstreet),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                จังหวัด: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$fprovince),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                รหัสไปรษณีย์: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fzipcode),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                โทรศัพท์: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$ftel),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                โทรศัพท์เคลื่อนที่: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fphone),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                โทรสาร: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$ffax),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                อีเลคทรอนิคเมล์ Email: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fmail),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620','                มีความประสงค์จะขอขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์'),0,1,'');
+                  
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                ในนามของ(กรณีเป็นนิติบุคคล): '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fname2),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                โดยมี: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$fowner),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                ที่อยู่: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$faddress2),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                ถนน: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$fstreet2),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                จังหวัด: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fprovince2),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                โทรศัพท์: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$ftel2),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                โทรศัพท์เคลื่อนที่: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fphone2),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                โทรสาร: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$ffax2),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                สถานที่เพาะเลี้ยงอนุรักษ์ ชื่อ: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$flocation),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                ที่อยู่: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$faddress3),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                ถนน: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fstreet3),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                จังหวัด: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$fprovince3),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                รหัสไปรษณีย์: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fzipcode3),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                โทรศัพท์: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$ftel3),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                โทรศัพท์เคลื่อนที่: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fphone3),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                โทรสาร: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$ffax3),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                ชื่อพืช: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$plantname),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                ชื่อวิทยาศาสตร์: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$sname),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                จำนวน พ่อ-แม่ พันธุ์: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$numberbreed),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                จำนวนเพื่อการค้า: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$numbercom),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                แหล่งที่มา(ที่ถูกต้องตามกฎหมาย): '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$source),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                วิธีการขยายพันธุ์เทียม: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$ab),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                ใบสำคัญฉบับนี้ออกให้เมื่อวันที่: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fdates),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(100,10,iconv( 'UTF-8','TIS-620','                โดยให้ใช้ถึงวันที่: '),0,0,'');
+                  $pdf->SetFont('angsa','',14);
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$fdatee),0,1,'');
+                  $pdf->SetFont('angsana','B',14);
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620','                และให้ใช้ได้เฉพาะสถานที่ซึ่งระบุไว้ในใบสำคัญนี้เท่านั้น'),0,1,'');
+                  $pdf->Cell(0,10,'',0,1,'');
+                  $pdf->Cell(0,5,iconv( 'UTF-8','TIS-620','                                                                                (ลายมือชื่อ).........................................(พนักงานเจ้าหน้าที่ผู้อนุญาติ)'),0,1,'');
+                  $pdf->Cell(0,5,iconv( 'UTF-8','TIS-620','                                                                                                  (.........................................)'),0,1,'');
+                  $pdf->Cell(0,5,iconv( 'UTF-8','TIS-620','                                                                                      ตำแหน่ง..........................................'),0,1,'');
+                  $pdf->Output("application/views/officers/pdf/form16.pdf","F");
+                  
+                  ?>  
+                  <?header('Location: '.site_url("officers/pdf/form16") )?>
+                   
   
 
 </body></html>

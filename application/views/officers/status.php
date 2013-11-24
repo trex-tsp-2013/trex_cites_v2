@@ -160,12 +160,12 @@
                         if($check['request'] == 11){
                           if($check['status'] == 'Verified'){ 
                             $segments = array('form16', 'view', $check['form15_Id'], '11' ); 
-                            echo '<a class="btn" style="width:70px" href="'.site_url($segments).'">พ.พ. 16</a>';
+                            echo '<a class="btn" style="width:70px" href="'.site_url($segments).'" target="_blank">พ.พ. 16</a>';
                           } 
                         } else if($check['request'] == 21){
                           if($check['status'] == 'Verified'){
                             $segments = array('form16', 'view', $check['form21_Id'], '21' ); 
-                            echo '<a class="btn" style="width:70px" href="'.site_url($segments).'">พ.พ. 16</a>';
+                            echo '<a class="btn" style="width:70px" href="'.site_url($segments).'" target="_blank">พ.พ. 16</a>';
                           }
                         } else if($check['request'] == 22){
                           if($check['status'] == 'Verified'){
@@ -173,7 +173,7 @@
                         }
                         } elseif ($check['request'] == 23) {
                           $segments = array('form16', 'view', $check['form20_Id'], '23' ); 
-                          echo '<a class="btn" style="width:70px" href="'.site_url($segments).'">พ.พ. 16</a>';
+                          echo '<a class="btn" style="width:70px" href="'.site_url($segments).'" target="_blank">พ.พ. 16</a>';
                         }
                       ?>
                       
