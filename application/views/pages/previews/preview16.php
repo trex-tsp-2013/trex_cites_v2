@@ -337,7 +337,7 @@
                   $pdf->Output("assets/pdf/form16.pdf","F");
                   
                   ?>  
-                  <?header('Location: '.site_url("officers/pdf/form16") )?>
+                  <?header('Location: '.base_url("assets/pdf/form16.pdf"))?>
                    
   
 
