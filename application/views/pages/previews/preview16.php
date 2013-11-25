@@ -334,7 +334,7 @@
                   $pdf->Cell(0,5,iconv( 'UTF-8','TIS-620','                                                                                (ลายมือชื่อ).........................................(พนักงานเจ้าหน้าที่ผู้อนุญาติ)'),0,1,'');
                   $pdf->Cell(0,5,iconv( 'UTF-8','TIS-620','                                                                                                  (.........................................)'),0,1,'');
                   $pdf->Cell(0,5,iconv( 'UTF-8','TIS-620','                                                                                      ตำแหน่ง..........................................'),0,1,'');
-                  $pdf->Output("application/views/officers/pdf/form16.pdf","F");
+                  $pdf->Output("assets/pdf/form16.pdf","F");
                   
                   ?>  
                   <?header('Location: '.site_url("officers/pdf/form16") )?>

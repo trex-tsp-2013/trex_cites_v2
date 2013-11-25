@@ -115,8 +115,8 @@ class Form16_C extends CI_Controller{
 		if(!$this->ion_auth->logged_in()){
 			redirect('auth', 'refresh');
 		}
-		fopen("application/views/officers/pdf/form16.pdf","");
-
+		//fopen(base_url()."application/pdf/form16.pdf", "");
+		$this->load->view('officers/pdf/openpdf');
 	}
 
 
