@@ -170,10 +170,17 @@
                         } else if($check['request'] == 22){
                           if($check['status'] == 'Verified'){
                             echo "Completed";
-                        }
+                          }
                         } elseif ($check['request'] == 23) {
-                          $segments = array('form16', 'view', $check['form20_Id'], '23' ); 
-                          echo '<a class="btn" style="width:70px" href="'.site_url($segments).'" target="_blank">พ.พ. 16</a>';
+                          if($check['status'] == 'Verified'){
+                            $segments = array('form16', 'view', $check['form20_Id'], '23' ); 
+                            echo '<a class="btn" style="width:70px" href="'.site_url($segments).'" target="_blank">พ.พ. 16</a>';
+                          }
+                        } elseif ($check['request'] == 24) {
+                          if($check['status'] == 'Verified'){
+                            $segments = array('form16', 'view', $check['form17_Id'], '24' ); 
+                            echo '<a class="btn" style="width:70px" href="'.site_url($segments).'" target="_blank">พ.พ. 16</a>';
+                          }
                         }
                       ?>
                       

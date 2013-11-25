@@ -97,10 +97,14 @@ $route['form16/view/(:any)'] = 'form16_c/view16/$1/$2';
 $route['pages/form19/(:any)'] ='form19_c/form19/$1';
 $route['pages/preview19'] ='form19_c/preview19';
 $route['pages/save19'] = 'form19_c/save19';
+$route['form19/update22'] = 'form19_c/update_stat22';
+$route['form19/show19/(:any)'] = 'form19_c/show19/$1';
 
 $route['pages/form20/(:any)'] ='form20_c/form20/$1';
 $route['pages/preview20'] ='form20_c/preview20';
 $route['pages/save20'] = 'form20_c/save20';
+$route['form20/update23'] = 'form16_c/update_stat23';
+$route['form20/show20/(:any)'] = 'form20_c/show20/$1';
 
 $route['pages/form13/(:any)'] ='form13_c/form13/$1';
 $route['pages/preview13'] ='form13_c/preview13';
@@ -109,6 +113,14 @@ $route['pages/save13'] = 'form13_c/save13';
 $route['pages/form17/(:any)'] ='form17_c/form17/$1';
 $route['pages/preview17'] ='form17_c/preview17';
 $route['pages/save17'] = 'form17_c/save17';
+$route['form17/update24'] = 'form16_c/update_stat24';
+$route['form17/show17/(:any)'] = 'form17_c/show17/$1';
+
+$route['pages/form18/(:any)'] ='form18_c/form18/$1';
+$route['pages/preview18'] ='form18_c/preview18';
+$route['pages/save18'] = 'form18_c/save18';
+$route['form18/update25'] = 'form16_c/update_stat25';
+$route['form18/show18/(:any)'] = 'form18_c/show18/$1';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

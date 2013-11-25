@@ -1,15 +1,15 @@
 <?php
 
-class Form17_C extends CI_Controller{
+class Form18_C extends CI_Controller{
 
 	public function __construct()  // load the model
 	{
 		parent::__construct();
-		$this->load->model('form17_model');
+		$this->load->model('form18_model');
 
 	}
 
-	public function form17($request)
+	public function form18($request)
 	{
 		if ($this->ion_auth->logged_in() && !$this->ion_auth->is_officer())
 		{
@@ -19,14 +19,14 @@ class Form17_C extends CI_Controller{
 				//save request to be data
 				$data['request'] = $request; 
 				//open form19
-				$this->load->view('pages/forms/form17',$data);
+				$this->load->view('pages/forms/form18',$data);
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
 		}
 	}
 
-	public function preview17()
+	public function preview18()
 	{
 
 		if ($this->ion_auth->logged_in() && !$this->ion_auth->is_officer())
@@ -35,7 +35,7 @@ class Form17_C extends CI_Controller{
 			//save username to be data
 			$data['username'] = $user->username;
 			//open preview form19
-			$this->load->view('pages/previews/preview17',$data);
+			$this->load->view('pages/previews/preview18',$data);
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');
@@ -49,8 +49,8 @@ class Form17_C extends CI_Controller{
 		$data['username'] = $user->username;
 		$id['id'] = $user->id;
 
-		$data['checks'] = $this->form17_model->get_stat17($id['id']);
-		$data['formNameId'] = 'form17_Id';
+		$data['checks'] = $this->form18_model->get_stat18($id['id']);
+		$data['formNameId'] = 'form18_Id';
 		$data['activer'] = 2;
 			
 		$this->load->view('pages/status/status',$data);
@@ -62,15 +62,15 @@ class Form17_C extends CI_Controller{
 		$data['username'] = $user->username;
 		$id['id'] = $user->id;
 
-		$data['checks'] = $this->form17_model->get_allform17();
-		$data['formNameId'] = 'form17_Id';
+		$data['checks'] = $this->form18_model->get_allform18();
+		$data['formNameId'] = 'form18_Id';
 		$data['activer'] = 2;
 			
 		$this->load->view('officers/status',$data);
 	}
 
 
-	public function save17()
+	public function save18()
 	{
 
 		if ($this->ion_auth->logged_in() && !$this->ion_auth->is_officer())
@@ -79,7 +79,7 @@ class Form17_C extends CI_Controller{
 			$user = $this->ion_auth->user()->row();
 
 
-			$data17 = array(
+			$data18 = array(
 				//add userId form user
 				'userId' => $user->id,
 				'fname' => $this->input->post('fname'),
@@ -106,10 +106,10 @@ class Form17_C extends CI_Controller{
 				'source3' => $this->input->post('source3'),
 				'ab3' => $this->input->post('ab3'),
 
-				'request' => 24,
+				'request' => 25,
 				);
 
-				if($this->form17_model->save_form17($data17))
+				if($this->form18_model->save_form18($data18))
 				{
 					redirect('auth', 'refresh');
 				}else{
@@ -152,7 +152,7 @@ class Form17_C extends CI_Controller{
 	// 	}
 		
 	// }
-	public function show17($formId)
+	public function show18($formId)
 	{
 		if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
 		{
@@ -160,11 +160,11 @@ class Form17_C extends CI_Controller{
 			//save username to be data
 			$data['username'] = $user->username;
 			//save from to data
-			$data['form17'] = $this->form17_model->get_showform17($formId);
-			if (empty($data['form17'])){
+			$data['form18'] = $this->form18_model->get_showform18($formId);
+			if (empty($data['form18'])){
 				show_404();
 			}
-			$this->load->view('officers/forms/form17', $data);
+			$this->load->view('officers/forms/form18', $data);
 		} else{
 			//redirect them to the login page
 		 	redirect('auth', 'refresh');

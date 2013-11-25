@@ -181,6 +181,29 @@ class Form19_C extends CI_Controller{
 	}
 
 
+	public function update_stat22(){
+
+		// if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
+		if ($this->ion_auth->is_officer() )
+		{
+			
+			$user = $this->ion_auth->user()->row();
+			$ida = array( 'form19_Id' => $this->input->post('form19_Id')); 
+			$array = array('status' => $this->input->post('stat'),
+							'comment' => $this->input->post('comment'));
+			$this->form19_model->update_stat_form19($ida,$array);
+			// $this->load->view('officers/form15/list15', $data);
+			redirect('officers/status/22');
+			
+			
+		}
+		else{
+			redirect('auth', 'refresh');
+		}
+
+	}
+
+
 	// public function update_stat19(){
 
 	// 	// if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
