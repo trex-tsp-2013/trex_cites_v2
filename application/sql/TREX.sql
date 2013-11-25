@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 22, 2013 at 10:09 AM
+-- Generation Time: Nov 25, 2013 at 01:43 PM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.10
 
@@ -133,7 +133,7 @@ INSERT INTO `form15` (`form15_Id`, `userId`, `fname`, `fbd`, `fnation`, `fpasspo
 (16, 5, 'dddddd', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Verified', 'New document', 11),
 (17, 2, 'Nuttapon', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Verified', 'New document', 11),
 (18, 2, 'nutt11', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Denied', 'New document', 11),
-(19, 2, 'nutt21', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Pending', 'New document', 11);
+(19, 2, 'nutt21', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Verified', 'New document', 11);
 
 -- --------------------------------------------------------
 
@@ -185,7 +185,7 @@ CREATE TABLE `form16` (
   `fdates` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `fdatee` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`form16_Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
 
 --
 -- Dumping data for table `form16`
@@ -201,7 +201,8 @@ INSERT INTO `form16` (`form16_Id`, `userId`, `fname`, `fbd`, `fnation`, `fpasspo
 (7, 2, 'Nuttapon', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 17, 11, '', ''),
 (8, 2, 'nutt11', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 18, 11, '', ''),
 (16, 2, 'Nuttapon', '12/12/12', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0', 7, 21, '', ''),
-(17, 2, 'test21', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 9, 21, '', '');
+(17, 2, 'test21', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 9, 21, '', ''),
+(18, 2, 'nutt21', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 19, 11, '', '');
 
 -- --------------------------------------------------------
 
@@ -245,6 +246,26 @@ CREATE TABLE `form17` (
 
 INSERT INTO `form17` (`form17_Id`, `userId`, `fname`, `fdate`, `fdate2`, `fyear`, `plantname`, `sname`, `numberbreed`, `source`, `ab`, `plantname2`, `sname2`, `numberbreed2`, `numbercom2`, `source2`, `ab2`, `plantname3`, `sname3`, `numberbreed3`, `numbercom3`, `source3`, `ab3`, `request`, `comment`, `status`) VALUES
 (1, 2, 'nut', 'nut', '', '', '', '', '0', '', 'nun', '', '', '', '', '', '', '', '', '', '', '', '', 24, 'New document', 'Pending');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `form18`
+--
+
+CREATE TABLE `form18` (
+  `form18_Id` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` tinyint(3) NOT NULL,
+  `numname` varchar(30) NOT NULL,
+  `datename` varchar(30) NOT NULL,
+  `plantname` varchar(30) NOT NULL,
+  `sname` varchar(30) NOT NULL,
+  `numberbreed` varchar(30) NOT NULL,
+  `numbercom` varchar(30) NOT NULL,
+  `source` varchar(30) NOT NULL,
+  `ad` varchar(30) NOT NULL,
+  PRIMARY KEY (`form18_Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -470,7 +491,7 @@ CREATE TABLE `users` (
   `company` varchar(100) DEFAULT NULL,
   `phone` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `users`
@@ -479,9 +500,10 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
 (1, '\0\0', 'administrator', '59beecdf7fc966e2f17fd8f65a4a9aeb09d4a3d4', '9462e8eee0', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1381302468, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'nuttapon phannurat', 'a4e9cc58a617436227ad7a1d6db6c51ca9c934b8', NULL, 'n@gmail.com', NULL, NULL, NULL, NULL, 1381043030, 1385110420, 1, 'Nuttapon', 'Phannurat', 'TREX', '0850199668'),
-(3, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'officer officer', '1c93c4d3c13a4521f19bfef3fe07dd6a1ef79a0c', NULL, 'officer@officer.com', NULL, NULL, NULL, NULL, 1381305254, 1385101466, 1, 'Officer', 'Officer', 'TREX', '0850199668'),
+(3, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'officer officer', '1c93c4d3c13a4521f19bfef3fe07dd6a1ef79a0c', NULL, 'officer@officer.com', NULL, NULL, NULL, NULL, 1381305254, 1385350564, 1, 'Officer', 'Officer', 'TREX', '0850199668'),
 (4, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'dsfdsfs dsfsf', '0bb941f07397167bb1aa19d81ec4be5894e178ea', NULL, 'm@g.com', NULL, NULL, NULL, NULL, 1381316764, 1381414176, 1, 'dsfdsfs', 'dsfsf', 'assadasd', 'dsadasd'),
-(5, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'tanachot techajarupan', 'ff01a5697d560ca487244dc4927a66dcb3007ff0', NULL, 'ttanachot@gmail.com', NULL, NULL, NULL, NULL, 1381330274, 1385103106, 1, 'Tanachot', 'Techajarupan', 'TREX', '1234');
+(5, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'tanachot techajarupan', 'ff01a5697d560ca487244dc4927a66dcb3007ff0', NULL, 'ttanachot@gmail.com', NULL, NULL, NULL, NULL, 1381330274, 1385103106, 1, 'Tanachot', 'Techajarupan', 'TREX', '1234'),
+(6, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'asdsa casdada', '6b2dac401d28a933ab7ec65a40936df0072ebbd0', NULL, 'q@q.com', NULL, NULL, NULL, NULL, 1385349468, 1385382566, 1, 'asdsa', 'casdada', 'sadasdas', '0000');
 
 -- --------------------------------------------------------
 
@@ -497,7 +519,7 @@ CREATE TABLE `users_groups` (
   UNIQUE KEY `uc_users_groups` (`user_id`,`group_id`),
   KEY `fk_users_groups_users1_idx` (`user_id`),
   KEY `fk_users_groups_groups1_idx` (`group_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `users_groups`
@@ -509,7 +531,8 @@ INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
 (3, 2, 2),
 (4, 3, 3),
 (5, 4, 2),
-(6, 5, 2);
+(6, 5, 2),
+(7, 6, 2);
 
 --
 -- Constraints for dumped tables
