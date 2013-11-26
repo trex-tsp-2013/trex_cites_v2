@@ -81,6 +81,7 @@ $route['officers/form21/status'] = 'form21_c/statusoff';
 $route['officers/form19/status'] = 'form19_c/statusoff';
 $route['officers/form20/status'] = 'form20_c/statusoff';
 $route['officers/form17/status'] = 'form17_c/statusoff';
+$route['officers/form18/status'] = 'form18_c/statusoff';
 
 $route['form21/show21/(:any)'] = 'form21_c/show21/$1';
 $route['pages/form21/(:any)'] ='form21_c/form21/$1';
@@ -121,6 +122,8 @@ $route['pages/preview18'] ='form18_c/preview18';
 $route['pages/save18'] = 'form18_c/save18';
 $route['form18/update25'] = 'form16_c/update_stat25';
 $route['form18/show18/(:any)'] = 'form18_c/show18/$1';
+
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

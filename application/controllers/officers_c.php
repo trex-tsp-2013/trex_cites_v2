@@ -43,6 +43,8 @@ class Officers_C extends CI_Controller{
 			redirect("officers/form20/status");
 		} elseif ($req == 24) {
 			redirect("officers/form17/status");
+		} elseif ($req == 25) {
+			redirect("officers/form18/status");
 		}
 	}
 
