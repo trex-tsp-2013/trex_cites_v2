@@ -82,29 +82,14 @@ class Form18_C extends CI_Controller{
 			$data18 = array(
 				//add userId form user
 				'userId' => $user->id,
-				'fname' => $this->input->post('fname'),
-				'fdate' => $this->input->post('fdate'),
-				'fdate2' => $this->input->post('fdate2'),
-				'fyear' => $this->input->post('fyear'),
+				'fname' => $this->input->post('numname'),
+				'datename' => $this->input->post('datename'),
 				'plantname' => $this->input->post('plantname'),
 				'sname' => $this->input->post('sname'),
 				'numberbreed' => $this->input->post('numbreed'),
+				'numbercom' => $this->input->post('numbercom'),
 				'source' => $this->input->post('source'),
 				'ab' => $this->input->post('ab'),
-
-				'plantname2' => $this->input->post('plantname2'),
-				'sname2' => $this->input->post('sname2'),
-				'numberbreed2' => $this->input->post('numberbreed2'),
-				'numbercom2' => $this->input->post('numbercom2'),
-				'source2' => $this->input->post('source2'),
-				'ab2' => $this->input->post('ab2'),
-
-				'plantname3' => $this->input->post('plantname3'),
-				'sname3' => $this->input->post('sname3'),
-				'numberbreed3' => $this->input->post('numberbreed3'),
-				'numbercom3' => $this->input->post('numbercom3'),
-				'source3' => $this->input->post('source3'),
-				'ab3' => $this->input->post('ab3'),
 
 				'request' => 25,
 				);
