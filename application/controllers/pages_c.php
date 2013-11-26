@@ -40,6 +40,12 @@ class Pages_C extends CI_Controller{
 			redirect("form17_c/status");
 		} elseif ($req == 25) {
 			redirect("form18_c/status");
+		} elseif ($req == 31) {
+			redirect("form13_c/status/31");
+		} elseif ($req == 32) {
+			redirect("form13_c/status/32");
+		} elseif ($req == 33) {
+			redirect("form13_c/status/33");
 		}
 	}
 

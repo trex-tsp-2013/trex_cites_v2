@@ -43,28 +43,28 @@ class Form13_C extends CI_Controller{
 	}
 
 
-	public function status(){
+	public function status($req){
 		$user = $this->ion_auth->user()->row();
 		//save username to be data
 		$data['username'] = $user->username;
 		$id['id'] = $user->id;
 
-		$data['checks'] = $this->form13_model->get_stat13($id['id']);
+		$data['checks'] = $this->form13_model->get_stat13($id['id'], $req);
 		$data['formNameId'] = 'form13_Id';
-		$data['activer'] = 2;
+		$data['activer'] = 3;
 			
 		$this->load->view('pages/status/status',$data);
 	}
 
-	public function statusoff(){
+	public function statusoff($req){
+
 		$user = $this->ion_auth->user()->row();
 		//save username to be data
 		$data['username'] = $user->username;
-		$id['id'] = $user->id;
-
-		$data['checks'] = $this->form13_model->get_allform13();
+		$id['id'] = $user->id;		
+		$data['checks'] = $this->form13_model->get_allform13($req);
 		$data['formNameId'] = 'form13_Id';
-		$data['activer'] = 2;
+		$data['activer'] = 3;
 			
 		$this->load->view('officers/status',$data);
 	}
@@ -154,6 +154,7 @@ class Form13_C extends CI_Controller{
 			if (empty($data['form13'])){
 				show_404();
 			}
+			$data['request'] = $data['form13']['request'];
 			$this->load->view('officers/forms/form13', $data);
 		} else{
 			//redirect them to the login page

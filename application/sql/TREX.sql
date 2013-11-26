@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 26, 2013 at 08:14 AM
+-- Generation Time: Nov 26, 2013 at 09:46 AM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.10
 
@@ -33,21 +33,26 @@ CREATE TABLE `form13` (
   `fname2` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `fname3` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `fnurse` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `fnurseno` int(11) NOT NULL,
   `ftrans` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `fvalue` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `fentry` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `fdel` varchar(20) NOT NULL,
   `comment` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'New document',
   `request` int(11) NOT NULL,
   `status` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Pending',
   PRIMARY KEY (`form13_Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `form13`
 --
 
-INSERT INTO `form13` (`form13_Id`, `userId`, `fplace`, `fdate`, `fname`, `fbd`, `fnation`, `faddress`, `fother`, `fname2`, `fname3`, `fnurse`, `ftrans`, `fvalue`, `fentry`, `comment`, `request`, `status`) VALUES
-(4, 5, '', '', '', '', '', '', '', '', '', '', '', '', '', 'New document', 31, 'Pending');
+INSERT INTO `form13` (`form13_Id`, `userId`, `fplace`, `fdate`, `fname`, `fbd`, `fnation`, `faddress`, `fother`, `fname2`, `fname3`, `fnurse`, `fnurseno`, `ftrans`, `fvalue`, `fentry`, `fdel`, `comment`, `request`, `status`) VALUES
+(7, 2, '', '', 'Nut31', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 31, 'Verified'),
+(8, 2, '', '', 'nuttapon31', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 31, 'Denied'),
+(9, 2, '', '', 'nut32', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 32, 'Denied'),
+(10, 2, '', '', 'nut33', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 33, 'Verified');
 
 -- --------------------------------------------------------
 
@@ -58,6 +63,7 @@ INSERT INTO `form13` (`form13_Id`, `userId`, `fplace`, `fdate`, `fname`, `fbd`, 
 CREATE TABLE `form14` (
   `form14_Id` int(11) NOT NULL AUTO_INCREMENT,
   `userId` int(11) NOT NULL,
+  `fname` varchar(20) NOT NULL,
   `faddress` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `fcountry` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `fname2` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -69,7 +75,15 @@ CREATE TABLE `form14` (
   `req_Id` int(11) NOT NULL,
   `request` int(11) NOT NULL,
   PRIMARY KEY (`form14_Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `form14`
+--
+
+INSERT INTO `form14` (`form14_Id`, `userId`, `fname`, `faddress`, `fcountry`, `fname2`, `faddress2`, `fcountry2`, `fcon`, `ftran`, `fau`, `req_Id`, `request`) VALUES
+(1, 2, 'Nut31', '', '', '', '', '', '', '', '', 7, 31),
+(2, 2, 'nut33', '', '', '', '', '', '', '', '', 10, 33);
 
 -- --------------------------------------------------------
 
@@ -259,7 +273,7 @@ INSERT INTO `form17` (`form17_Id`, `userId`, `fname`, `fdate`, `fdate2`, `fyear`
 CREATE TABLE `form18` (
   `form18_Id` int(11) NOT NULL AUTO_INCREMENT,
   `userId` tinyint(3) NOT NULL,
-  `numname` varchar(30) NOT NULL,
+  `fname` varchar(30) NOT NULL,
   `datename` varchar(30) NOT NULL,
   `plantname` varchar(30) NOT NULL,
   `sname` varchar(30) NOT NULL,
@@ -271,7 +285,15 @@ CREATE TABLE `form18` (
   `comment` varchar(50) NOT NULL,
   `status` varchar(20) NOT NULL DEFAULT 'Pending',
   PRIMARY KEY (`form18_Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `form18`
+--
+
+INSERT INTO `form18` (`form18_Id`, `userId`, `fname`, `datename`, `plantname`, `sname`, `numberbreed`, `numbercom`, `source`, `ab`, `request`, `comment`, `status`) VALUES
+(1, 2, 'Nuttapon25', '', '', '', '0', '', '', '', 25, '', 'Pending'),
+(2, 2, 'nutre25', '', '', '', '0', '', '', '', 25, '', 'Pending');
 
 -- --------------------------------------------------------
 

@@ -82,6 +82,7 @@ $route['officers/form19/status'] = 'form19_c/statusoff';
 $route['officers/form20/status'] = 'form20_c/statusoff';
 $route['officers/form17/status'] = 'form17_c/statusoff';
 $route['officers/form18/status'] = 'form18_c/statusoff';
+$route['officers/form13/status/(:any)'] = 'form13_c/statusoff/$1';
 
 $route['form21/show21/(:any)'] = 'form21_c/show21/$1';
 $route['pages/form21/(:any)'] ='form21_c/form21/$1';
@@ -93,6 +94,7 @@ $route['form21/update21']='form16_c/update_stat21';  ////////////////////////brb
 //user view the return form form officer
 $route['form16/submitForm16/'] = 'form16_c/submitForm16/';
 $route['form16/view/(:any)'] = 'form16_c/view16/$1/$2';
+$route['form14/view/(:any)'] = 'form14_c/view14/$1/$2';
 
 
 $route['pages/form19/(:any)'] ='form19_c/form19/$1';
@@ -123,6 +125,9 @@ $route['pages/save18'] = 'form18_c/save18';
 $route['form18/update25'] = 'form16_c/update_stat25';
 $route['form18/show18/(:any)'] = 'form18_c/show18/$1';
 
+
+$route['form13/show13/(:any)'] = 'form13_c/show13/$1';
+$route['form13/update3/(:any)'] = 'form14_c/update_stat3/$1';
 
 
 /* End of file routes.php */

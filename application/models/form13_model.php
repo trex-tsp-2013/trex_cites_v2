@@ -19,15 +19,15 @@ class Form13_model extends CI_Model
 		return 'true';
 	}
 
-	public function get_stat13($userId){
+	public function get_stat13($userId, $req){
 		// $query = $this->db->get('form13');
-		$query = $this->db->get_where('form13', array('userId' => $userId));
+		$query = $this->db->get_where('form13', array('userId' => $userId, 'request' => $req));
 		return $query->result_array();
 	}
 
-	public function get_allform13()
+	public function get_allform13($req)
 	{
-		$query = $this->db->get_where('form13');
+		$query = $this->db->get_where('form13', array('request' => $req ));
 		return $query->result_array();
 	}
 	// public function get_listform13($slug){
