@@ -227,6 +227,7 @@
             <br>
             <br>
             <button type="submit" class="btn btn-large btn-primary">Submit</button>
+            <?php echo form_open("pages");?><br>
             <button type="cancel" class="btn btn-large">Cancel</button>
             </form>
           </div>
