@@ -129,6 +129,11 @@ $route['form18/show18/(:any)'] = 'form18_c/show18/$1';
 $route['form13/show13/(:any)'] = 'form13_c/show13/$1';
 $route['form13/update3/(:any)'] = 'form14_c/update_stat3/$1';
 
+$route['pages/formhybrid/(:any)'] ='formhybrid_c/formhybrid/$1';
+$route['pages/previewhybrid'] ='formhybrid_c/previewhybrid';
+$route['pages/savehybrid'] = 'formhybrid_c/savehybrid';
+$route['formhybrid/update61'] = 'form14_c/update_stat61';
+$route['formhybrid/showhybrid/(:any)'] = 'formhybrid_c/showhybrid/$1';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
