@@ -98,7 +98,7 @@
           <div class="well">
             <h2>คำขอขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์</h2><br>
             
-            <?php echo form_open("pages/save15");?>
+            <form action="../pages/save15" method="post" enctype="multipart/form-data">
 
             <div style="color:red"><h1>โปรดตรวจสอบความถูกต้องอีกครั้ง</h1></div>
             <? $fname = $_POST['fname']; ?>
@@ -227,8 +227,53 @@
             <br>
             <br>
             <br>
-            <b>รูปภาพสถานประกอบการ: </b> <input type="file" name="file" id="file"><br>
-            <b>รูปภาพพันธุ์พืชอนุรักษ์: </b> <input type="file" name="file2" id="file">
+            <!-- save temp picture-->
+            <?php
+                if(file_exists("temp/1"))unlink("temp/1");
+                if(file_exists("temp/2"))unlink("temp/2");
+                $allowedExts = array("gif", "jpeg", "jpg", "png");
+                $temp = explode(".", $_FILES["file"]["name"]);
+                $extension = end($temp);
+                if ((($_FILES["file"]["type"] == "image/gif")
+                || ($_FILES["file"]["type"] == "image/jpeg")
+                || ($_FILES["file"]["type"] == "image/jpg")
+                || ($_FILES["file"]["type"] == "image/pjpeg")
+                || ($_FILES["file"]["type"] == "image/x-png")
+                || ($_FILES["file"]["type"] == "image/png"))
+                && ($_FILES["file"]["size"] < 20000)
+                && in_array($extension, $allowedExts))
+                  {
+                  if ($_FILES["file"]["error"] > 0)
+                    {
+                    echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
+                    }
+                  else{
+                    move_uploaded_file($_FILES["file"]["tmp_name"],
+                    "temp/1");
+                    }
+                  }
+                $temp = explode(".", $_FILES["file2"]["name"]);
+                $extension2 = end($temp);
+                if ((($_FILES["file2"]["type"] == "image/gif")
+                || ($_FILES["file2"]["type"] == "image/jpeg")
+                || ($_FILES["file2"]["type"] == "image/jpg")
+                || ($_FILES["file2"]["type"] == "image/pjpeg")
+                || ($_FILES["file2"]["type"] == "image/x-png")
+                || ($_FILES["file2"]["type"] == "image/png"))
+                && ($_FILES["file2"]["size"] < 20000)
+                && in_array($extension, $allowedExts))
+                  {
+                  if ($_FILES["file2"]["error"] > 0){
+                    echo "Return Code: " . $_FILES["file2"]["error"] . "<br>";
+                    }
+                  else{
+                    move_uploaded_file($_FILES["file2"]["tmp_name"],
+                    "temp/2");
+                    }
+                  }
+            ?>
+            <b>รูปภาพสถานประกอบการ: <?php if(file_exists("temp/1"))echo "</b><img src=\"".base_url()."/temp/1\">" ?><br>
+            <b>รูปภาพพันธุ์พืชอนุรักษ์: <?php if(file_exists("temp/2"))echo "</b><img src=\"".base_url()."/temp/2\">" ?><br>
             <br>
             <br>
             <br>
@@ -337,7 +382,6 @@
       </div><!--/row-->
     </div>
       <hr>
-
       <footer>
         <p>© TREX Corp. 2013</p>
       </footer>

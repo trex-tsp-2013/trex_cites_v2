@@ -136,4 +136,8 @@ $route['formhybrid/update61'] = 'form14_c/update_stat61';
 $route['formhybrid/showhybrid/(:any)'] = 'formhybrid_c/showhybrid/$1';
 
 /* End of file routes.php */
+//test upload
+$route['pages/contact'] = 'pages_c/contact';
+$route['pages/upload_file'] = 'pages_c/upload';
+//end test
 /* Location: ./application/config/routes.php */

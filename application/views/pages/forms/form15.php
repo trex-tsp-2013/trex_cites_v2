@@ -98,7 +98,7 @@
           <div class="well">
             <h2>คำขอขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์</h2><br><br>
             
-            <?php echo form_open("pages/preview15");?>
+            <form action="../../pages/preview15" method="post" enctype="multipart/form-data">
 
             <?
               // check post if it is null value

@@ -85,8 +85,26 @@ class Form15_C extends CI_Controller{
 		{
 			//load user
 			$user = $this->ion_auth->user()->row();
-
-
+			//save picture
+			$i=0;
+			if(file_exists("temp/1")){
+				for($i=1;;$i++){
+					if(!file_exists("upload/".$i)){
+						rename("temp/1","upload/".$i);
+						break;
+					}
+				}
+			}
+			$j=0;
+			if(file_exists("temp/2")){
+				for($j=1;;$j++){
+					if(!file_exists("upload/".$j)){
+						rename("temp/2","upload/".$j);
+						break;
+					}
+				}
+			}
+			//end save picture
 			$data15 = array(
 				//add userId form user
 				'userId' => $user->id,
@@ -129,6 +147,8 @@ class Form15_C extends CI_Controller{
 				'source' => $this->input->post('source'),
 				'ab' => $this->input->post('ab'),
 				'request' => 11,
+				'placepic'=> $i,
+				'plantpic'=>$j,
 				);
 
 				if($this->form15_model->save_form15($data15))
