@@ -20,4 +20,10 @@ class Form16_model extends CI_Model
 		return $query->row_array();
 	}
 
+	public function get_all_form16($userid)
+	{
+		$query = $this->db->query('SELECT form16_Id, fname FROM form16 WHERE userId = ?', $userid);
+		return $query->result_array();
+	}
+
 }

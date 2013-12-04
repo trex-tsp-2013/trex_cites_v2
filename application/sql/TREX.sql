@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 03, 2013 at 10:41 AM
+-- Generation Time: Dec 04, 2013 at 12:35 PM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.10
 
@@ -22,6 +22,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `form13` (
   `form13_Id` int(11) NOT NULL AUTO_INCREMENT,
+  `form16_Id` int(11) NOT NULL DEFAULT '0',
   `userId` int(11) NOT NULL,
   `fplace` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `fdate` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -42,17 +43,18 @@ CREATE TABLE `form13` (
   `request` int(11) NOT NULL,
   `status` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Pending',
   PRIMARY KEY (`form13_Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `form13`
 --
 
-INSERT INTO `form13` (`form13_Id`, `userId`, `fplace`, `fdate`, `fname`, `fbd`, `fnation`, `faddress`, `fother`, `fname2`, `fname3`, `fnurse`, `fnurseno`, `ftrans`, `fvalue`, `fentry`, `fdel`, `comment`, `request`, `status`) VALUES
-(7, 2, '', '', 'Nut31', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 31, 'Verified'),
-(8, 2, '', '', 'nuttapon31', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 31, 'Denied'),
-(9, 2, '', '', 'nut32', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 32, 'Denied'),
-(10, 2, '', '', 'nut33', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 33, 'Verified');
+INSERT INTO `form13` (`form13_Id`, `form16_Id`, `userId`, `fplace`, `fdate`, `fname`, `fbd`, `fnation`, `faddress`, `fother`, `fname2`, `fname3`, `fnurse`, `fnurseno`, `ftrans`, `fvalue`, `fentry`, `fdel`, `comment`, `request`, `status`) VALUES
+(7, 0, 2, '', '', 'Nut31', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 31, 'Verified'),
+(8, 0, 2, '', '', 'nuttapon31', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 31, 'Denied'),
+(9, 0, 2, '', '', 'nut32', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 32, 'Denied'),
+(10, 0, 2, '', '', 'nut33', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 33, 'Verified'),
+(11, 8, 2, 'nut41', '', '', '', '', '', '', '', '', '', 0, '', '', '', '', 'New document', 41, 'Pending');
 
 -- --------------------------------------------------------
 
@@ -151,7 +153,7 @@ INSERT INTO `form15` (`form15_Id`, `userId`, `fname`, `fbd`, `fnation`, `fpasspo
 (18, 2, 'nutt11', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Verified', 'New document', 11, '', ''),
 (19, 2, 'nutt21', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Verified', 'New document', 11, '', ''),
 (20, 6, 'qqq', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Pending', 'New document', 11, '', ''),
-(21, 6, 'dasdasdas', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Pending', 'New document', 11, '1', ''),
+(21, 6, 'dasdasdas', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Verified', 'New document', 11, '1', ''),
 (22, 6, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Pending', 'New document', 11, '0', '0'),
 (23, 6, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Pending', 'New document', 11, '1', '2'),
 (24, 6, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Pending', 'New document', 11, '2', '3'),
@@ -209,7 +211,7 @@ CREATE TABLE `form16` (
   `placepic` varchar(11) NOT NULL,
   `plantpic` varchar(11) NOT NULL,
   PRIMARY KEY (`form16_Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `form16`
@@ -221,14 +223,11 @@ INSERT INTO `form16` (`form16_Id`, `userId`, `fname`, `fbd`, `fnation`, `fpasspo
 (3, 5, 'ธนโชติ เตชะจารุพันธ์', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 11, '', '', '', ''),
 (4, 5, 'ธนโชติ เตชะจารุพันธ์', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 11, '', '', '', ''),
 (5, 5, 'ธนโชติ เตชะจารุพันธ์', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 11, '', '', '', ''),
-(6, 2, 'Nuttapon', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 17, 11, '', '', '', ''),
-(7, 2, 'Nuttapon', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 17, 11, '', '', '', ''),
 (8, 2, 'nutt11', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 18, 11, '', '', '', ''),
 (16, 2, 'Nuttapon', '12/12/12', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0', 7, 21, '', '', '', ''),
 (17, 2, 'test21', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 9, 21, '', '', '', ''),
-(18, 2, 'nutt21', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 19, 11, '', '', '', ''),
-(19, 2, 'nutt11', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 18, 11, '', '', '', ''),
-(20, 5, 'ธนโชติ เตชะจารุพันธ์', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 15, 11, '', '', '', '');
+(20, 5, 'ธนโชติ เตชะจารุพันธ์', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 15, 11, '', '', '', ''),
+(21, 6, 'dasdasdas', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 21, 11, '', '', '1', '');
 
 -- --------------------------------------------------------
 
@@ -356,7 +355,7 @@ CREATE TABLE `form19` (
 --
 
 INSERT INTO `form19` (`form19_Id`, `userId`, `fname`, `fbd`, `fnation`, `fpassport`, `fissue`, `faddress`, `fstreet`, `fprovince`, `fzipcode`, `ftel`, `fphone`, `ffax`, `fmail`, `fnumber`, `fname2`, `frname`, `faddress2`, `fstreet2`, `fprovince2`, `fzipcode2`, `ftel2`, `fphone2`, `ffax2`, `fname3`, `faddress3`, `fstreet3`, `fprovince3`, `fzipcode3`, `ftel3`, `fphone3`, `ffax3`, `comment`, `request`, `status`) VALUES
-(2, '2', 'Nut22', 'asdf', 'jknj', 'n', 'jnjkn', 'jn', 'jknjk', 'nkj', 'njk', 'njkn', 'jkn', 'kjn', 'knjk', 'nk', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'New document', 22, 'Pending'),
+(2, '2', 'Nut22', 'asdf', 'jknj', 'n', 'jnjkn', 'jn', 'jknjk', 'nkj', 'njk', 'njkn', 'jkn', 'kjn', 'knjk', 'nk', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'New document', 22, 'Verified'),
 (3, '2', 'Nuttaponform19', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'wef', 'New document', 22, 'Pending');
 
 -- --------------------------------------------------------
@@ -590,8 +589,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
 (1, '\0\0', 'administrator', '59beecdf7fc966e2f17fd8f65a4a9aeb09d4a3d4', '9462e8eee0', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1381302468, 1, 'Admin', 'istrator', 'ADMIN', '0'),
-(2, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'nuttapon phannurat', 'a4e9cc58a617436227ad7a1d6db6c51ca9c934b8', NULL, 'n@gmail.com', NULL, NULL, NULL, NULL, 1381043030, 1385110420, 1, 'Nuttapon', 'Phannurat', 'TREX', '0850199668'),
-(3, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'officer officer', '1c93c4d3c13a4521f19bfef3fe07dd6a1ef79a0c', NULL, 'officer@officer.com', NULL, NULL, NULL, NULL, 1381305254, 1385432924, 1, 'Officer', 'Officer', 'TREX', '0850199668'),
+(2, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'nuttapon phannurat', 'a4e9cc58a617436227ad7a1d6db6c51ca9c934b8', NULL, 'n@gmail.com', NULL, NULL, NULL, NULL, 1381043030, 1386153384, 1, 'Nuttapon', 'Phannurat', 'TREX', '0850199668'),
+(3, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'officer officer', '1c93c4d3c13a4521f19bfef3fe07dd6a1ef79a0c', NULL, 'officer@officer.com', NULL, NULL, NULL, NULL, 1381305254, 1386151195, 1, 'Officer', 'Officer', 'TREX', '0850199668'),
 (4, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'dsfdsfs dsfsf', '0bb941f07397167bb1aa19d81ec4be5894e178ea', NULL, 'm@g.com', NULL, NULL, NULL, NULL, 1381316764, 1381414176, 1, 'dsfdsfs', 'dsfsf', 'assadasd', 'dsadasd'),
 (5, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'tanachot techajarupan', 'ff01a5697d560ca487244dc4927a66dcb3007ff0', NULL, 'ttanachot@gmail.com', NULL, NULL, NULL, NULL, 1381330274, 1385697042, 1, 'Tanachot', 'Techajarupan', 'TREX', '1234'),
 (6, '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0', 'asdsa casdada', '6b2dac401d28a933ab7ec65a40936df0072ebbd0', NULL, 'q@q.com', NULL, NULL, NULL, NULL, 1385349468, 1386059170, 1, 'asdsa', 'casdada', 'sadasdas', '0000');
@@ -618,7 +617,6 @@ CREATE TABLE `users_groups` (
 
 INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
 (1, 1, 1),
-(2, 1, 2),
 (3, 2, 2),
 (4, 3, 3),
 (5, 4, 2),

@@ -6,7 +6,7 @@ class Form13_C extends CI_Controller{
 	{
 		parent::__construct();
 		$this->load->model('form13_model');
-
+		$this->load->model('form16_model');
 	}
 
 	public function form13($request)
@@ -18,6 +18,10 @@ class Form13_C extends CI_Controller{
 				$data['username'] = $user->username;
 				//save request to be data
 				$data['request'] = $request; 
+
+				if($request == 41){
+					$data['form16'] = $this->form16_model->get_all_form16($user->id);
+				}
 				//open form13
 				$this->load->view('pages/forms/form13',$data);
 		} else{
@@ -34,6 +38,8 @@ class Form13_C extends CI_Controller{
 			$user = $this->ion_auth->user()->row();
 			//save username to be data
 			$data['username'] = $user->username;
+
+			$data['request'] = $this->input->post('req');
 			//open preview form13
 			$this->load->view('pages/previews/preview13',$data);
 		} else{
@@ -78,34 +84,63 @@ class Form13_C extends CI_Controller{
 			//load user
 			$user = $this->ion_auth->user()->row();
 
+			if($this->input->post('req') == 41){
+				$data13 = array(
+					//add userId form user
+					'form16_Id' => $this->input->post('form16'),
+					'userId' => $user->id,
+					'fplace' => $this->input->post('fplace'),
+					'fname' => $this->input->post('fname'),
+					'fbd' => $this->input->post('fbd'),
+					'fnation' => $this->input->post('fnation'),
+					'fother' => $this->input->post('fother'),
+					'faddress' => $this->input->post('faddress'),
 
-			$data13 = array(
-				//add userId form user
-				'userId' => $user->id,
-				'fplace' => $this->input->post('fplace'),
-				'fname' => $this->input->post('fname'),
-				'fbd' => $this->input->post('fbd'),
-				'fnation' => $this->input->post('fnation'),
-				'fother' => $this->input->post('fother'),
-				'faddress' => $this->input->post('faddress'),
+					'fname2' => $this->input->post('fname2'),
+					'fname3' => $this->input->post('fname3'),
+					'fnurse' => $this->input->post('fnurse'),
+					'ftrans' => $this->input->post('ftrans'),
+					'fvalue' => $this->input->post('fvalue'),
+					'fentry' => $this->input->post('fentry'),
+					'request' => $this->input->post('request'),
+					
+					);
 
-				'fname2' => $this->input->post('fname2'),
-				'fname3' => $this->input->post('fname3'),
-				'fnurse' => $this->input->post('fnurse'),
-				'ftrans' => $this->input->post('ftrans'),
-				'fvalue' => $this->input->post('fvalue'),
-				'fentry' => $this->input->post('fentry'),
-				'request' => $this->input->post('request'),
-				
-				);
+					if($this->form13_model->save_form13($data13))
+					{
+						redirect('auth', 'refresh');
+					}else{
+						show_404();
+					}
 
-				if($this->form13_model->save_form13($data13))
-				{
-					redirect('auth', 'refresh');
-				}else{
-					show_404();
-				}
+			} else {
+				$data13 = array(
+					//add userId form user
+					'userId' => $user->id,
+					'fplace' => $this->input->post('fplace'),
+					'fname' => $this->input->post('fname'),
+					'fbd' => $this->input->post('fbd'),
+					'fnation' => $this->input->post('fnation'),
+					'fother' => $this->input->post('fother'),
+					'faddress' => $this->input->post('faddress'),
 
+					'fname2' => $this->input->post('fname2'),
+					'fname3' => $this->input->post('fname3'),
+					'fnurse' => $this->input->post('fnurse'),
+					'ftrans' => $this->input->post('ftrans'),
+					'fvalue' => $this->input->post('fvalue'),
+					'fentry' => $this->input->post('fentry'),
+					'request' => $this->input->post('request'),
+					
+					);
+
+					if($this->form13_model->save_form13($data13))
+					{
+						redirect('auth', 'refresh');
+					}else{
+						show_404();
+					}
+			}
 
 			// //open preview form13
 			// $this->load->view('pages/previews/preview13');

@@ -126,7 +126,9 @@ $route['pages/save18'] = 'form18_c/save18';
 $route['form18/update25'] = 'form16_c/update_stat25';
 $route['form18/show18/(:any)'] = 'form18_c/show18/$1';
 
-
+$route['pages/form13/(:any)'] ='form13_c/form13/$1';
+$route['pages/preview13'] ='form13_c/preview13';
+$route['pages/save13'] = 'form13_c/save13';
 $route['form13/show13/(:any)'] = 'form13_c/show13/$1';
 $route['form13/update3/(:any)'] = 'form14_c/update_stat3/$1';
 

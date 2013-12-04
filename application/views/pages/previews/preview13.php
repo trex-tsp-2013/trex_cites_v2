@@ -100,6 +100,15 @@
             <?php echo form_open("pages/save13");?>
 
             <div style="color:red"><h1>โปรดตรวจสอบความถูกต้องอีกครั้ง</h1></div>
+
+            <?
+              if($request == 41){
+               $form16 = $_POST['form16']; ?>
+                <input type="hidden" name="form16" value="<?echo $form16;?>">
+                <input type="hidden" name="req" value="<?echo $request;?>">
+                <b>ยื่นพร้อมพพ. เลขที่: </b><span style="color:red"><?echo $_POST["form16"];?></span><br>
+            <?}?>
+
             <? $fplace = $_POST['fplace']; ?>
             <b>เขียนที่ (Place): </b><span style="color:red"><?echo $_POST["fplace"];?></span><br>
 
@@ -156,6 +165,7 @@
 
             <? $fdel = $_POST['fdel']; ?>
             <b>ประมาณวันที่ (Date of delivery shipment):</b><span style="color:red"><?echo $_POST["fdel"];?></span><br>
+
 
             <input type="hidden" name="fplace" value="<?echo $fplace;?>">
             <input type="hidden" name="fdate" value="<?echo $fdate;?>">

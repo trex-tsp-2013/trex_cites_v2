@@ -77,10 +77,10 @@
               <br>
               <li><a href="<? echo site_url("pages/trans2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
               <br>
-              <li class ="active"><a href="<? echo site_url("pages/trans3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
+              <li class ="<?= ($request == 31 || $request == 32 || $request == 33) ? "active" : "nonactive" ; ?>"><a href="<? echo site_url("pages/trans3") ?>">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
               <br>
-              <li><a href="<? echo site_url("pages/trans4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
+              <li class ="<?= ($request == 41) ? "active" : "nonactive" ; ?>"><a href="<? echo site_url("pages/trans4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
               <br>
               <li><a href="<? echo site_url("pages/trans5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
@@ -161,6 +161,13 @@
 
             ?>
             <input type="hidden" name="request" value="<?echo $request;?>">
+            <? if($request == 41){ ?>
+            <select name="form16">
+              <? foreach ($form16 as $key) {?>
+                <option value="<? echo $key['form16_Id'] ?>" ><?echo $key['fname'];?></option>
+              <?}?>
+            </select><br>
+            <?}?>
             <b>เขียนที่ (Place): </b><input class="input-xlarge" type="text" name="fplace" value="<?echo $fplace;?>"><br>
             <b>วันที่ (Date): </b><input type="text" name="fdate" value="<?echo $fdate;?>"><br>
             <b>ข้าพเจ้า (Mr./Mrs./Miss): </b><input class="input-xlarge" type="text" name="fname" value="<?echo $fname;?>"><br>
@@ -186,6 +193,7 @@
             <b>ชื่อสถานที่เพาะเลี้ยงอนุรักษ์ (Name of Nursery Registration):<input class="input-xlarge" type="text" name="fnurse" value="<?echo $fnurse;?>"> <br>เลขทะเบียน (Registration No.):<input class="input-xlarge" type="text" name="fnurseno" value="<?echo $fnurseno;?>"></b><br>
             <b>มูลค่า (Values):<input class="input-xlarge" type="text" name="fvalue" value="<?echo $fvalue;?>"> (บาท) <br>โดยพาหนะ (Means of Conveyance):<input class="input-xlarge" type="text" name="ftrans" value="<?echo $ftrans;?>"></b><br>
             <b>นำเข้าประเทศปลายทาง (Point of Entry):<input class="input-xlarge" type="text" name="fentry" value="<?echo $fentry;?>"> <br>ประมาณวันที่ (Date of delivery shipment):<input class="input-xlarge" type="text" name="fdel" value="<?echo $fdel;?>"></b>
+            <input type="hidden" name="req" value="<?echo $request;?>">
             <br>
             <button type="submit" class="btn btn-large btn-primary">Submit</button>
             <button type="cancel" class="btn btn-large">Cancel</button>
