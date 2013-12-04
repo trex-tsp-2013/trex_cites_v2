@@ -2095,4 +2095,20 @@ class Ion_auth_model extends CI_Model
 			return inet_pton($ip_address);
 		}
 	}
+
+	public function getAllUser(){
+		$query = $this->db->query('SELECT email, first_name, last_name, phone 
+								   FROM users
+								   INNER JOIN users_groups ON users.id = users_groups.user_id
+								   WHERE users_groups.group_id = 2');
+		return $query->result_array();
+	}
+
+	public function getAllOfficer(){
+		$query = $this->db->query('SELECT email, first_name, last_name, phone 
+								   FROM users
+								   INNER JOIN users_groups ON users.id = users_groups.user_id
+								   WHERE users_groups.group_id = 3');
+		return $query->result_array();
+	}
 }

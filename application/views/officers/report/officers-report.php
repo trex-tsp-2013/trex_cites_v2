@@ -72,38 +72,58 @@
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><h2>Form & Request</h2></li>
-              <li><a href="<? echo site_url("pages/trans1") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
-              <br>
-              <li><a href="<? echo site_url("pages/trans2") ?>">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
-              <br>
-              <li class="active"><a href="#">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
-              ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
-              <br>
-              <li><a href="<? echo site_url("pages/trans4") ?>">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
-              <br>
-              <li><a href="<? echo site_url("pages/trans5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
-              <br>
-              <li><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li class="nav-header"><a href="<? echo site_url("pages/report") ?>">
+              <h2 style="color:gray"><font >report</h2></a></font></li>
             </ul>
           </div><!--/.well -->
+
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header"><a href="<? echo site_url("pages/report") ?>">
-              <h2><font >Report</h2></a></font></li>
+              <li class="nav-header"><a href="<? echo site_url("") ?>">
+              <h2><font >Form & request</h2></a></font></li>
             </ul>
           </div><!--/.well -->
+
         </div><!--/span-->
         <div class="span9">
           <div class="well">
-            <h2>การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
-              ตามวงศ์และชนิดที่ระบุในบัญชี</h2><br><br>
+            <h2>List of User</h2><br><br>
             <div style ="font-size:16px">
-            <ol>
-              <li><a href="<? echo site_url('officers/status/31') ?>">การขออนุญาตนําเข้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์ตามวงศ์และชนิดที่ระบุในบัญชี 1 และ 2</a></li>
-              <li><a href="<? echo site_url('officers/status/32') ?>">การขออนุญาตนําเข้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์ตามวงศ์และชนิดที่ระบุในบัญชี 3</a></li>
-              <li><a href="<? echo site_url('officers/status/33') ?>">การขออนุญาตนําเข้าล่วงหน้าซึ่งพnช อนุรักษ์และซากของพืชอนุรักษ์ตามวงศ์และชนิดที่ระบุใน บัญชี 1 และ 2</a></li>
-            </ol>
+            
+            <table class="table" style="width:950px">
+            <thead> 
+            <td width="20%"><h4>#</h4></td>
+            <td><h4>First Name</h4></td> 
+            <td><h4>Last Name</h4></td>
+            <td><h4>E-Mail</h4></td>
+            <td><h4>Phone</h4></td>
+            </thead>
+
+            <?  $int = 1; 
+            foreach ($officers as $user) { ?>
+
+              <tbody >
+                  <td width="10%">
+                    <? echo $int++; ?>
+                  </td>
+                  <td>
+                    <? echo $user['first_name']; ?>
+                  </td>
+                  <td>
+                    <? echo $user['last_name']; ?>
+                  </td>
+                  <td >
+                    <? echo $user['email']; ?>
+                  </td>
+                  <td>
+                    <? echo $user['phone']; ?>
+                  </td>
+                 
+                 
+              </tbody>
+           
+              <?}?>
+          </table>
             </div>
           </div>
         </div>

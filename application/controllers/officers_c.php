@@ -54,6 +54,25 @@ class Officers_C extends CI_Controller{
 		}
 	}
 
+	public function getAllUser()
+	{
+		$user = $this->ion_auth->user()->row();
+			//save username to be data
+		$data['username'] = $user->username;
+		$data['users'] = $this->ion_auth_model->getAllUser();
+
+		$this->load->view('officers/report/users-report', $data);
+	}
+
+	public function getAllOfficer()
+	{
+		$user = $this->ion_auth->user()->row();
+			//save username to be data
+		$data['username'] = $user->username;
+		$data['officers'] = $this->ion_auth_model->getAllOfficer();
+
+		$this->load->view('officers/report/officers-report', $data);
+	}
 	
 	// public function lists($request)
 	// {

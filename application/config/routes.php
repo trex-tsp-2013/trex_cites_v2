@@ -58,6 +58,7 @@ $route['pages/trans3']='trans_c/trans3';
 $route['pages/trans4']='trans_c/trans4';
 $route['pages/trans5']='trans_c/trans5';
 $route['pages/trans6']='trans_c/trans6';
+$route['pages/report']='trans_c/report';
 
 $route['pages/stats_home']='stats_c/home';
 $route['pages/stats1']='stats_c/stats1';
@@ -134,6 +135,11 @@ $route['pages/previewhybrid'] ='formhybrid_c/previewhybrid';
 $route['pages/savehybrid'] = 'formhybrid_c/savehybrid';
 $route['formhybrid/update61'] = 'form14_c/update_stat61';
 $route['formhybrid/showhybrid/(:any)'] = 'formhybrid_c/showhybrid/$1';
+
+
+//officers reports
+$route['officers/users-report']='officers_c/getAllUser';
+$route['officers/officers-report']='officers_c/getAllOfficer';
 
 /* End of file routes.php */
 //test upload

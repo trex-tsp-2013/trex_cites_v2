@@ -87,6 +87,12 @@
               <li><a href="<? echo site_url("pages/trans6") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
           </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header"><a href="<? echo site_url("pages/report") ?>">
+              <h2><font >Report</h2></a></font></li>
+            </ul>
+          </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <div class="well">

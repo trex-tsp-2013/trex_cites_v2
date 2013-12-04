@@ -164,4 +164,19 @@ class Trans_C extends CI_Controller{
 		 	redirect('auth', 'refresh');
 		}
 	}
+
+	public function report()
+	{
+		if($this->ion_auth->is_officer()){
+			$user = $this->ion_auth->user()->row();
+			//save username to be data
+			$data['username'] = $user->username;
+			//save request to be data
+			// $data['request'] = $request; 
+			//open form15
+			$this->load->view('officers/trans/transreport',$data);
+		} else {
+			echo "You are not an officers";
+		}
+	}
 }
