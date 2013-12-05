@@ -87,7 +87,9 @@
         </div><!--/span-->
         <div class="span9">
           <div class="well">
-            <h2>List of User</h2><br><br>
+            <h2>Total Officers: <span style="color:green"><?echo $count;?></span> </h2>
+            <br>
+            <h3>List of Officer</h3><br>
             <div style ="font-size:16px">
             
             <table class="table" style="width:950px">

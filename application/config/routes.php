@@ -143,7 +143,7 @@ $route['formhybrid/showhybrid/(:any)'] = 'formhybrid_c/showhybrid/$1';
 //officers reports
 $route['officers/users-report']='officers_c/getAllUser';
 $route['officers/officers-report']='officers_c/getAllOfficer';
-
+$route['officers/form-report']='report_c/getform';
 /* End of file routes.php */
 //test upload
 $route['pages/contact'] = 'pages_c/contact';

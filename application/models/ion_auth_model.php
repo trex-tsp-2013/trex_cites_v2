@@ -2104,11 +2104,27 @@ class Ion_auth_model extends CI_Model
 		return $query->result_array();
 	}
 
+	public function getNumberUser(){
+		$query = $this->db->query('SELECT email, first_name, last_name, phone 
+								   FROM users
+								   INNER JOIN users_groups ON users.id = users_groups.user_id
+								   WHERE users_groups.group_id = 2');
+		return $query->num_rows();
+	}
+
 	public function getAllOfficer(){
 		$query = $this->db->query('SELECT email, first_name, last_name, phone 
 								   FROM users
 								   INNER JOIN users_groups ON users.id = users_groups.user_id
 								   WHERE users_groups.group_id = 3');
 		return $query->result_array();
+	}
+
+	public function getNumberOfficer(){
+		$query = $this->db->query('SELECT email, first_name, last_name, phone 
+								   FROM users
+								   INNER JOIN users_groups ON users.id = users_groups.user_id
+								   WHERE users_groups.group_id = 3');
+		return $query->num_rows();
 	}
 }

@@ -87,45 +87,11 @@
         </div><!--/span-->
         <div class="span9">
           <div class="well">
-            <h2>Total Users: <span style="color:green"><?echo $count;?></span> </h2>
-            <br>
-            <h3>List of User</h3><br>
-            <div style ="font-size:16px">
+            <h3>Form15</h3>
+            <h3>Verified: <span style="color:green"><?echo $count;?></span> forms</h2>
+            <h3>Denied: <span style="color:red"><?echo $count2;?></span> forms</h2>
+            <h3>Pending: <span style="color:orange"><?echo $count3;?></span> forms</h2>
             
-            <table class="table" style="width:950px">
-            <thead> 
-            <td width="20%"><h4>#</h4></td>
-            <td><h4>First Name</h4></td> 
-            <td><h4>Last Name</h4></td>
-            <td><h4>E-Mail</h4></td>
-            <td><h4>Phone</h4></td>
-            </thead>
-
-            <?  $int = 1; 
-            foreach ($users as $user) { ?>
-
-              <tbody >
-                  <td width="10%">
-                    <? echo $int++; ?>
-                  </td>
-                  <td>
-                    <? echo $user['first_name']; ?>
-                  </td>
-                  <td>
-                    <? echo $user['last_name']; ?>
-                  </td>
-                  <td >
-                    <? echo $user['email']; ?>
-                  </td>
-                  <td>
-                    <? echo $user['phone']; ?>
-                  </td>
-                 
-                 
-              </tbody>
-           
-              <?}?>
-          </table>
             </div>
           </div>
         </div>

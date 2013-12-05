@@ -6,6 +6,7 @@ class Officers_C extends CI_Controller{
 	{
 		parent::__construct();
 		// $this->load->model('form_model');
+
 	}
 
 	public function index()
@@ -66,7 +67,7 @@ class Officers_C extends CI_Controller{
 			//save username to be data
 		$data['username'] = $user->username;
 		$data['users'] = $this->ion_auth_model->getAllUser();
-
+		$data['count'] = $this->ion_auth_model->getNumberUser();
 		$this->load->view('officers/report/users-report', $data);
 	}
 
@@ -76,7 +77,8 @@ class Officers_C extends CI_Controller{
 			//save username to be data
 		$data['username'] = $user->username;
 		$data['officers'] = $this->ion_auth_model->getAllOfficer();
-
+		$data['count'] = $this->ion_auth_model->getNumberOfficer();
+		
 		$this->load->view('officers/report/officers-report', $data);
 	}
 	
