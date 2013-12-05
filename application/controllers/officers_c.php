@@ -51,8 +51,10 @@ class Officers_C extends CI_Controller{
 			redirect("officers/form13/status/32");
 		} elseif ($req == 33) {
 			redirect("officers/form13/status/33");
+		} elseif ($req == 61) {
+			redirect("officers/formhybrid/status/61");
 		}
-	}
+	}	
 
 	public function getAllUser()
 	{

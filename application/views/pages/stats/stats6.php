@@ -84,7 +84,7 @@
               <br>
               <li><a href="<? echo site_url("pages/stats5") ?>">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
               <br>
-              <li class="active"><a href="#">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
+              <li class="active"><a href="<? echo site_url("pages/status/61") ?>">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">

@@ -84,6 +84,7 @@ $route['officers/form20/status'] = 'form20_c/statusoff';
 $route['officers/form17/status'] = 'form17_c/statusoff';
 $route['officers/form18/status'] = 'form18_c/statusoff';
 $route['officers/form13/status/(:any)'] = 'form13_c/statusoff/$1';
+$route['officers/formhybrid/status/(:any)'] = 'formhybrid_c/statusoff/$1';
 
 $route['form21/show21/(:any)'] = 'form21_c/show21/$1';
 $route['pages/form21/(:any)'] ='form21_c/form21/$1';
