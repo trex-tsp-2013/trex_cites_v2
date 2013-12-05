@@ -151,7 +151,7 @@
                     } elseif ($check['request'] == 24)  {
                       $segment = array('form17', 'show17', $check['form17_Id']);
                       echo '<a class="btn" href="'.site_url($segment).'"> ดูแบบฟอร์ม </a>';
-                    } elseif ($check['request'] == 31 || $check['request'] == 32 || $check['request'] == 33)  {
+                    } elseif ($check['request'] == 31 || $check['request'] == 32 || $check['request'] == 33 || $check['request'] == 41 || $check['request'] == 51)  {
                       $segment = array('form13', 'show13', $check['form13_Id']);
                       echo '<a class="btn" href="'.site_url($segment).'"> ดูแบบฟอร์ม </a>';
                     } elseif ($check['request'] == 61 )  {
@@ -187,7 +187,7 @@
                             $segments = array('form16', 'view', $check['form17_Id'], '24' ); 
                             echo '<a class="btn" style="width:70px" href="'.site_url($segments).'" target="_blank">พ.พ. 16</a>';
                           }
-                        } elseif ($check['request'] == 31 || $check['request'] == 32 || $check['request'] == 33) {
+                        } elseif ($check['request'] == 31 || $check['request'] == 32 || $check['request'] == 33 || $check['request'] == 41 || $check['request'] == 51) {
                           if($check['status'] == 'Verified'){
                             $segments = array('form14', 'view', $check['form13_Id'], $check['request'] ); 
                             echo '<a class="btn" style="width:70px" href="'.site_url($segments).'" target="_blank">พ.พ. 14</a>';

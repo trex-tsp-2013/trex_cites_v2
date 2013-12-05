@@ -57,8 +57,13 @@ class Form13_C extends CI_Controller{
 
 		$data['checks'] = $this->form13_model->get_stat13($id['id'], $req);
 		$data['formNameId'] = 'form13_Id';
-		$data['activer'] = 3;
-			
+		if($req == 41){
+			$data['activer'] = 4;
+		} elseif ($req == 51) {
+			$data['activer'] = 5;
+		} else {
+			$data['activer'] = 3;
+		}
 		$this->load->view('pages/status/status',$data);
 	}
 
@@ -70,8 +75,13 @@ class Form13_C extends CI_Controller{
 		$id['id'] = $user->id;		
 		$data['checks'] = $this->form13_model->get_allform13($req);
 		$data['formNameId'] = 'form13_Id';
-		$data['activer'] = 3;
-			
+		if($req == 41){
+			$data['activer'] = 4;
+		} elseif ($req == 51) {
+			$data['activer'] = 5;
+		} else {
+			$data['activer'] = 3;
+		}
 		$this->load->view('officers/status',$data);
 	}
 
