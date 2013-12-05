@@ -70,37 +70,13 @@
     
     <div class="container-fluid">
       <div class="row-fluid">
-        <!-- <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header"><h2>Form & Request</h2></li>
-              <li><a href="pages/form15">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li>
-              <br>
-              <li><a href="#">การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</a></li>
-              <br>
-              <li><a href="#">การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
-              ตามวงศ์และชนิดที่ระบุในบัญชี</a></li>
-              <br>
-              <li><a href="#">การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</a></li>
-              <br>
-              <li><a href="#">การขออนุญาตนำผ่านพืชอนุรักษ์</a></li>
-              <br>
-              <li><a href="#">การออกหนังสือรับรองการส่งออกพืชลูกผสม</a></li>
-            </ul>
-          </div>
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header"><h2>Form Status</h2></li>
-              <li><a href="#">คำขอล่าสุด</a></li>
-            </ul>
-          </div>
-        </div> -->
+        
         <div class="span9 offset2">
           <div class="hero-unit">
             <h1>Hello, <?echo $username;?>!</h1><br>
             <p>Welcome to the CITES online document approval</p>
             <p>ยินดีต้อนรับเข้าสู่ การลงทะเบียน CITES ออนไลน์</p>
-            <p><a href="#" class="btn btn-primary btn-large">Learn more »</a></p>
+            
           </div>
           <div class="row-fluid">
             <div class="well span4">
@@ -134,8 +110,20 @@
               <p><a class="btn btn-success" href="<? echo site_url("pages/trans6") ?>">Verification »</a></p>
             </div><!--/span-->
           </div><!--/row-->
+
+          <div class="row-fluid">
+            <div class="well span6 offset3">
+              <center><h4>ดูแบบรายงาน</h4>
+              <br>
+              <p><a class="btn btn-danger" href="<? echo site_url("pages/report") ?>">Report »</a></p>
+            </center>
+            </div><!--/span-->
+          </div><!--/row-->
+
         </div><!--/span-->
       </div><!--/row-->
+      
+      
 
     
       <hr>

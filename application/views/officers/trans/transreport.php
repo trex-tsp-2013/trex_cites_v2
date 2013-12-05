@@ -87,14 +87,13 @@
         </div><!--/span-->
         <div class="span9">
           <div class="well">
-            <h2>Report</h2><br><br>
+            <h2>REPORT</h2><br><br>
             <div style ="font-size:16px">
             <ol>
               <!-- <li><a href="<? echo site_url("pages/form15/11") ?>">การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</a></li> -->
-              <li><a href="<? echo site_url("officers/users-report") ?>">จำนวน user</a></li>
-              <li><a href="<? echo site_url("officers/officers-report") ?>">จำนวน officer</a></li>
-              <li><a href="<? echo site_url("officers/form-report") ?>">จำนวน พพ ที่กรอก ไล่ไปแต่ละฟอร์ม</a></li>
-              <li><a href="<? echo site_url("") ?>">จำนวน พพ 14,16 ที่ออกไปแต่ละอัน</a></li>
+              <li><a href="<? echo site_url("officers/users-report") ?>">จำนวน user</a><br></li><br>
+              <li><a href="<? echo site_url("officers/officers-report") ?>">จำนวน officer</a></li><br>
+              <li><a href="<? echo site_url("officers/form-report") ?>">จำนวน พ.พ. และ ใบสำคัญ</a></li>
 
             </ol>
             </div>

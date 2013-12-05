@@ -98,42 +98,41 @@
             <h1>Hello, <?echo $username;?>!</h1><br>
             <p>Welcome to the CITES online document approval</p>
             <p>ยินดีต้อนรับเข้าสู่ การลงทะเบียน CITES ออนไลน์</p>
-            <p><a href="#" class="btn btn-primary btn-large">Learn more »</a></p>
           </div>
           
-          <div class="row-fluid">
+          <!-- <div class="row-fluid">
             <div class="span4">
               <h4>การขึ้นทะเบียนสถานที่เพาะเลี้ยงพืชอนุรักษ์ และ ยื่นบัญชีแสดงจำนวนพืชอนุรักษ์</h4><br>
-              <p><a class="btn btn-info" href="#">View details »</a></p>
-            </div><!--/span-->
-            <div class="span4">
+              <p><a class="btn btn-info" href="<? echo site_url("pages/trans1") ?>">View details »</a></p>
+            </div></span>
+           <div class="span4">
               <h4>การยื่นคำขอต่างๆ ที่เกี่ยวข้องกับใบสำคัญการขึ้นทะเบียนสถานที่เพาะเลี้ยง และ บัญชีพืชอนุรักษ์</h4>
-              <p><a class="btn btn-info" href="#">View details »</a></p>
-            </div><!--/span-->
+              <p><a class="btn btn-info" href="<? echo site_url("pages/trans2") ?>">View details »</a></p>
+            </div></span>
             <div class="span4">
               <h4>การขออนุญาตนำเข้า และนำเข้าล่วงหน้าพืชอนุรักษ์และซากพืชของพืชอนุรักษ์
               ตามวงศ์และชนิดที่ระบุในบัญชี</h4>
-              <p><a class="btn btn-info" href="#">View details »</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
+              <p><a class="btn btn-info" href="<? echo site_url("pages/trans3") ?>">View details »</a></p>
+            </div></span>
+          </div></row>
           <div class="row-fluid">
             <div class="span4">
               <h4>การขอใบอนุญาตส่งออก และส่งออกล่วงหน้าพืชอนุรักษ์หรือซากพืชอนุรักษ์</h4>
-              <p><a class="btn btn-info" href="#">View details »</a></p>
-            </div><!--/span-->
+              <p><a class="btn btn-info" href="<? echo site_url("pages/trans4") ?>">View details »</a></p>
+            </div></span>
             <div class="span4">
               <h4>การขออนุญาตนำผ่านพืชอนุรักษ์</h4>
               <br>
-              <p><a class="btn btn-info" href="#">View details »</a></p>
-            </div><!--/span-->
+              <p><a class="btn btn-info" href="<? echo site_url("pages/trans5") ?>">View details »</a></p>
+            </div></span>
             <div class="span4">
               <h4>การออกหนังสือรับรองการส่งออกพืชลูกผสม</h4>
               <br>
-              <p><a class="btn btn-info" href="#">View details »</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-        </div><!--/span-->
-      </div><!--/row-->
+              <p><a class="btn btn-info" href="<? echo site_url("pages/trans6") ?>">View details »</a></p>
+            </div></span>
+          </div></row>
+        </div></span>
+      </div></row> -->
       <hr>
 
       <footer>

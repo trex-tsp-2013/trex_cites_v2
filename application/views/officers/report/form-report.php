@@ -87,11 +87,100 @@
         </div><!--/span-->
         <div class="span9">
           <div class="well">
-            <h3>Form15</h3>
-            <h3>Verified: <span style="color:green"><?echo $count;?></span> forms</h2>
-            <h3>Denied: <span style="color:red"><?echo $count2;?></span> forms</h2>
-            <h3>Pending: <span style="color:orange"><?echo $count3;?></span> forms</h2>
-            
+            <!-- <h3>Form15</h3>
+            <h3>Verified: <span style="color:green"><?echo $count;?></span> forms</h3>
+            <h3>Denied: <span style="color:red"><?echo $count2;?></span> forms</h3>
+            <h3>Pending: <span style="color:orange"><?echo $count3;?></span> forms</h3>
+             -->
+
+            <h2>รายละเอียด การใช้งาน แบบ พ.พ.</h2><br>
+            <table class="table" style="width:950px">
+            <thead> 
+            <td><h4>#Form</h4></td> 
+            <td><h4><span style="color:green">Verified</span></h4></td>
+            <td><h4><span style="color:red">Denied</h4></span></td>
+            <td><h4><span style="color:orange">Pending</h4></span></td>
+            <td><h4>Total</h4></td>
+            </thead>
+             
+              <tbody>
+                  <td>พ.พ. 13</td>
+                  <td><span style="color:green"><?echo $v13;?></span></td>
+                  <td><span style="color:red"><?echo $d13;?></span></td>
+                  <td><span style="color:red"><?echo $p13;?></span></td>
+                  <td><?echo $v13+$d13+$p13;?></td>
+              </tbody>
+              <tbody>
+                  <td>พ.พ. 15</td>
+                  <td><span style="color:green"><?echo $v15;?></span></td>
+                  <td><span style="color:red"><?echo $d15;?></span></td>
+                  <td><span style="color:red"><?echo $p15;?></span></td>
+                  <td><?echo $v15+$d15+$p15;?></td>
+              </tbody>
+              <tbody>
+                  <td>พ.พ. 17</td>
+                  <td><span style="color:green"><?echo $v17;?></span></td>
+                  <td><span style="color:red"><?echo $d17;?></span></td>
+                  <td><span style="color:red"><?echo $p17;?></span></td>
+                  <td><?echo $v17+$d17+$p17;?></td>
+              </tbody>
+              <tbody>
+                  <td>พ.พ. 18</td>
+                  <td><span style="color:green"><?echo $v18;?></span></td>
+                  <td><span style="color:red"><?echo $d18;?></span></td>
+                  <td><span style="color:red"><?echo $p18;?></span></td>
+                  <td><?echo $v18+$d18+$p18;?></td>
+              </tbody>
+              <tbody>
+                  <td>พ.พ. 19</td>
+                  <td><span style="color:green"><?echo $v19;?></span></td>
+                  <td><span style="color:red"><?echo $d19;?></span></td>
+                  <td><span style="color:red"><?echo $p19;?></span></td>
+                  <td><?echo $v19+$d19+$p19;?></td>
+              </tbody>
+              <tbody>
+                  <td>พ.พ. 20</td>
+                  <td><span style="color:green"><?echo $v20;?></span></td>
+                  <td><span style="color:red"><?echo $d20;?></span></td>
+                  <td><span style="color:red"><?echo $p20;?></span></td>
+                  <td><?echo $v20+$d20+$p20;?></td>
+              </tbody>
+              <tbody>
+                  <td>พ.พ. 21</td>
+                  <td><span style="color:green"><?echo $v21;?></span></td>
+                  <td><span style="color:red"><?echo $d21;?></span></td>
+                  <td><span style="color:red"><?echo $p21;?></span></td>
+                  <td><?echo $v21+$d21+$p21;?></td>
+              </tbody>
+              <tbody>
+                  <td>พืชผสม</td>
+                  <td><span style="color:green"><?echo $vhybrid;?></span></td>
+                  <td><span style="color:red"><?echo $dhybrid;?></span></td>
+                  <td><span style="color:red"><?echo $phybrid;?></span></td>
+                  <td><?echo $vhybrid+$dhybrid+$phybrid;?></td>
+              </tbody>
+           
+
+          </table>
+          <br>
+          <h2>จำนวนใบสำคัญทั้งหมด</h2><br>
+          <table class="table" style="width:950px">
+            <thead> 
+            <td><h4>#Form</h4></td> 
+            <td><h4>Total</h4></td>
+            </thead>
+             
+              <tbody>
+                  <td>พ.พ. 14</td>
+                  <td><span style="color:blue"><?echo $t14;?></span></td>
+              </tbody>
+              <tbody>
+                  <td>พ.พ. 16</td>
+                  <td><span style="color:blue"><?echo $t16;?></span></td>
+              </tbody>
+          </table>
+
+
             </div>
           </div>
         </div>
