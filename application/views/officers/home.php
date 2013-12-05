@@ -130,7 +130,7 @@
             </div><!--/span-->
             <div class="well span4">
               <h4>การออกหนังสือรับรองการส่งออกพืชลูกผสม</h4>
-              <br><br>
+              <br>
               <p><a class="btn btn-success" href="<? echo site_url("pages/trans6") ?>">Verification »</a></p>
             </div><!--/span-->
           </div><!--/row-->
