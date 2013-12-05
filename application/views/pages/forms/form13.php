@@ -162,9 +162,10 @@
             ?>
             <input type="hidden" name="request" value="<?echo $request;?>">
             <? if($request == 41){ ?>
+            <b>ใบอนุญาติ พ.พ.16: </b>
             <select name="form16">
               <? foreach ($form16 as $key) {?>
-                <option value="<? echo $key['form16_Id'] ?>" ><?echo $key['fname'];?></option>
+                <option value="<? echo $key['form16_Id'] ?>" ><?echo $key['form16_Id'].': '.$key['fname'];?></option>
               <?}?>
             </select><br>
             <?}?>
