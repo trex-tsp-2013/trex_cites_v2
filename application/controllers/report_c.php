@@ -10,6 +10,8 @@ class Report_C extends CI_Controller{
 
 	public function getform()
 	{
+		if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
+		{
 		$user = $this->ion_auth->user()->row();
 			//save username to be data
 		$data['username'] = $user->username;
@@ -50,11 +52,11 @@ class Report_C extends CI_Controller{
 		$data['t16'] = $this->report_model->get_form16();
 
 		$this->load->view('officers/report/form-report', $data);
-	}
+		
 
-	public function report(){
-
-		$this->load->view('officers/report/evident-report', $data);
+		} else {
+			redirect('auth', 'refresh');
+		}
 	}
 	
 
