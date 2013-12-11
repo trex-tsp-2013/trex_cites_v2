@@ -8,6 +8,7 @@ class Form16_C extends CI_Controller{
 		$this->load->model('form15_model');
 		$this->load->model('form16_model');
 		$this->load->model('form17_model');
+		$this->load->model('form18_model');
 		$this->load->model('form20_model');
 		$this->load->model('form21_model');
 	}
@@ -228,6 +229,57 @@ class Form16_C extends CI_Controller{
 		}
 		else
 		{
+			redirect('auth', 'refresh');
+		}
+
+	}
+
+
+	public function update_stat25()
+	{
+
+		// if ($this->ion_auth->logged_in() && $this->ion_auth->is_officer())
+		if ($this->ion_auth->is_officer() )
+		{
+			$user = $this->ion_auth->user()->row();
+			$ida = array( 'form18_Id' => $this->input->post('form18_Id')); 
+
+			if($this->input->post('stat') == "Denied")
+			{
+				$array = array('status' => $this->input->post('stat'),
+							'comment' => $this->input->post('comment'));
+				$this->form18_model->update_stat_form18($ida,$array);
+				// $this->load->view('officers/form15/list15', $data);
+				redirect('officers/status/25');
+			} else 
+			{
+
+				$id = $ida['form18_Id'];
+					//save username to be data
+				$data['username'] = $user->username;
+				$data['form18'] = $this->form18_model->get_listidform18('25', $id);
+				$data['form18']['req_Id'] = $data['form18']['form18_Id'];
+
+				unset($data['form18']['form18_Id'],
+					$data['form18']['status'],
+					$data['form18']['comment'],
+					$data['form18']['datename']);
+				
+				// open quqery form15
+				// $this->load->view('officers/form15/list15',$data);
+				if($this->form16_model->save_form16($data['form18']))
+				{
+					$array = array('status' => $this->input->post('stat'),
+								'comment' => $this->input->post('comment'));
+					$this->form18_model->update_stat_form18($ida,$array);
+					// $this->load->view('officers/form15/list15', $data);
+					redirect('officers/status/25');
+				}else{
+					show_404();
+				}
+			}
+		}
+		else{
 			redirect('auth', 'refresh');
 		}
 
