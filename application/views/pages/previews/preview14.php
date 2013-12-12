@@ -6,6 +6,10 @@
   <body>
             <?
               // check post if it is null value
+              if(isset($form14['req_Id'])) 
+                $freq = $form14['req_Id'];
+              else 
+                $freq = '';
               if(isset($form14['fname'])) 
                 $fname = $form14['fname'];
               else 
@@ -42,6 +46,7 @@
               ?>
 
               <?php
+                  ob_clean();  
                   require('fpdf.php');
 
                   define('FPDF_FONTPATH','font/');
@@ -71,22 +76,22 @@
                   $pdf->Cell(50,0,iconv( 'UTF-8','TIS-620','                                     Country: '),0,0,'');
                   $pdf->SetFont('angsa','',14);
                   $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fcountry),0,1,'');
-                  $pdf->Cell(0,10,iconv( 'UTF-8',''),0,1,'');
+                  $pdf->Cell(0,10,iconv( 'UTF-8','',''),0,1,'  ');
                   $pdf->SetFont('angsana','B',16);
                   $pdf->Cell(50,0,iconv( 'UTF-8','TIS-620','                Permitee information '),0,1,'');
                   $pdf->SetFont('angsana','B',14);
                   $pdf->Cell(50,10,iconv( 'UTF-8','TIS-620','                                      Name: '),0,0,'');
                   $pdf->SetFont('angsa','',14);
-                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$name2),0,1,'');
+                  $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$fname2),0,1,'');
                   $pdf->SetFont('angsana','B',14);
                   $pdf->Cell(50,0,iconv( 'UTF-8','TIS-620','                                      Address: '),0,0,'');
                   $pdf->SetFont('angsa','',14);
-                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$fzipcode),0,1,'');
+                  $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$faddress2),0,1,'');
                   $pdf->SetFont('angsana','B',14);
                   $pdf->Cell(50,10,iconv( 'UTF-8','TIS-620','                                      Country: '),0,0,'');
                   $pdf->SetFont('angsa','',14);
                   $pdf->Cell(0,10,iconv( 'UTF-8','TIS-620',$fcountry2),0,1,'');
-                  $pdf->Cell(0,5,iconv( 'UTF-8',''),0,1,'');
+                  $pdf->Cell(0,5,iconv( 'UTF-8','',''),0,1,'');
                   $pdf->SetFont('angsana','B',14);
                   $pdf->Cell(50,0,iconv( 'UTF-8','TIS-620','                Management Authority: '),0,0,'');
                   $pdf->SetFont('angsa','',14);
@@ -99,18 +104,19 @@
                   $pdf->Cell(100,0,iconv( 'UTF-8','TIS-620','                Purpose of the transaction: '),0,0,'');
                   $pdf->SetFont('angsa','',14);
                   $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620',$ftran),0,1,'');
-                  $pdf->Cell(0,10,iconv( 'UTF-8',''),0,1,'');
+                  $pdf->Cell(0,10,iconv( 'UTF-8','',''),0,1,'');
                   $pdf->SetFont('angsana','B',14);
                   $pdf->Cell(0,15,iconv( 'UTF-8','TIS-620','                * according to database 7-12 is to be discuss later hot to implement'),0,1,'');
                   $pdf->Cell(0,0,iconv( 'UTF-8','TIS-620','                ** Note that according to the standard form number 13+14 should be fill by the officer'),0,1,'');
-                  $pdf->Cell(0,20,iconv( 'UTF-8',''),0,1,'');
+                  $pdf->Cell(0,20,iconv( 'UTF-8','',''),0,1,'');
                   $pdf->Cell(0,5,iconv( 'UTF-8','TIS-620','                                                                                (Signature).........................................(Authorized Officer)'),0,1,'');
                   $pdf->Cell(0,5,iconv( 'UTF-8','TIS-620','                                                                                                  (.........................................)'),0,1,'');
                   $pdf->Cell(0,5,iconv( 'UTF-8','TIS-620','                                                                                      Position..........................................'),0,1,'');
-                  $pdf->Output("assets/pdf/form14.pdf","F");
+                  
+                  $pdf->Output("form14.pdf","D");
                   
                   ?>  
-                  <?header('Location: '.base_url("assets/pdf/form14.pdf"))?>
+                  
                    
   
 
