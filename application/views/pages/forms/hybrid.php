@@ -99,134 +99,134 @@
           <div class="well">
             <h2>แบบคำขอหนังสือรับรองการส่งออกพืชลูกผสมของบัญชีแนบท้าย</h2><br><br>
             <?php echo form_open("pages/previewhybrid");?>
-            <?
+            <? 
               // check post if it is null value
-              if(isset($POST_['fname'])) 
-                $fname = $POST_['fname'];
+              if(isset($_POST['fname'])) 
+                $fname = $_POST['fname'];
               else 
                 $fname = '';
-              if(isset($POST_['fbd'])) 
-                $fbd = $POST_['fbd'];
+              if(isset($_POST['fbd'])) 
+                $fbd = $_POST['fbd'];
               else 
                 $fbd = '';
-              if(isset($POST_['fnation'])) 
-                $fnation = $POST_['fnation'];
+              if(isset($_POST['fnation'])) 
+                $fnation = $_POST['fnation'];
               else 
                 $fnation = '';
               //
-              if(isset($POST_['faddress'])) 
-                $faddress = $POST_['faddress'];
+              if(isset($_POST['faddress'])) 
+                $faddress = $_POST['faddress'];
               else 
                 $faddress = '';
-              if(isset($POST_['fstreet'])) 
-                $fstreet = $POST_['fstreet'];
+              if(isset($_POST['fstreet'])) 
+                $fstreet = $_POST['fstreet'];
               else 
                 $fstreet = '';
-              if(isset($POST_['fprovince'])) 
-                $fprovince = $POST_['fprovince'];
+              if(isset($_POST['fprovince'])) 
+                $fprovince = $_POST['fprovince'];
               else 
                 $fprovince = '';
-              if(isset($POST_['fzipcode'])) 
-                $fzipcode = $POST_['fzipcode'];
+              if(isset($_POST['fzipcode'])) 
+                $fzipcode = $_POST['fzipcode'];
               else 
                 $fzipcode = '';
-              if(isset($POST_['ftel'])) 
-                $ftel = $POST_['ftel'];
+              if(isset($_POST['ftel'])) 
+                $ftel = $_POST['ftel'];
               else 
                 $ftel = '';
-              if(isset($POST_['fphone'])) 
-                $fphone = $POST_['fphone'];
+              if(isset($_POST['fphone'])) 
+                $fphone = $_POST['fphone'];
               else 
                 $fphone = '';
-              if(isset($POST_['ffax'])) 
-                $fax = $POST_['ffax'];
+              if(isset($_POST['ffax'])) 
+                $ffax = $_POST['ffax'];
               else 
                 $ffax = '';
               //
-              if(isset($POST_['fname2'])) 
-                $fname2 = $POST_['fname2'];
+              if(isset($_POST['fname2'])) 
+                $fname2 = $_POST['fname2'];
               else 
                 $fname2 = '';
-              if(isset($POST_['faddress2'])) 
-                $faddress2 = $POST_['faddress2'];
+              if(isset($_POST['faddress2'])) 
+                $faddress2 = $_POST['faddress2'];
               else 
                 $faddress2 = '';
-              if(isset($POST_['fstreet2'])) 
-                $fstreet2 = $POST_['fstreet2'];
+              if(isset($_POST['fstreet2'])) 
+                $fstreet2 = $_POST['fstreet2'];
               else 
                 $fstreet2 = '';
-              if(isset($POST_['fprovince2'])) 
-                $fprovince2 = $POST_['fprovince2'];
+              if(isset($_POST['fprovince2'])) 
+                $fprovince2 = $_POST['fprovince2'];
               else 
                 $fprovince2 = '';
-              if(isset($POST_['fzipcode2'])) 
-                $fzipcode2 = $POST_['fzipcode2'];
+              if(isset($_POST['fzipcode2'])) 
+                $fzipcode2 = $_POST['fzipcode2'];
               else 
                 $fzipcode2 = '';
-              if(isset($POST_['ftel2'])) 
-                $ftel2 = $POST_['ftel2'];
+              if(isset($_POST['ftel2'])) 
+                $ftel2 = $_POST['ftel2'];
               else 
                 $ftel2 = '';
-              if(isset($POST_['fphone2'])) 
-                $fphone2 = $POST_['fphone2'];
+              if(isset($_POST['fphone2'])) 
+                $fphone2 = $_POST['fphone2'];
               else 
                 $fphone2 = '';
-              if(isset($POST_['ffax2'])) 
-                $ffax2 = $POST_['ffax2'];
+              if(isset($_POST['ffax2'])) 
+                $ffax2 = $_POST['ffax2'];
               else 
                 $ffax2 = '';
               //
-              if(isset($POST_['fname3'])) 
-                $fname3 = $POST_['fname3'];
+              if(isset($_POST['fname3'])) 
+                $fname3 = $_POST['fname3'];
               else 
                 $fname3 = '';
-              if(isset($POST_['faddress3'])) 
-                $faddress3 = $POST_['faddress3'];
+              if(isset($_POST['faddress3'])) 
+                $faddress3 = $_POST['faddress3'];
               else 
                 $faddress3 = '';
-              if(isset($POST_['fstreet3'])) 
-                $fstreet3 = $POST_['fstreet3'];
+              if(isset($_POST['fstreet3'])) 
+                $fstreet3 = $_POST['fstreet3'];
               else 
                 $fstreet3 = '';
-              if(isset($POST_['fprovince3'])) 
-                $fprovince3 = $POST_['fprovince3'];
+              if(isset($_POST['fprovince3'])) 
+                $fprovince3 = $_POST['fprovince3'];
               else 
                 $fprovince3 = '';
-              if(isset($POST_['fzipcode3'])) 
-                $fzipcode3 = $POST_['fzipcode3'];
+              if(isset($_POST['fzipcode3'])) 
+                $fzipcode3 = $_POST['fzipcode3'];
               else 
                 $fzipcode3 = '';
-              if(isset($POST_['ftel3'])) 
-                $ftel3 = $POST_['ftel3'];
+              if(isset($_POST['ftel3'])) 
+                $ftel3 = $_POST['ftel3'];
               else 
                 $ftel3 = '';
-              if(isset($POST_['fphone3'])) 
-                $fphone3 = $POST_['fphone3'];
+              if(isset($_POST['fphone3'])) 
+                $fphone3 = $_POST['fphone3'];
               else 
                 $fphone3 = '';
-              if(isset($POST_['ffax3'])) 
-                $ffax3 = $POST_['ffax3'];
+              if(isset($_POST['ffax3'])) 
+                $ffax3 = $_POST['ffax3'];
               else 
                 $ffax3 = '';
               //
-              if(isset($POST_['fmark'])) 
-                $fmark = $POST_['fmark'];
+              if(isset($_POST['fmark'])) 
+                $fmark = $_POST['fmark'];
               else 
                 $fmark = '';
-              if(isset($POST_['value'])) 
-                $value = $POST_['value'];
+              if(isset($_POST['value'])) 
+                $value = $_POST['value'];
               else 
                 $value = '';
-              if(isset($POST_['transportby'])) 
-                $transportby = $POST_['transportby'];
+              if(isset($_POST['transportby'])) 
+                $transportby = $_POST['transportby'];
               else 
                 $transportby = '';
-              if(isset($POST_['exportto'])) 
-                $exportto = $POST_['exportto'];
+              if(isset($_POST['exportto'])) 
+                $exportto = $_POST['exportto'];
               else 
                 $exportto = '';
-              if(isset($POST_['estarrivedate'])) 
-                $estarrivedate = $POST_['estarrivedate'];
+              if(isset($_POST['estarrivedate'])) 
+                $estarrivedate = $_POST['estarrivedate'];
               else 
                 $estarrivedate = '';
             ?>
@@ -269,13 +269,13 @@
             <b>โทรสาร: </b><input type="text" name="ffax3" value="<?echo $ffax3;?>"><br>
             <br>
             <br>
-            <b>เครื่องหมายที่สัังเกตบนหีบห่อ</b><input type="text" name="fmark" value="<?echo $fmark;?>"><br>
-            <b>มูลค่า</b><input type="text" name="value" value="<?echo $value;?>"><br>
-            <b>โดยพาหนะ</b><input type="text" name="transportby" value="<?echo $transportby;?>"><br>
+            <b>เครื่องหมายที่สังเกตบนหีบห่อ: </b><input type="text" name="fmark" value="<?echo $fmark;?>"><br>
+            <b>มูลค่า: </b><input type="text" name="value" value="<?echo $value;?>"><br>
+            <b>โดยพาหนะ: </b><input type="text" name="transportby" value="<?echo $transportby;?>"><br>
             <br>
             <br>
-            <b>นำเข้าประเทศปลายทาง</b><input type="text" name="exportto" value="<?echo $exportto;?>"><br>
-            <b>ประมาณวันที่</b><input type="text" name="estarrivedate" value="<?echo $estarrivedate;?>"><br>
+            <b>นำเข้าประเทศปลายทาง: </b><input type="text" name="exportto" value="<?echo $exportto;?>"><br>
+            <b>ประมาณวันที่: </b><input type="text" name="estarrivedate" value="<?echo $estarrivedate;?>"><br>
             <br>
             <br>
 

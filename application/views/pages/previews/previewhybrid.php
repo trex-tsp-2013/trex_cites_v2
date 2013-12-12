@@ -255,7 +255,7 @@
             </td>
 
             <td>
-            <?php echo form_open('pages/formhybrid/22'); ?>
+            <?php echo form_open('pages/formhybrid/61'); ?>
 
             <input type="hidden" name="fname" value="<?echo $fname;?>">
             <input type="hidden" name="fbd" value="<?echo $fbd;?>">

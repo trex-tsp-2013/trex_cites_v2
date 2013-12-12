@@ -100,7 +100,7 @@
             
             <form action="../../pages/preview15" method="post" enctype="multipart/form-data">
 
-            <?
+            <? 
               // check post if it is null value
               if(isset($_POST['fname'])) 
                 $fname = $_POST['fname'];
